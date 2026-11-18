@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: skillswap-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-skillswap}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-skillswap_secret}
+      POSTGRES_DB: ${POSTGRES_DB:-skillswap_db}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-skillswap} -d ${POSTGRES_DB:-skillswap_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: skillswap-backend
+    restart: always
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-skillswap}:${POSTGRES_PASSWORD:-skillswap_secret}@postgres:5432/${POSTGRES_DB:-skillswap_db}?schema=public
+      JWT_SECRET: ${JWT_SECRET:-supersecret_jwt_key_at_least_32_chars_long}
+      SESSION_SECRET: ${SESSION_SECRET:-supersecret_session_key_32_chars}
+      APP_ORIGIN: ${APP_ORIGIN:-http://localhost:3000}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:3000}
+    ports:
+      - "4000:4000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: skillswap-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
