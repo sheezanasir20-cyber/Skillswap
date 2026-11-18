@@ -1,0 +1,307 @@
+// Prisma Schema for SkillSwap
+// Conforms to docss/backend/DATA-MODEL.md
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  member
+  moderator
+  admin
+}
+
+enum UserStatus {
+  active
+  suspended
+  deleted
+  pending_verification
+}
+
+enum SkillIntent {
+  teach
+  learn
+}
+
+enum SkillLevel {
+  beginner
+  intermediate
+  advanced
+}
+
+enum ConnectionStatus {
+  pending
+  accepted
+  rejected
+  cancelled
+  blocked
+}
+
+enum SessionStatus {
+  proposed
+  confirmed
+  declined
+  cancelled
+  completed
+}
+
+enum ReviewStatus {
+  visible
+  hidden_pending_review
+  removed
+}
+
+enum ReportTargetType {
+  profile
+  message
+  review
+}
+
+enum ReportStatus {
+  submitted
+  under_review
+  resolved
+  dismissed
+}
+
+enum JobStatus {
+  pending
+  running
+  completed
+  failed
+  cancelled
+}
+
+model User {
+  id           String      @id @default(uuid())
+  email        String      @unique
+  passwordHash String      @map("password_hash")
+  displayName  String      @map("display_name")
+  bio          String?
+  avatarUrl    String?     @map("avatar_url")
+  timezone     String      @default("UTC")
+  role         Role        @default(member)
+  status       UserStatus  @default(active)
+  createdAt    DateTime    @default(now()) @map("created_at")
+  updatedAt    DateTime    @updatedAt @map("updated_at")
+  lastLoginAt  DateTime?   @map("last_login_at")
+
+  // Relationships
+  skills               UserSkill[]
+  availability         Availability[]
+  sentConnections      Connection[]      @relation("SentConnections")
+  receivedConnections  Connection[]      @relation("ReceivedConnections")
+  messages             Message[]
+  proposedSessions     Session[]         @relation("ProposedSessions")
+  givenReviews         Review[]          @relation("GivenReviews")
+  receivedReviews      Review[]          @relation("ReceivedReviews")
+  submittedReports     Report[]          @relation("SubmittedReports")
+  assignedReports      Report[]          @relation("AssignedReports")
+  notifications        Notification[]
+  auditLogs            AuditLog[]
+
+  @@map("users")
+}
+
+model Skill {
+  id        String      @id @default(uuid())
+  name      String      @unique
+  category  String?
+  isActive  Boolean     @default(true) @map("is_active")
+  createdAt DateTime    @default(now()) @map("created_at")
+
+  userSkills UserSkill[]
+
+  @@map("skills")
+}
+
+model UserSkill {
+  id        String      @id @default(uuid())
+  userId    String      @map("user_id")
+  skillId   String      @map("skill_id")
+  intent    SkillIntent
+  level     SkillLevel
+  createdAt DateTime    @default(now()) @map("created_at")
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, skillId, intent])
+  @@index([skillId, intent, level, userId])
+  @@map("user_skills")
+}
+
+model Availability {
+  id          String   @id @default(uuid())
+  userId      String   @map("user_id")
+  weekday     Int      // 0 = Sunday, 6 = Saturday
+  startMinute Int      @map("start_minute") // 0 to 1439
+  endMinute   Int      @map("end_minute")   // 1 to 1440
+  timezone    String   @default("UTC")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("availability")
+}
+
+model Connection {
+  id          String           @id @default(uuid())
+  requesterId String           @map("requester_id")
+  recipientId String           @map("recipient_id")
+  status      ConnectionStatus @default(pending)
+  requestNote String?          @map("request_note")
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+
+  requester    User          @relation("SentConnections", fields: [requesterId], references: [id], onDelete: Cascade)
+  recipient    User          @relation("ReceivedConnections", fields: [recipientId], references: [id], onDelete: Cascade)
+  conversation Conversation?
+  sessions     Session[]
+
+  @@unique([requesterId, recipientId])
+  @@index([requesterId, recipientId, status])
+  @@map("connections")
+}
+
+model Conversation {
+  id           String     @id @default(uuid())
+  connectionId String     @unique @map("connection_id")
+  createdAt    DateTime   @default(now()) @map("created_at")
+
+  connection Connection @relation(fields: [connectionId], references: [id], onDelete: Cascade)
+  messages   Message[]
+
+  @@map("conversations")
+}
+
+model Message {
+  id             String       @id @default(uuid())
+  conversationId String       @map("conversation_id")
+  senderId       String       @map("sender_id")
+  body           String
+  createdAt      DateTime     @default(now()) @map("created_at")
+  editedAt       DateTime?    @map("edited_at")
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  sender       User         @relation(fields: [senderId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId, createdAt(sort: Desc)])
+  @@map("messages")
+}
+
+model Session {
+  id                 String        @id @default(uuid())
+  connectionId       String        @map("connection_id")
+  proposedBy         String        @map("proposed_by")
+  title              String
+  description        String?
+  startsAt           DateTime      @map("starts_at")
+  endsAt             DateTime      @map("ends_at")
+  timezone           String        @default("UTC")
+  externalMeetingUrl String?       @map("external_meeting_url")
+  status             SessionStatus @default(proposed)
+  version            Int           @default(1)
+  createdAt          DateTime      @default(now()) @map("created_at")
+  updatedAt          DateTime      @updatedAt @map("updated_at")
+
+  connection Connection @relation(fields: [connectionId], references: [id], onDelete: Cascade)
+  proposer   User       @relation("ProposedSessions", fields: [proposedBy], references: [id], onDelete: Cascade)
+  reviews    Review[]
+
+  @@index([connectionId, startsAt, status])
+  @@map("sessions")
+}
+
+model Review {
+  id          String       @id @default(uuid())
+  sessionId   String       @map("session_id")
+  reviewerId  String       @map("reviewer_id")
+  revieweeId  String       @map("reviewee_id")
+  rating      Int          // 1 to 5
+  body        String?
+  status      ReviewStatus @default(visible)
+  createdAt   DateTime     @default(now()) @map("created_at")
+
+  session  Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  reviewer User    @relation("GivenReviews", fields: [reviewerId], references: [id], onDelete: Cascade)
+  reviewee User    @relation("ReceivedReviews", fields: [revieweeId], references: [id], onDelete: Cascade)
+
+  @@unique([sessionId, reviewerId])
+  @@map("reviews")
+}
+
+model Report {
+  id             String           @id @default(uuid())
+  reporterId     String           @map("reporter_id")
+  targetType     ReportTargetType @map("target_type")
+  targetId       String           @map("target_id")
+  reason         String
+  description    String?
+  status         ReportStatus     @default(submitted)
+  assignedTo     String?          @map("assigned_to")
+  resolutionNote String?          @map("resolution_note")
+  createdAt      DateTime         @default(now()) @map("created_at")
+  updatedAt      DateTime         @updatedAt @map("updated_at")
+  resolvedAt     DateTime?        @map("resolved_at")
+
+  reporter User  @relation("SubmittedReports", fields: [reporterId], references: [id], onDelete: Cascade)
+  assignee User? @relation("AssignedReports", fields: [assignedTo], references: [id], onDelete: SetNull)
+
+  @@index([status, createdAt])
+  @@map("reports")
+}
+
+model Notification {
+  id           String    @id @default(uuid())
+  userId       String    @map("user_id")
+  type         String
+  title        String
+  body         String
+  resourceType String?   @map("resource_type")
+  resourceId   String?   @map("resource_id")
+  readAt       DateTime? @map("read_at")
+  createdAt    DateTime  @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, readAt, createdAt(sort: Desc)])
+  @@map("notifications")
+}
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  actorId    String   @map("actor_id")
+  action     String
+  targetType String   @map("target_type")
+  targetId   String   @map("target_id")
+  reason     String?
+  metadata   Json?
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  actor User @relation(fields: [actorId], references: [id], onDelete: Cascade)
+
+  @@index([actorId, createdAt(sort: Desc)])
+  @@map("audit_logs")
+}
+
+model NotificationJob {
+  id         String    @id @default(uuid())
+  type       String    // e.g. "session_reminder_24h", "session_reminder_1h"
+  resourceId String    @map("resource_id")
+  runAt      DateTime  @map("run_at")
+  status     JobStatus @default(pending)
+  attempts   Int       @default(0)
+  lastError  String?   @map("last_error")
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @updatedAt @map("updated_at")
+
+  @@index([status, runAt])
+  @@map("notification_jobs")
+}
