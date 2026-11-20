@@ -1,0 +1,96 @@
+:root {
+  /* Verdant Atelier Core Palette */
+  --color-forest-950: #142b28;
+  --color-forest-900: #1b3934;
+  --color-forest-800: #245047;
+  --color-jade-700: #287565;
+  --color-jade-600: #348777;
+  --color-jade-100: #dcede6;
+  --color-sage-100: #eaf0e8;
+  --color-sage-600: #91a995;
+  --color-parchment: #f5f1e8;
+  --color-paper: #fffefa;
+  --color-white: #ffffff;
+  --color-ink: #1e2c29;
+  --color-ink-soft: #465650;
+  --color-muted: #75817a;
+  --color-line: #e4e4d9;
+  --color-clay-600: #c96f55;
+  --color-clay-100: #f6e5de;
+  --color-amber-600: #b9853f;
+  --color-amber-100: #f5ebd7;
+  --color-sky-700: #527c91;
+  --color-sky-100: #e2eef2;
+  --color-danger: #b34e4a;
+  --color-danger-soft: #f8e7e4;
+  --color-success: #32745a;
+  --color-success-soft: #e2f0e7;
+  --color-warning: #a8752d;
+  --color-warning-soft: #f7eedb;
+  --color-focus: #76a9d5;
+
+  /* Backward Compatibility Semantic Aliases */
+  --color-surface: var(--color-paper);
+  --color-accent: var(--color-jade-700);
+  --color-accent-soft: var(--color-jade-100);
+  --color-ink-muted: var(--color-muted);
+
+  /* Signature Gradients */
+  --gradient-brand: linear-gradient(120deg, #1b3934 0%, #287565 58%, #57917b 100%);
+  --gradient-sidebar: linear-gradient(180deg, #142b28 0%, #1b3934 55%, #20473f 100%);
+  --gradient-warm: linear-gradient(120deg, #f5f1e8 0%, #f3e9dc 52%, #e8f0e8 100%);
+  --gradient-clay: linear-gradient(120deg, #c96f55 0%, #d58b66 100%);
+  --gradient-hero: linear-gradient(135deg, #142b28 0%, #1b3934 60%, #287565 100%);
+
+  /* Typography Stacks */
+  --font-display: "Manrope", "Avenir Next", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-body);
+
+  /* Spacing Scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 9px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Legacy Radii Aliases */
+  --radius-control: var(--radius-sm);
+  --radius-panel: var(--radius-lg);
+  --radius-tag: var(--radius-xs);
+  --radius-full: var(--radius-pill);
+
+  /* Selective Glassmorphism */
+  --glass-bg: rgba(255, 254, 250, 0.72);
+  --glass-bg-strong: rgba(255, 254, 250, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.74);
+  --glass-shadow: 0 14px 40px rgba(23, 49, 43, 0.10);
+  --glass-blur: 18px;
+
+  /* Depth and Shadows */
+  --shadow-soft: 0 4px 16px rgba(23, 49, 43, 0.055);
+  --shadow-card: 0 10px 28px rgba(23, 49, 43, 0.075);
+  --shadow-float: 0 16px 44px rgba(23, 49, 43, 0.14);
+  --shadow-modal: 0 24px 72px rgba(13, 31, 27, 0.22);
+  --shadow-overlay: var(--shadow-modal);
+  --shadow-subtle: var(--shadow-soft);
+
+  /* Transitions */
+  --transition-fast: 140ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 300ms ease;
+}

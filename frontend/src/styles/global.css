@@ -1,0 +1,200 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Atmospheric canvas per design.md §3.3 */
+.app-canvas {
+  background:
+    radial-gradient(ellipse at 88% 4%, rgba(52, 135, 119, 0.09), transparent 28rem),
+    radial-gradient(ellipse at 18% 78%, rgba(201, 111, 85, 0.055), transparent 26rem),
+    var(--color-parchment);
+  min-height: 100vh;
+}
+
+/* Accessible visible focus ring per design.md §15 */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+/* Sidebar accessible focus */
+.sidebar :focus-visible {
+  outline-color: #f3d8a7;
+}
+
+/* Typography scale per design.md §4 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-forest-950);
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: 2.125rem;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 1.625rem;
+  line-height: 1.22;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+p {
+  font-size: 0.9375rem;
+  color: var(--color-ink);
+  line-height: 1.55;
+}
+
+small,
+.text-muted {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+a {
+  color: var(--color-jade-700);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-jade-600);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 0.9375rem;
+}
+
+/* Reusable Glass Surface per design.md §6.3 */
+.glass-surface {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+}
+
+.glass-surface-strong {
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-float);
+  backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+}
+
+/* Standard Paper Card Surface per design.md §6.4 */
+.paper-card {
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.paper-card:hover {
+  box-shadow: var(--shadow-card);
+}
+
+/* Utility container classes */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-10);
+  }
+}
+
+/* Subtle scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(30, 44, 41, 0.18);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 44, 41, 0.32);
+}
+
+/* Respect reduced motion per design.md §13 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
