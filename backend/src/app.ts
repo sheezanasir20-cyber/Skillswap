@@ -56,10 +56,10 @@ export function createApp(): { app: Express; server: http.Server } {
 
   // REST API v1 routes per API.md
   app.use('/api/v1/auth', authRouter);
-  app.use('/api/v1/members', membersRouter);
-  app.use('/api/v1', skillsRouter);
-  app.use('/api/v1', matchingRouter);
   app.use('/api/v1', discoveryRouter);
+  app.use('/api/v1', skillsRouter);
+  app.use('/api/v1/members', membersRouter);
+  app.use('/api/v1', matchingRouter);
   app.use('/api/v1', connectionsRouter);
   app.use('/api/v1', messagingRouter);
   app.use('/api/v1', sessionsRouter);

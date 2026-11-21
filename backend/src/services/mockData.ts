@@ -283,7 +283,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'tariq.almansoor@example.com',
     displayName: 'Tariq Al-Mansoor',
     bio: 'Cybersecurity analyst and penetration tester. Teaching ethical hacking, network defense, and Arabic. Looking to learn Next.js and web design.',
-    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=250&h=250&auto=format&fit=crop&crop=face&q=80',
     timezone: 'Asia/Dubai',
     role: 'member',
     teachSkills: [
@@ -986,7 +986,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'admin@example.com',
     displayName: 'Dr. Arthur Pendelton (Admin)',
     bio: 'Platform System Administrator & Engineering Director. Decades of distributed systems experience.',
-    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250&h=250&auto=format&fit=crop&crop=face&q=80',
     timezone: 'Europe/London',
     role: 'admin',
     teachSkills: [

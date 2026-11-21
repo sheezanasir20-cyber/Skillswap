@@ -41,7 +41,7 @@ export const Avatar: React.FC<AvatarProps> = ({ name, avatarUrl, size = 40, styl
           height: `${size}px`,
           borderRadius: 'var(--radius-pill)',
           objectFit: 'cover',
-          objectPosition: 'center 20%',
+          objectPosition: 'center',
           border: '1.5px solid var(--color-line)',
           boxShadow: 'var(--shadow-sm)',
           display: 'block',
