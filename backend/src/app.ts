@@ -22,8 +22,15 @@ import { notificationsRouter } from './modules/notifications/notifications.route
 import { staffRouter } from './modules/moderation/staff.router.js';
 import { ReminderWorker } from './jobs/reminder.worker.js';
 import { logger } from './utils/logger.js';
+import { inMemoryDb } from './services/db.js';
+import { seedMockDatabase } from './services/mockData.js';
 
 export function createApp(): { app: Express; server: http.Server } {
+  // Seed initial 50 mock users and skills in non-test environment
+  if (process.env.NODE_ENV !== 'test' && inMemoryDb.users.size === 0) {
+    seedMockDatabase(inMemoryDb);
+  }
+
   const app = express();
   const server = http.createServer(app);
 
