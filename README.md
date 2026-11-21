@@ -93,10 +93,7 @@ SkillSwap_WEB/
 │   ├── whitebox/                   # White-Box unit & module test suites (88 tests)
 │   └── integration/                # Full 25-step End-to-End user journey (25 tests)
 ├── REQUIREMENTS-CHECKLIST.md       # Traceability matrix mapping all FRs to code & tests
-├── IMPLEMENTATION-PLAN.md          # Architectural phases & execution plan
-├── DOCUMENTATION-REVIEW.md         # Resolution of decisions & scope confirmation
 ├── TEST-REPORT.md                  # Complete testing report with coverage metrics
-├── SECURITY-REVIEW.md              # Threat model & OWASP security review
 ├── docker-compose.yml              # Production Docker Compose for PostgreSQL & App
 └── .env.example                    # Template environment variables
 ```
