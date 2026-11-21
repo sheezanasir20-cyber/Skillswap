@@ -67,7 +67,7 @@ export const ConnectionsPage: React.FC = () => {
     <div style={{ maxWidth: '1000px', display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
       {/* Title */}
       <div>
-        <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-jade-700)', marginBottom: 'var(--space-1)' }}>
+        <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-crimson-600)', marginBottom: 'var(--space-1)' }}>
           Learning Network
         </div>
         <h1
@@ -75,7 +75,7 @@ export const ConnectionsPage: React.FC = () => {
             fontSize: '2rem',
             fontFamily: 'var(--font-display)',
             fontWeight: 800,
-            color: 'var(--color-forest-950)',
+            color: 'var(--color-ink-950)',
             letterSpacing: '-0.02em',
           }}
         >
@@ -90,7 +90,7 @@ export const ConnectionsPage: React.FC = () => {
       <div
         style={{
           display: 'inline-flex',
-          backgroundColor: 'rgba(23, 49, 43, 0.06)',
+          backgroundColor: 'rgba(3, 7, 30, 0.06)',
           padding: '4px',
           borderRadius: 'var(--radius-pill)',
           width: 'fit-content',
@@ -103,9 +103,9 @@ export const ConnectionsPage: React.FC = () => {
             padding: '8px 20px',
             borderRadius: 'var(--radius-pill)',
             border: 'none',
-            backgroundColor: activeTab === 'accepted' ? 'var(--color-paper)' : 'transparent',
+            backgroundColor: activeTab === 'accepted' ? 'var(--color-surface)' : 'transparent',
             fontWeight: activeTab === 'accepted' ? 700 : 500,
-            color: activeTab === 'accepted' ? 'var(--color-forest-950)' : 'var(--color-muted)',
+            color: activeTab === 'accepted' ? 'var(--color-ink-950)' : 'var(--color-muted)',
             boxShadow: activeTab === 'accepted' ? 'var(--shadow-soft)' : 'none',
             cursor: 'pointer',
             fontSize: '0.875rem',
@@ -121,9 +121,9 @@ export const ConnectionsPage: React.FC = () => {
             padding: '8px 20px',
             borderRadius: 'var(--radius-pill)',
             border: 'none',
-            backgroundColor: activeTab === 'pending' ? 'var(--color-paper)' : 'transparent',
+            backgroundColor: activeTab === 'pending' ? 'var(--color-surface)' : 'transparent',
             fontWeight: activeTab === 'pending' ? 700 : 500,
-            color: activeTab === 'pending' ? 'var(--color-forest-950)' : 'var(--color-muted)',
+            color: activeTab === 'pending' ? 'var(--color-ink-950)' : 'var(--color-muted)',
             boxShadow: activeTab === 'pending' ? 'var(--shadow-soft)' : 'none',
             cursor: 'pointer',
             fontSize: '0.875rem',
@@ -168,7 +168,7 @@ export const ConnectionsPage: React.FC = () => {
                         fontSize: '1rem',
                         fontWeight: 700,
                         fontFamily: 'var(--font-display)',
-                        color: 'var(--color-forest-950)',
+                        color: 'var(--color-ink-950)',
                       }}
                     >
                       {conn.partner.displayName}
@@ -206,7 +206,7 @@ export const ConnectionsPage: React.FC = () => {
                 fontSize: '1.25rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 marginBottom: 'var(--space-3)',
               }}
             >
@@ -232,7 +232,7 @@ export const ConnectionsPage: React.FC = () => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)' }}>
                       <Avatar name={conn.partner.displayName} avatarUrl={conn.partner.avatarUrl} size={46} />
                       <div>
-                        <div style={{ fontWeight: 700, color: 'var(--color-forest-950)', fontFamily: 'var(--font-display)' }}>
+                        <div style={{ fontWeight: 700, color: 'var(--color-ink-950)', fontFamily: 'var(--font-display)' }}>
                           {conn.partner.displayName}
                         </div>
                         {conn.requestNote ? (
@@ -264,7 +264,7 @@ export const ConnectionsPage: React.FC = () => {
                 fontSize: '1.25rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 marginBottom: 'var(--space-3)',
               }}
             >
@@ -288,7 +288,7 @@ export const ConnectionsPage: React.FC = () => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
                       <Avatar name={conn.partner.displayName} avatarUrl={conn.partner.avatarUrl} size={40} />
                       <div>
-                        <div style={{ fontWeight: 700, color: 'var(--color-forest-950)' }}>{conn.partner.displayName}</div>
+                        <div style={{ fontWeight: 700, color: 'var(--color-ink-950)' }}>{conn.partner.displayName}</div>
                         <div style={{ fontSize: '0.75rem', color: 'var(--color-muted)' }}>
                           Request dispatched on {new Date(conn.createdAt).toLocaleDateString()}
                         </div>

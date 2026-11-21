@@ -5,6 +5,7 @@ export interface SkillBadgeProps {
   intent: 'teach' | 'learn';
   level?: 'beginner' | 'intermediate' | 'advanced';
   onRemove?: () => void;
+  style?: React.CSSProperties;
   [key: string]: any;
 }
 
@@ -19,8 +20,8 @@ export const SkillBadge: React.FC<SkillBadgeProps> = ({ name, intent, level, onR
         gap: 'var(--space-2)',
         padding: '5px 10px',
         borderRadius: 'var(--radius-xs)',
-        border: `1px solid ${isTeach ? 'rgba(52, 135, 119, 0.32)' : 'rgba(201, 111, 85, 0.32)'}`,
-        backgroundColor: isTeach ? 'var(--color-jade-100)' : 'var(--color-clay-100)',
+        border: `1px solid ${isTeach ? 'var(--color-teach-border)' : 'var(--color-learn-border)'}`,
+        backgroundColor: isTeach ? 'var(--color-teach-bg)' : 'var(--color-learn-bg)',
         fontSize: '0.8125rem',
         lineHeight: 1.25,
         transition: 'all var(--transition-fast)',
@@ -31,7 +32,7 @@ export const SkillBadge: React.FC<SkillBadgeProps> = ({ name, intent, level, onR
       <span
         style={{
           fontWeight: 700,
-          color: isTeach ? 'var(--color-jade-700)' : 'var(--color-clay-600)',
+          color: isTeach ? 'var(--color-teach-text)' : 'var(--color-learn-text)',
           textTransform: 'uppercase',
           fontSize: '0.6875rem',
           letterSpacing: '0.03em',
@@ -39,16 +40,16 @@ export const SkillBadge: React.FC<SkillBadgeProps> = ({ name, intent, level, onR
       >
         {isTeach ? 'Teach' : 'Learn'}
       </span>
-      <span style={{ fontWeight: 600, color: 'var(--color-forest-950)' }}>{name}</span>
+      <span style={{ fontWeight: 600, color: 'var(--color-ink-950)' }}>{name}</span>
       {level ? (
         <span
           style={{
             fontSize: '0.6875rem',
-            color: isTeach ? 'var(--color-forest-800)' : 'var(--color-clay-600)',
+            color: 'var(--color-muted)',
             textTransform: 'capitalize',
-            borderLeft: `1px solid ${isTeach ? 'rgba(52, 135, 119, 0.25)' : 'rgba(201, 111, 85, 0.25)'}`,
+            borderLeft: `1px solid ${isTeach ? 'var(--color-teach-border)' : 'var(--color-learn-border)'}`,
             paddingLeft: 'var(--space-2)',
-            opacity: 0.85,
+            opacity: 0.9,
           }}
         >
           {level}

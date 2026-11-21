@@ -20,7 +20,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
             style={{
               fontSize: '0.8125rem',
               fontWeight: 650,
-              color: 'var(--color-forest-950)',
+              color: 'var(--color-ink-950)',
               fontFamily: 'var(--font-body)',
               letterSpacing: '-0.01em',
             }}
@@ -38,11 +38,11 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
             padding: 'var(--space-3) var(--space-4)',
             borderRadius: 'var(--radius-sm)',
             border: `1.5px solid ${error ? 'var(--color-danger)' : 'var(--color-line)'}`,
-            backgroundColor: 'var(--color-paper)',
+            backgroundColor: 'var(--color-surface)',
             color: 'var(--color-ink)',
             fontSize: '0.9375rem',
             fontFamily: 'var(--font-body)',
-            boxShadow: 'var(--shadow-soft)',
+            boxShadow: 'var(--shadow-xs)',
             resize: 'vertical',
             lineHeight: 1.55,
             transition: 'border-color var(--transition-fast), box-shadow var(--transition-fast)',

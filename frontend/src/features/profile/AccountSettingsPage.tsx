@@ -93,10 +93,10 @@ export const AccountSettingsPage: React.FC = () => {
   return (
     <div style={{ maxWidth: '860px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
       <div>
-        <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--color-ink)' }}>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--color-ink-950)' }}>
           Account & Availability Settings
         </h1>
-        <p style={{ color: 'var(--color-ink-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
+        <p style={{ color: 'var(--color-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
           Configure weekly availability windows to make scheduling learning sessions effortless.
         </p>
       </div>
@@ -109,15 +109,15 @@ export const AccountSettingsPage: React.FC = () => {
             alignItems: 'center',
             gap: 'var(--space-2)',
             padding: 'var(--space-3) var(--space-4)',
-            borderRadius: 'var(--radius-control)',
-            backgroundColor: 'var(--color-jade-100)',
-            color: 'var(--color-jade-700)',
-            border: '1px solid rgba(52, 135, 119, 0.25)',
+            borderRadius: 'var(--radius-sm)',
+            backgroundColor: 'rgba(250, 163, 7, 0.12)',
+            color: 'var(--color-ink-950)',
+            border: '1px solid rgba(250, 163, 7, 0.3)',
             fontSize: '0.875rem',
             fontWeight: 500,
           }}
         >
-          <CheckCircle2 size={16} />
+          <CheckCircle2 size={16} color="var(--color-amber-500)" />
           Availability windows updated successfully.
         </div>
       ) : null}
@@ -130,11 +130,11 @@ export const AccountSettingsPage: React.FC = () => {
           gap: 'var(--space-6)',
         }}
       >
-        <div style={{ borderBottom: '1px solid var(--color-line-subtle)', paddingBottom: 'var(--space-3)' }}>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink)' }}>
+        <div style={{ borderBottom: '1px solid var(--color-line)', paddingBottom: 'var(--space-3)' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink-950)' }}>
             Weekly Recurring Availability
           </h2>
-          <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '2px' }}>
+          <p style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '2px' }}>
             Prospective exchange partners can see these windows when proposing sessions.
           </p>
         </div>
@@ -147,9 +147,9 @@ export const AccountSettingsPage: React.FC = () => {
             gap: 'var(--space-3)',
             alignItems: 'flex-end',
             padding: 'var(--space-4)',
-            backgroundColor: 'var(--color-parchment-200)',
-            borderRadius: 'var(--radius-panel)',
-            border: '1px solid var(--color-line-subtle)',
+            backgroundColor: 'rgba(3, 7, 30, 0.03)',
+            borderRadius: 'var(--radius-md)',
+            border: '1px solid var(--color-line)',
           }}
         >
           <div style={{ width: '160px' }}>
@@ -186,7 +186,7 @@ export const AccountSettingsPage: React.FC = () => {
 
         {/* Current slots list */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
-          <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.9375rem', fontWeight: 600, color: 'var(--color-ink)' }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 600, color: 'var(--color-ink-950)' }}>
             Configured Time Windows ({slots.length})
           </h3>
 
@@ -195,13 +195,13 @@ export const AccountSettingsPage: React.FC = () => {
               style={{
                 padding: 'var(--space-6)',
                 textAlign: 'center',
-                backgroundColor: 'var(--color-parchment-200)',
-                borderRadius: 'var(--radius-control)',
+                backgroundColor: 'rgba(3, 7, 30, 0.03)',
+                borderRadius: 'var(--radius-sm)',
                 border: '1px dashed var(--color-line)',
               }}
             >
-              <Calendar size={24} style={{ color: 'var(--color-ink-muted)', marginBottom: 'var(--space-2)' }} />
-              <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-muted)', margin: 0 }}>
+              <Calendar size={24} style={{ color: 'var(--color-muted)', marginBottom: 'var(--space-2)' }} />
+              <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)', margin: 0 }}>
                 No regular availability windows configured. You can still coordinate session times directly in chat messages.
               </p>
             </div>
@@ -215,10 +215,10 @@ export const AccountSettingsPage: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     padding: 'var(--space-3) var(--space-4)',
-                    borderRadius: 'var(--radius-control)',
-                    backgroundColor: 'var(--color-paper)',
-                    border: '1px solid var(--color-line-subtle)',
-                    boxShadow: 'var(--shadow-sm)',
+                    borderRadius: 'var(--radius-sm)',
+                    backgroundColor: 'var(--color-surface)',
+                    border: '1px solid var(--color-line)',
+                    boxShadow: 'var(--shadow-soft)',
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
@@ -226,9 +226,9 @@ export const AccountSettingsPage: React.FC = () => {
                       style={{
                         width: '32px',
                         height: '32px',
-                        borderRadius: 'var(--radius-control)',
-                        backgroundColor: 'var(--color-jade-100)',
-                        color: 'var(--color-jade-700)',
+                        borderRadius: 'var(--radius-sm)',
+                        backgroundColor: 'rgba(208, 0, 0, 0.08)',
+                        color: 'var(--color-crimson-600)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -237,10 +237,10 @@ export const AccountSettingsPage: React.FC = () => {
                       <Clock size={16} />
                     </div>
                     <div>
-                      <div style={{ fontWeight: 600, fontSize: '0.875rem', color: 'var(--color-ink)' }}>
+                      <div style={{ fontWeight: 600, fontSize: '0.875rem', color: 'var(--color-ink-950)' }}>
                         {weekdays.find((w) => w.value === s.weekday)?.label}
                       </div>
-                      <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)' }}>
+                      <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)' }}>
                         {minutesToTime(s.startMinute)} – {minutesToTime(s.endMinute)}
                       </div>
                     </div>

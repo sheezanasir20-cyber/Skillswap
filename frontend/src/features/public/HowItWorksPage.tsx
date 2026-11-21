@@ -10,36 +10,36 @@ export const HowItWorksPage: React.FC = () => {
     {
       num: '01',
       title: 'Skills and Experience Levels',
-      icon: <BookOpen size={20} color="var(--color-jade-700)" />,
-      bg: 'var(--color-jade-100)',
+      icon: <BookOpen size={20} color="var(--color-burgundy-800)" />,
+      bg: 'rgba(106, 4, 15, 0.08)',
       text: 'When you create your profile, you select skills you can teach and skills you want to learn. Levels are self-assessed as Beginner, Intermediate, or Advanced. We treat levels as descriptive guidelines so you can find a partner whose expectations align with yours.',
     },
     {
       num: '02',
       title: 'Transparent Reciprocal Matching',
-      icon: <Compass size={20} color="var(--color-amber-600)" />,
-      bg: 'var(--color-amber-100)',
+      icon: <Compass size={20} color="var(--color-amber-500)" />,
+      bg: 'rgba(250, 163, 7, 0.12)',
       text: 'Our matching engine evaluates mutual fit based on what you teach and what candidates want to learn. When you see a suggested match, we show you the exact reason in plain English: for example, "You can teach JavaScript, and Alex wants to learn it. Alex can teach Figma, which is on your learning list."',
     },
     {
       num: '03',
       title: 'Safe Connections and Chat',
-      icon: <Users size={20} color="var(--color-sky-700)" />,
-      bg: 'var(--color-sky-100)',
+      icon: <Users size={20} color="var(--color-crimson-600)" />,
+      bg: 'rgba(208, 0, 0, 0.08)',
       text: 'Before messaging begins, members exchange connection requests. You can view a member’s public profile and decide whether to accept or decline. Only accepted connections can message each other or schedule learning sessions.',
     },
     {
       num: '04',
       title: 'Scheduling and Reminders',
-      icon: <Calendar size={20} color="var(--color-clay-600)" />,
-      bg: 'var(--color-clay-100)',
+      icon: <Calendar size={20} color="var(--color-ember-600)" />,
+      bg: 'rgba(232, 93, 4, 0.08)',
       text: 'Either member can propose a session date, time, and external meeting link (e.g. Google Meet, Zoom). The session is confirmed once the other member accepts. SkillSwap automatically schedules reminders 24 hours and 1 hour before the start time.',
     },
     {
       num: '05',
       title: 'Reviews and Community Trust',
-      icon: <Star size={20} color="var(--color-amber-600)" />,
-      bg: 'var(--color-amber-100)',
+      icon: <Star size={20} color="var(--color-gold-400)" />,
+      bg: 'rgba(255, 186, 8, 0.14)',
       text: 'Once a session has taken place, both members can submit a rating and written feedback. Reviews help highlight dependable, helpful members across the community and cannot be fabricated without a real session record.',
     },
   ];
@@ -52,7 +52,7 @@ export const HowItWorksPage: React.FC = () => {
             fontSize: '0.75rem',
             fontWeight: 700,
             textTransform: 'uppercase',
-            color: 'var(--color-jade-700)',
+            color: 'var(--color-crimson-600)',
             letterSpacing: '0.08em',
             marginBottom: 'var(--space-2)',
           }}
@@ -64,7 +64,7 @@ export const HowItWorksPage: React.FC = () => {
             fontSize: '2.5rem',
             fontFamily: 'var(--font-display)',
             fontWeight: 800,
-            color: 'var(--color-forest-950)',
+            color: 'var(--color-ink-950)',
             letterSpacing: '-0.025em',
             marginBottom: 'var(--space-4)',
           }}
@@ -114,7 +114,7 @@ export const HowItWorksPage: React.FC = () => {
                   fontSize: '1.25rem',
                   fontFamily: 'var(--font-display)',
                   fontWeight: 700,
-                  color: 'var(--color-forest-950)',
+                  color: 'var(--color-ink-950)',
                   marginBottom: 'var(--space-2)',
                 }}
               >
@@ -132,7 +132,7 @@ export const HowItWorksPage: React.FC = () => {
         style={{
           marginTop: 'var(--space-12)',
           padding: 'var(--space-8)',
-          backgroundColor: 'var(--color-paper)',
+          backgroundColor: 'var(--color-surface)',
           borderRadius: 'var(--radius-xl)',
           border: '1px solid var(--color-line)',
           boxShadow: 'var(--shadow-card)',
@@ -143,8 +143,8 @@ export const HowItWorksPage: React.FC = () => {
           gap: 'var(--space-3)',
         }}
       >
-        <ShieldCheck size={28} color="var(--color-jade-700)" />
-        <h3 style={{ fontSize: '1.375rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)' }}>
+        <ShieldCheck size={28} color="var(--color-crimson-600)" />
+        <h3 style={{ fontSize: '1.375rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)' }}>
           Ready to trade your knowledge?
         </h3>
         <p style={{ fontSize: '0.9375rem', color: 'var(--color-ink-soft)', maxWidth: '480px' }}>

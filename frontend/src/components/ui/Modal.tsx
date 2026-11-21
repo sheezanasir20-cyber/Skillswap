@@ -49,9 +49,9 @@ export const Modal: React.FC<ModalProps> = ({
       style={{
         position: 'fixed',
         inset: 0,
-        backgroundColor: 'rgba(20, 43, 40, 0.52)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
+        backgroundColor: 'rgba(3, 7, 30, 0.65)',
+        backdropFilter: 'blur(14px)',
+        WebkitBackdropFilter: 'blur(14px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -69,10 +69,10 @@ export const Modal: React.FC<ModalProps> = ({
         tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
         style={{
-          backgroundColor: 'var(--color-paper)',
-          borderRadius: 'var(--radius-xl)',
-          border: '1px solid rgba(255, 255, 255, 0.75)',
-          boxShadow: 'var(--shadow-modal)',
+          backgroundColor: 'var(--color-surface)',
+          borderRadius: 'var(--radius-dialog)',
+          border: '1px solid var(--color-line)',
+          boxShadow: 'var(--shadow-popover)',
           width: '100%',
           maxWidth,
           maxHeight: '90vh',
@@ -89,7 +89,7 @@ export const Modal: React.FC<ModalProps> = ({
             justifyContent: 'space-between',
             padding: 'var(--space-6) var(--space-6) var(--space-4)',
             borderBottom: '1px solid var(--color-line)',
-            backgroundColor: 'var(--color-paper)',
+            backgroundColor: 'var(--color-surface)',
           }}
         >
           <div>
@@ -97,10 +97,9 @@ export const Modal: React.FC<ModalProps> = ({
               id="modal-title"
               style={{
                 fontSize: '1.25rem',
-                fontFamily: 'var(--font-display)',
+                fontFamily: 'var(--font-heading)',
                 fontWeight: 700,
-                color: 'var(--color-forest-950)',
-                letterSpacing: '-0.015em',
+                color: 'var(--color-ink-950)',
               }}
             >
               {title}
@@ -108,12 +107,18 @@ export const Modal: React.FC<ModalProps> = ({
             {description ? (
               <p
                 id="modal-description"
-                style={{ fontSize: '0.875rem', color: 'var(--color-muted)', marginTop: '4px' }}
+                style={{
+                  fontSize: '0.8125rem',
+                  color: 'var(--color-muted)',
+                  marginTop: 'var(--space-1)',
+                  lineHeight: 1.45,
+                }}
               >
                 {description}
               </p>
             ) : null}
           </div>
+
           <button
             type="button"
             onClick={onClose}
@@ -121,21 +126,23 @@ export const Modal: React.FC<ModalProps> = ({
             style={{
               background: 'none',
               border: 'none',
-              cursor: 'pointer',
               color: 'var(--color-muted)',
-              padding: 'var(--space-2)',
-              borderRadius: 'var(--radius-pill)',
+              cursor: 'pointer',
+              padding: 'var(--space-1)',
+              borderRadius: 'var(--radius-sm)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              transition: 'background-color var(--transition-fast)',
+              transition: 'color var(--transition-fast)',
             }}
           >
             <X size={20} />
           </button>
         </div>
 
-        <div style={{ padding: 'var(--space-6)', overflowY: 'auto', flex: 1 }}>{children}</div>
+        <div style={{ padding: 'var(--space-6)', overflowY: 'auto' }}>
+          {children}
+        </div>
       </div>
     </div>
   );

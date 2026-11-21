@@ -1,246 +1,323 @@
-# SkillSwap — Premium Visual & Interaction Design System
+# SkillSwap — Ember Noir Premium Design System
 
-**Design direction:** Verdant Atelier — a warm, confident learning-exchange product with forest-green structure, soft parchment surfaces, jade accents, restrained terracotta warmth, and selective glassmorphism.
+**Design direction:** Ember Noir — a premium, expressive learning-community experience built around midnight ink, oxblood, deep crimson, vermilion, ember orange, and restrained golden highlights. Warm porcelain surfaces, editorial typography, deliberate composition, and selective glassmorphism keep the strong palette sophisticated and readable.
 
-This document replaces the previous minimal monochrome visual direction. It is the visual source of truth for the complete SkillSwap application. Apply it consistently to public pages, member workspace, messaging, sessions, moderator tools, and administration.
-
----
-
-## 1. Design intent
-
-### 1.1 Product personality
-SkillSwap should feel like a thoughtfully designed learning studio: welcoming, premium, calm, capable, and a little expressive. It should not look like a generic SaaS admin template or an automatically assembled AI dashboard.
-
-The visual language combines:
-- **Grounded structure:** deep evergreen navigation and clear page hierarchy.
-- **Warm surfaces:** ivory, parchment, and soft neutral backgrounds instead of flat grey.
-- **Fresh accents:** jade and sage for learning, progress, and selection.
-- **Human warmth:** restrained clay/terracotta and muted amber for highlights.
-- **Depth:** layered surfaces, subtle translucency, soft shadows, and selective glassmorphism.
-- **Editorial restraint:** strong typography, carefully composed sections, and varied layouts rather than repeated grids of identical cards.
-
-### 1.2 Intended visual impression
-The interface should feel finished and designed, not merely minimal. Each screen needs a deliberate composition: a clear focal point, a secondary information layer, and a calm background. Use color and depth to establish hierarchy, not decoration for its own sake.
-
-### 1.3 Design principles
-1. **Warm, not sterile:** use parchment and cream neutrals instead of a white-on-grey-only palette.
-2. **Distinctive, not loud:** use a strong evergreen foundation with a few warm accents.
-3. **Layered, not cluttered:** add depth through a small number of translucent or elevated surfaces.
-4. **Human, not synthetic:** avoid generic gradient blobs, random illustrations, stock-avatar walls, and AI-sounding copy.
-5. **Informative, not ornamental:** every visual treatment must clarify status, hierarchy, or action.
-6. **Consistent, not repetitive:** share a design system but vary page composition according to the task.
-
-### 1.4 Do not reproduce the current screenshot literally
-The current dashboard screenshot is useful as a structural reference, but its white sidebar, pale grey canvas, dark monochrome controls, thin plain cards, and blue browser-style focus outline make the interface feel unfinished and generic. The new design must visibly move beyond that appearance:
-- Replace the white sidebar with a deep evergreen navigation rail.
-- Replace the flat grey canvas with a warm parchment background and soft atmospheric color washes.
-- Replace plain outlined panels with a mix of elevated paper surfaces and selective frosted-glass surfaces.
-- Replace the default black CTA with a branded jade/evergreen treatment.
-- Replace the harsh blue active outline with a designed active-navigation state while retaining a clear accessible keyboard focus ring.
-- Give the dashboard more composition, warmth, and hierarchy without adding unnecessary content.
+**Visual source of truth:** This document replaces all earlier palettes and design directions. Apply it consistently to the public website, authentication, onboarding, member workspace, discovery, profiles, connections, messaging, sessions, reviews, moderation, and administration.
 
 ---
 
-## 2. Brand and art direction
+## 1. Design intent and product character
 
-### 2.1 Brand concept
-**SkillSwap — Share what you know. Discover what you don't.**
+### 1.1 Brand feeling
 
-SkillSwap is a reciprocal learning community, not a paid tutoring marketplace. The visual identity should communicate exchange, trust, curiosity, and growth.
+SkillSwap should feel like a confident, creative learning community: welcoming, ambitious, trustworthy, and carefully crafted. The visual language is warm and energetic without becoming loud, playful, or childish.
 
-### 2.2 Signature motif
-Use an understated **exchange-loop / interwoven path** motif. It can appear as:
-- A small geometric mark beside the wordmark.
-- A faint line motif in a hero background.
-- A subtle accent on empty states or section dividers.
+The design combines:
 
-Keep the mark simple enough to work at 18–24 px. Do not use a robot, brain, graduation cap, generic lightbulb, or sparkle cluster as the logo.
+- **Midnight foundation:** deep navy-black establishes structure, focus, and contrast.
+- **Oxblood depth:** wine and burgundy create an elevated, distinctive brand character.
+- **Crimson confidence:** deep red anchors primary actions and selected states.
+- **Ember energy:** vermilion and orange highlight discovery, momentum, and important moments.
+- **Golden warmth:** amber and sunlight yellow are used as small highlights, not as large text surfaces.
+- **Warm porcelain:** creamy neutral backgrounds make the saturated palette feel balanced and keep content readable.
+- **Selective glass:** translucent layers add depth to navigation, popovers, and a few feature surfaces.
+- **Editorial composition:** confident typography, asymmetrical layouts, intentional whitespace, and varied content structures replace generic dashboard grids.
 
-### 2.3 Brand lockup
-- Wordmark: `SkillSwap` in a semibold or bold weight.
-- Mark: two interlocking curved strokes or two offset leaf-like paths suggesting a reciprocal exchange.
-- Default lockup on the dark sidebar: warm white wordmark with a jade/amber mark.
-- Public-page lockup: deep evergreen wordmark with jade mark.
-- Do not stretch, rotate, outline, or apply glow to the wordmark.
+### 1.2 Design goals
 
-### 2.4 Visual references in words
-Think: a contemporary independent learning studio, a beautifully typeset editorial publication, and a calm boutique productivity product. Do not imitate any single commercial product or template.
+1. Make SkillSwap recognizable through the relationship between midnight, wine, crimson, ember, and gold.
+2. Communicate a reciprocal learning community rather than a paid tutoring marketplace.
+3. Make dashboards attractive while keeping actions, data, and status easy to scan.
+4. Give every page a deliberate visual composition instead of repeating identical card grids.
+5. Use glassmorphism only where layering improves hierarchy.
+6. Preserve WCAG contrast, keyboard access, and mobile usability.
+7. Use the supplied ten-color palette as the complete brand hue family; add only quiet neutral utility colors for legibility.
+
+### 1.3 What this design is not
+
+Avoid:
+
+- Flat white sidebar, grey canvas, and generic black buttons.
+- A page filled with identical white cards.
+- Red/orange gradients on every panel.
+- Neon outlines, glowing text, cyberpunk effects, or over-saturated backgrounds.
+- Bright orange or yellow with white small text.
+- Frosted glass behind dense tables, long paragraphs, or forms.
+- Random blobs, sparkles, floating 3D objects, and decorative emoji.
+- Excessive pills, huge rounded cards, or unnecessary animation.
+- Fake testimonials, fake members, fabricated ratings, or invented analytics.
+- Using red for every interaction, including destructive actions and ordinary navigation.
+
+### 1.4 Redesign direction
+
+Keep the existing product information architecture and useful navigation, but replace the entire old visual language:
+
+- Use a deep midnight-to-oxblood sidebar as the visual anchor.
+- Use warm porcelain or soft ivory for the main workspace.
+- Use a burgundy/crimson feature treatment for the dashboard welcome area.
+- Introduce ember and gold only as deliberate highlights.
+- Use neutral paper panels for dense information.
+- Use glass surfaces for floating layers and selected feature panels.
+- Give teach skills, learning goals, sessions, discovery, and alerts distinct but related semantic treatments.
+- Keep the interface confident and premium, not loud or cluttered.
+
+---
+
+## 2. Brand identity and art direction
+
+### 2.1 Brand idea
+
+**SkillSwap — Share what you know. Discover what’s next.**
+
+SkillSwap is a reciprocal learning community. Every member can be both a teacher and a learner. The design should communicate that each person brings value.
+
+### 2.2 Brand mark
+
+Use a compact exchange symbol built from two interlocking paths, offset loops, or directional strokes. It should suggest sharing, learning, and mutual movement.
+
+- Use the standalone mark only where space is limited.
+- Pair the mark with the `SkillSwap` wordmark in the sidebar and public header.
+- On dark surfaces, use a porcelain wordmark with a crimson-to-amber mark.
+- On light surfaces, use midnight ink for the wordmark and deep crimson for the mark.
+- Do not use a graduation cap, robot, brain, lightbulb, money symbol, or generic sparkle.
+
+### 2.3 Photography and avatars
+
+- Use member-uploaded avatars or neutral initials fallbacks.
+- Never imply generated portraits are real members.
+- Avoid random stock photography in dashboards.
+- Marketing photography, if used, should show authentic learning or collaboration with natural light and restrained warm color grading.
+- Do not apply heavy red/orange duotone filters to faces.
+- Skill category photography is optional; clear text labels are usually better.
+
+### 2.4 Iconography
+
+Use one coherent line-icon family such as Lucide.
+
+- Navigation: 20 px.
+- Inline actions: 16 px.
+- Form controls: 16–18 px.
+- Empty-state spot illustration: up to 28 px.
+- Default stroke: 1.8–2 px.
+- Icons support labels; they do not replace unfamiliar actions.
+- Avoid mixing filled, 3D, emoji, and outline icon styles.
 
 ---
 
 ## 3. Color system
 
-The palette is intentionally richer than the previous grey-and-muted-green scheme. Evergreen anchors the product; parchment keeps it warm; jade provides freshness; terracotta and amber create human warmth. Use colors by role, not randomly.
+The supplied Coolors palette is the exact brand hue source:
 
-### 3.1 Core palette
+`#03071E · #370617 · #6A040F · #9D0208 · #D00000 · #DC2F02 · #E85D04 · #F48C06 · #FAA307 · #FFBA08`
+
+The palette moves from midnight ink through wine, burgundy, crimson, vermilion, orange, and gold. It is intentionally bold. Use the darker values for structure and actions; reserve the brighter values for small, controlled highlights.
+
+### 3.1 Exact brand palette
 
 | Token | Hex | Role |
 |---|---|---|
-| `--color-forest-950` | `#142B28` | Deepest brand shade, sidebar and dark hero |
-| `--color-forest-900` | `#1B3934` | Main dark surfaces and headings on dark backgrounds |
-| `--color-forest-800` | `#245047` | Hover/active dark-surface states |
-| `--color-jade-700` | `#287565` | Primary brand action and links |
-| `--color-jade-600` | `#348777` | Main accent |
-| `--color-jade-100` | `#DCEDE6` | Selected surface and soft accent |
-| `--color-sage-100` | `#EAF0E8` | Soft supporting surface |
-| `--color-parchment` | `#F5F1E8` | Main page canvas |
-| `--color-paper` | `#FFFEFA` | Main card and form surface |
-| `--color-white` | `#FFFFFF` | High-contrast surface and reversed text |
-| `--color-ink` | `#1E2C29` | Main text |
-| `--color-ink-soft` | `#465650` | Secondary text |
-| `--color-muted` | `#75817A` | Metadata and helper text |
-| `--color-line` | `#E4E4D9` | Borders and dividers |
-| `--color-clay-600` | `#C96F55` | Warm highlight, badges, selected editorial accents |
-| `--color-clay-100` | `#F6E5DE` | Soft warm accent surface |
-| `--color-amber-600` | `#B9853F` | Important highlight and small decorative accents |
-| `--color-amber-100` | `#F5EBD7` | Warm information surface |
-| `--color-sky-700` | `#527C91` | Secondary data visualization accent |
-| `--color-sky-100` | `#E2EEF2` | Secondary cool information surface |
-| `--color-danger` | `#B34E4A` | Errors and destructive actions |
-| `--color-danger-soft` | `#F8E7E4` | Error background |
-| `--color-success` | `#32745A` | Success status |
-| `--color-success-soft` | `#E2F0E7` | Success background |
-| `--color-warning` | `#A8752D` | Warning status |
-| `--color-warning-soft` | `#F7EEDB` | Warning background |
-| `--color-focus` | `#76A9D5` | Visible keyboard focus on light and dark surfaces |
+| `--color-ink-950` | `#03071E` | Deepest brand ink; sidebar base, dark hero text |
+| `--color-wine-900` | `#370617` | Wine surface; sidebar depth and dark panels |
+| `--color-burgundy-800` | `#6A040F` | Deep burgundy; strong hover and feature surface |
+| `--color-crimson-700` | `#9D0208` | Primary brand action; active navigation marker |
+| `--color-crimson-600` | `#D00000` | High-emphasis crimson; links and selected accents |
+| `--color-vermilion-600` | `#DC2F02` | Warm action accent and prominent highlights |
+| `--color-ember-600` | `#E85D04` | Discovery and editorial accent |
+| `--color-orange-500` | `#F48C06` | Warm highlight and progress detail |
+| `--color-amber-500` | `#FAA307` | Small accent, selected marker, chart series |
+| `--color-gold-400` | `#FFBA08` | Tiny highlight and decorative emphasis |
 
-### 3.2 Signature gradients
-Gradients are allowed and encouraged in a controlled way. Use them as a brand layer, not as a default background for every component.
+### 3.2 Neutral utility palette
+
+These are supporting neutrals, not additional brand hues. They exist to keep long-form content and app surfaces easy to read.
+
+| Token | Hex | Role |
+|---|---|---|
+| `--color-paper` | `#FAF7F4` | Main authenticated canvas |
+| `--color-paper-warm` | `#F3ECE7` | Alternate section background |
+| `--color-surface` | `#FFFEFC` | Cards, form surfaces, menus |
+| `--color-surface-raised` | `#FFFFFF` | Dialogs and elevated content |
+| `--color-line` | `#E8DDD7` | Borders and separators |
+| `--color-ink-soft` | `#282435` | Body text and headings on light surfaces |
+| `--color-muted` | `#726A70` | Secondary metadata |
+| `--color-muted-light` | `#91878A` | Nonessential metadata only |
+| `--color-focus` | `#9D0208` | Keyboard focus on light surfaces |
+| `--color-focus-dark` | `#FFBA08` | Keyboard focus on dark surfaces |
+
+### 3.3 Semantic color roles
+
+| UI purpose | Main treatment | Supporting treatment |
+|---|---|---|
+| Primary action | Crimson 700 `#9D0208` with white text | Burgundy hover |
+| Brand / selected navigation | Crimson 700 | Pale warm red tint |
+| Teach / contribution | Burgundy or crimson | Soft blush utility tint |
+| Want to learn / discovery | Ember or vermilion | Pale apricot utility tint |
+| Session due soon | Ember / orange | Pale amber utility tint |
+| Completed session | Midnight ink text with gold marker | Pale warm neutral |
+| Informational | Midnight ink | Warm porcelain |
+| Warning | Ember `#E85D04` with dark ink | Pale amber utility tint |
+| Destructive / error | Crimson `#D00000` or burgundy | Pale red utility tint |
+| Selected highlight | Amber or gold marker | Pale warm neutral |
+
+Rules:
+
+- Use `#9D0208`, `#6A040F`, `#370617`, or `#03071E` for controls that need white text.
+- Do not put small white text on `#DC2F02`, `#E85D04`, `#F48C06`, `#FAA307`, or `#FFBA08`; use dark ink text on bright surfaces.
+- Do not use gold as a large paragraph or button-label color on white.
+- Use muted text for secondary metadata only, never for essential instructions.
+- Every status includes a readable text label; never rely on color alone.
+- Reserve `#D00000` for important emphasis, not every link or icon.
+- Red is a brand color in this system; destructive actions must still use a clear label, confirmation, and icon/context so users understand the consequence.
+- Verify actual contrast pairs in the rendered application before release.
+
+### 3.4 Color balance
+
+For a typical authenticated desktop page, use this as a loose guide:
+
+- 58–68% warm paper, porcelain, or white surfaces.
+- 15–22% deep ink, wine, or burgundy framing.
+- 5–9% crimson brand actions and selected details.
+- 4–7% vermilion and ember highlights.
+- 1–4% orange, amber, and gold details combined.
+
+Do not count mechanically. The goal is an intentional warm-neutral canvas with rich dark structure and a few memorable warm accents.
+
+### 3.5 Brand gradients
+
+Use gradients on large intentional surfaces, not every card.
 
 | Token | CSS value | Use |
 |---|---|---|
-| `--gradient-brand` | `linear-gradient(120deg, #1B3934 0%, #287565 58%, #57917B 100%)` | Primary CTA, hero panel, selected feature areas |
-| `--gradient-sidebar` | `linear-gradient(180deg, #142B28 0%, #1B3934 55%, #20473F 100%)` | Main app sidebar |
-| `--gradient-warm` | `linear-gradient(120deg, #F5F1E8 0%, #F3E9DC 52%, #E8F0E8 100%)` | Marketing backgrounds and restrained content washes |
-| `--gradient-clay` | `linear-gradient(120deg, #C96F55 0%, #D58B66 100%)` | Occasional highlight or small decorative detail |
+| `--gradient-brand` | `linear-gradient(118deg, #03071E 0%, #370617 48%, #9D0208 100%)` | Dashboard welcome hero and major brand panel |
+| `--gradient-sidebar` | `linear-gradient(180deg, #03071E 0%, #370617 62%, #6A040F 100%)` | Authenticated sidebar |
+| `--gradient-crimson` | `linear-gradient(110deg, #6A040F 0%, #9D0208 100%)` | Primary feature action or small hero accent |
+| `--gradient-ember` | `linear-gradient(110deg, #D00000 0%, #DC2F02 55%, #E85D04 100%)` | Narrow accent strip, progress or editorial highlight |
+| `--gradient-gold` | `linear-gradient(110deg, #F48C06 0%, #FAA307 55%, #FFBA08 100%)` | Decorative micro-accent only; dark text if text is needed |
+| `--gradient-soft` | `linear-gradient(135deg, #FAF7F4 0%, #F3ECE7 58%, #F8E7DF 100%)` | Low-contrast workspace wash |
 
-Rules:
-- Use no more than one prominent gradient area per viewport.
-- Keep text contrast strong on gradient surfaces.
-- Never use rainbow, neon, or purple-blue AI-style gradients.
-- Do not put gradients inside every card, button, and badge.
+Gradient rules:
 
-### 3.3 Background atmosphere
-The main app canvas may use a very subtle layered background, for example:
+- One major gradient area per viewport is usually enough.
+- Use the brand gradient for the welcome hero or one large landing-page region.
+- Use the ember gradient as a narrow highlight, not a full page background.
+- Never use the gold gradient behind white text.
+- Avoid rainbow effects, neon glow, and high-contrast gradients behind dense content.
+- Important text on dark gradients must use a verified light color.
+
+### 3.6 Workspace atmosphere
+
+Keep the main workspace mostly solid. Add barely visible warm ambient light for depth.
 
 ```css
 .app-canvas {
   background:
-    radial-gradient(ellipse at 88% 4%, rgba(52, 135, 119, 0.09), transparent 28rem),
-    radial-gradient(ellipse at 18% 78%, rgba(201, 111, 85, 0.055), transparent 26rem),
-    var(--color-parchment);
+    radial-gradient(ellipse at 94% 0%, rgba(220, 47, 2, 0.045), transparent 30rem),
+    radial-gradient(ellipse at 4% 82%, rgba(106, 4, 15, 0.035), transparent 26rem),
+    var(--color-paper);
 }
 ```
 
-Keep the washes low-opacity and behind content. They must not reduce text contrast, compete with charts, or look like floating blobs.
-
-### 3.4 Color balance guideline
-For a typical authenticated desktop screen, target approximately:
-- 55–65% parchment/cream/white surfaces.
-- 20–25% evergreen/dark brand surfaces.
-- 8–12% jade/sage accents.
-- 3–6% warm clay/amber accents.
-
-This is a visual guide, not a strict measurement. Do not let accent colors dominate the page.
-
-### 3.5 Semantic color rules
-- Jade: primary action, selected state, positive learning progress, links.
-- Clay: attention, warm emphasis, selected editorial accents; not success or error.
-- Amber: due soon, caution, important reminders.
-- Sky: secondary information and chart series.
-- Red: errors, destructive actions, suspended status.
-- Green: success and completed states.
-
-Every semantic status must include a readable label or icon. Never communicate meaning through color alone.
+Do not create obvious background blobs, glowing spots, or patterns behind dense content.
 
 ---
 
-## 4. Typography
+## 4. Typography system
 
 ### 4.1 Font pairing
-Use a restrained two-family system:
-- **Headings and display:** `Manrope`, with `ui-sans-serif` fallback.
-- **Body and interface:** `DM Sans`, with `ui-sans-serif` fallback.
 
-Recommended CSS stack:
+Use:
+
+- **Headings:** `Manrope`, fallback to `ui-sans-serif, system-ui`.
+- **Body and interface:** `Inter`, fallback to `ui-sans-serif, system-ui`.
 
 ```css
---font-display: "Manrope", "Avenir Next", ui-sans-serif, system-ui, sans-serif;
---font-body: "DM Sans", Inter, ui-sans-serif, system-ui, sans-serif;
+--font-heading: "Manrope", ui-sans-serif, system-ui, sans-serif;
+--font-body: Inter, ui-sans-serif, system-ui, sans-serif;
 ```
 
-Load fonts locally or through an approved font provider. If fonts cannot load, the interface must remain visually stable with system fallbacks. Do not use more than two font families.
+Load fonts from an approved provider or package them locally where licensing permits. If a font fails to load, system fallbacks must remain visually sound. Do not use more than two font families.
 
 ### 4.2 Type scale
 
 | Style | Size | Weight | Line height | Usage |
 |---|---:|---:|---:|---|
-| Display | 48–56 px | 700 | 1.08 | Marketing hero only |
-| H1 | 34–38 px | 700 | 1.15 | Main workspace page title |
-| H2 | 25–28 px | 650 | 1.22 | Main section headings |
-| H3 | 18–20 px | 650 | 1.3 | Panel and card headings |
-| H4 | 15–16 px | 650 | 1.35 | Small subsection headings |
-| Body large | 17 px | 400 | 1.55 | Hero supporting text |
-| Body | 14–15 px | 400 | 1.55 | Default content |
-| Body small | 12–13 px | 400 | 1.5 | Supporting metadata |
-| Label | 11–12 px | 650 | 1.3 | Form labels and overlines |
+| Display | 48–60 px | 700 | 1.05–1.12 | Public hero only |
+| H1 | 32–38 px | 700 | 1.15 | Main page title |
+| H2 | 24–28 px | 700 | 1.2 | Primary sections |
+| H3 | 18–20 px | 650 | 1.3 | Panels and cards |
+| H4 | 15–16 px | 650 | 1.35 | Subsections |
+| Body large | 16–18 px | 400 | 1.55 | Hero and lead text |
+| Body | 14–15 px | 400 | 1.55 | Standard content |
+| Body small | 12–13 px | 400 | 1.45 | Metadata |
+| Label | 11–12 px | 650 | 1.3 | Field labels and overlines |
 | Button | 13–14 px | 650 | 1 | Buttons |
 
 ### 4.3 Typography rules
-- Use sentence case for navigation and headings.
-- Use tabular numerals for counts, ratings, dates, and analytics.
-- Headlines should be confident but not oversized on operational screens.
-- Use bold to establish hierarchy, not to emphasize every phrase.
-- Keep paragraphs to a readable measure, ideally 55–80 characters per line.
-- Avoid ultra-light weights, all-caps body copy, and condensed display fonts.
-- Do not use letter spacing as a substitute for good hierarchy.
+
+- Use sentence case for headings and navigation.
+- Use tabular numerals for metrics, dates, timestamps, and ratings.
+- Establish hierarchy through type size, weight, and spacing before adding color.
+- Keep paragraphs around 55–80 characters per line where practical.
+- Avoid all-caps paragraphs, ultra-light body text, and oversized headings on operational screens.
+- Use bold sparingly; do not bold entire paragraphs.
 
 ---
 
-## 5. Layout system and app shell
+## 5. Layout and application shell
 
-### 5.1 Grid and content widths
-- Maximum desktop workspace width: 1440 px.
-- Standard reading width: 680–760 px.
-- Wide dashboard content: 1180–1280 px where available.
-- Desktop sidebar: 256 px expanded; 84 px compact only if compact mode is actually implemented.
+### 5.1 Grid and dimensions
+
+- Maximum wide workspace content: 1320 px.
+- Typical dashboard content: 1120–1240 px.
+- Reading width: 680–760 px.
+- Desktop sidebar: 252–264 px expanded.
 - Topbar: 72 px high.
 - Desktop content gutters: 36–44 px.
 - Tablet gutters: 24 px.
 - Mobile gutters: 16–20 px.
+- Use a 12-column grid for marketing and complex admin pages; use simpler two-column layouts for profiles and settings.
 
-### 5.2 Main app shell
-Use a composed two-region shell:
-1. **Evergreen sidebar:** full-height, subtle gradient, wordmark at top, navigation grouped by purpose, profile area at bottom.
-2. **Workspace:** warm atmospheric canvas, translucent topbar, page content aligned to a consistent content grid.
+### 5.2 App shell
 
-The sidebar should feel like an intentional brand anchor, not a generic white panel. It may use a slight inner highlight or a very subtle border on its right edge.
+The authenticated shell has two primary regions:
 
-### 5.3 Sidebar specification
+1. Midnight/wine sidebar as the brand anchor.
+2. Warm paper workspace with a translucent topbar and carefully aligned page content.
+
+Each page should have a deliberate composition and one clear visual focal point. Do not force every page into the same layout.
+
+### 5.3 Sidebar
+
 - Background: `--gradient-sidebar`.
-- Wordmark: warm white; brand mark in jade or muted amber.
-- Primary nav text: `rgba(255,255,255,.78)`.
-- Inactive icon: `rgba(226,237,230,.72)`.
-- Hover background: `rgba(255,255,255,.075)`.
-- Active background: `rgba(220,237,230,.14)` with a slim jade/cream marker.
+- Width: 252–264 px.
+- Wordmark: warm white; exchange mark uses crimson and amber.
+- Inactive label: `rgba(255, 250, 247, .76)`.
+- Inactive icon: `rgba(255, 230, 220, .68)`.
+- Hover background: `rgba(255, 255, 255, .07)`.
+- Active background: `rgba(208, 0, 0, .18)`.
+- Active marker: slim `#FFBA08` or `#F48C06` line.
 - Active label: white, semibold.
-- Active icon: soft jade or pale mint.
-- Divider: `rgba(255,255,255,.12)`.
-- Profile footer: slightly lighter translucent dark surface with avatar, name, role, and sign-out control.
-- Keep hit areas at least 44 px high.
+- Active icon: white or pale warm neutral.
+- Dividers: `rgba(255, 255, 255, .12)`.
+- Profile footer: translucent wine panel with avatar, display name, role, and logout.
+- Minimum navigation item height: 44 px.
 
-Do not place a bright blue rectangle around the active item. Use a designed translucent highlight and a slim accent marker. Keyboard focus must remain distinct and visible (see Accessibility).
+Do not use a bright orange block behind every active item. Keep focus rings distinct from selected states.
 
-### 5.4 Topbar specification
-- Sticky at the top of the workspace.
-- Background: `rgba(255, 254, 250, 0.78)`.
-- `backdrop-filter: blur(18px) saturate(145%)` with a solid fallback.
-- Bottom border: `rgba(228,228,217,.75)`.
-- Contains page context or breadcrumb on the left and notification/profile actions on the right.
-- Avoid a second large logo in the workspace if the sidebar already holds the brand.
+### 5.4 Topbar
+
+- Sticky to workspace top.
+- Background: `rgba(255, 254, 252, .78)`.
+- Backdrop blur: 14–20 px.
+- Bottom border: `rgba(232, 221, 215, .82)`.
+- Left side: page title, breadcrumb, or compact context.
+- Right side: notification control and member menu.
+- Keep height and alignment consistent across authenticated routes.
+- Provide a solid warm-white fallback when backdrop filters are unsupported.
 
 ### 5.5 Spacing scale
-Use a 4 px base unit.
+
+Use a 4 px base unit and an 8 px rhythm for larger layout decisions.
 
 | Token | Value |
 |---|---:|
@@ -256,174 +333,231 @@ Use a 4 px base unit.
 | `--space-16` | 64 px |
 | `--space-20` | 80 px |
 
-Spacing rules:
-- Page title to supporting text: 8–12 px.
-- Page header to first content area: 28–36 px.
-- Section separation: 36–48 px.
-- Form field separation: 16–20 px.
-- Dense list row padding: 14–18 px.
-- Card internal padding: 22–28 px desktop, 16–20 px mobile.
-- Keep related controls close; use whitespace to separate unrelated groups.
+Use 40–48 px between major dashboard sections, 16–24 px inside standard panels, and 16–20 px between form fields.
 
 ---
 
-## 6. Glassmorphism, surfaces, and depth
+## 6. Surface, glassmorphism, borders, and elevation
 
-Glassmorphism is a signature part of this visual direction, but it must be selective. Too much blur makes the UI look like a template and reduces legibility.
+### 6.1 Surface families
 
-### 6.1 Where glass is allowed
-Use frosted glass for:
-- Topbar.
-- Notification popover.
-- Dropdown menus.
-- Filter popovers.
-- Modal backplates and selected floating panels.
-- A small number of dashboard summary surfaces.
-- Floating contextual controls over a page background.
+Use three surface families:
 
-### 6.2 Where glass should not be used
-Do not use glass for:
-- Every content card.
-- Long text and message bodies.
-- Dense data tables.
-- Form fields with long labels or validation text.
-- High-density admin screens.
-- Anything that must remain highly readable under all display conditions.
+**Paper surface**
+- White or warm porcelain background.
+- Fine warm-neutral border.
+- Minimal shadow.
+- Used for forms, tables, message history, dense information, and standard panels.
 
-### 6.3 Glass tokens
+**Tinted surface**
+- Pale blush, pale apricot, or warm neutral background.
+- Used to group skill types, highlight summaries, or distinguish secondary context.
+- Use sparingly; do not tint every component.
+
+**Glass surface**
+- Translucent warm-white or midnight/wine layer.
+- Backdrop blur and subtle border.
+- Used for the topbar, popovers, notifications, floating controls, selected overview panels, and a few hero overlays.
+- Never used for long-form text or dense tables.
+
+### 6.2 Glassmorphism specification
+
+Use glass as a layering technique, not as a theme applied everywhere.
+
+Light glass:
 
 ```css
-:root {
-  --glass-bg: rgba(255, 254, 250, 0.68);
-  --glass-bg-strong: rgba(255, 254, 250, 0.84);
-  --glass-border: rgba(255, 255, 255, 0.74);
-  --glass-shadow: 0 14px 40px rgba(23, 49, 43, 0.10);
-  --glass-blur: 18px;
-}
-
-.glass-surface {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
-  backdrop-filter: blur(var(--glass-blur)) saturate(145%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+.glass-light {
+  background: rgba(255, 254, 252, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 36px rgba(3, 7, 30, 0.08);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
 }
 ```
 
-Always include a readable opaque fallback when `backdrop-filter` is unsupported or disabled. Avoid placing text over complex moving content. Blur should be around 12–22 px, not extreme.
+Dark glass:
 
-### 6.4 Standard surfaces
-Use three clear surface levels:
-1. **Canvas:** parchment with subtle color atmosphere.
-2. **Paper surface:** warm white, a quiet border, and soft ambient shadow.
-3. **Floating surface:** frosted glass, stronger elevation, and clear boundary.
+```css
+.glass-dark {
+  background: rgba(55, 6, 23, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 16px 44px rgba(3, 7, 30, 0.24);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+}
+```
 
-Not every content group needs a card. Use open layouts, dividers, and typography where a card would add no value.
+Glass rules:
 
-### 6.5 Shadows and borders
+- Use blur between 12 and 20 px in most cases.
+- Keep opacity high enough for readable contrast.
+- Use only one glass layer; do not stack several blurred surfaces.
+- Menus and popovers need solid fallbacks.
+- Test text against the actual rendered background.
+- Do not apply backdrop-filter to every card, list row, or form.
+- Keep dense content on solid paper surfaces.
 
-| Token | Value | Use |
-|---|---|---|
-| `--shadow-soft` | `0 4px 16px rgba(23,49,43,.055)` | Standard paper surface |
-| `--shadow-card` | `0 10px 28px rgba(23,49,43,.075)` | Featured panel or member card |
-| `--shadow-float` | `0 16px 44px rgba(23,49,43,.14)` | Popover and menu |
-| `--shadow-modal` | `0 24px 72px rgba(13,31,27,.22)` | Dialog |
+### 6.3 Shape and radius
 
-- Prefer delicate borders plus low-opacity shadows.
-- Avoid heavy dark shadows and multiple nested shadow layers.
-- Borders should usually be warm neutral, not pure grey.
+| Element | Radius |
+|---|---:|
+| Small control | 7 px |
+| Input / button | 9 px |
+| Standard card | 14 px |
+| Feature panel | 18 px |
+| Large hero panel | 22 px |
+| Dialog | 18 px |
+| Avatar | 50% |
+| Small tag | 6 px |
 
-### 6.6 Radius scale
+Avoid making every control a full pill. Pills are reserved for compact filters, status chips, and selected tags where the shape improves recognition.
 
-| Token | Value | Usage |
-|---|---:|---|
-| `--radius-xs` | 6 px | Small tags and compact controls |
-| `--radius-sm` | 9 px | Inputs and small buttons |
-| `--radius-md` | 14 px | Standard buttons and small panels |
-| `--radius-lg` | 18 px | Content panels and cards |
-| `--radius-xl` | 24 px | Hero and featured surfaces |
-| `--radius-pill` | 999 px | Avatar/status dot and deliberately pill-shaped chips |
+### 6.4 Elevation
 
-Do not round every element into a pill. Reserve large radii for larger surfaces.
+Prefer borders and surface contrast. Use shadows only to separate layers.
+
+```css
+--shadow-xs: 0 1px 2px rgba(3, 7, 30, .04);
+--shadow-sm: 0 4px 14px rgba(3, 7, 30, .06);
+--shadow-md: 0 10px 28px rgba(3, 7, 30, .09);
+--shadow-lg: 0 18px 48px rgba(3, 7, 30, .14);
+--shadow-popover: 0 16px 42px rgba(3, 7, 30, .16);
+```
 
 ---
 
-## 7. Buttons and interactive controls
+## 7. Core component specifications
 
-### 7.1 Button variants
+### 7.1 Buttons
 
-**Primary — Jade gradient**
-- Background: `--gradient-brand`.
-- Text: white.
-- Soft shadow: subtle jade-tinted shadow.
-- Hover: slightly brighter, lift by at most 1 px.
-- Pressed: return to baseline and darken slightly.
-- Use for the principal action on a page.
+**Primary:** crimson 700 `#9D0208` fill, white label, subtle shadow. Hover uses burgundy `#6A040F`. Use a gradient only for a large feature CTA when it materially improves the composition.
 
-**Secondary — Paper outline**
-- Background: warm white or translucent paper.
-- Text: forest.
-- Border: warm neutral.
-- Hover: sage tint and jade border.
+**Secondary:** white/porcelain fill, midnight text, warm border.
 
-**Tertiary — Quiet text action**
-- No filled background.
-- Jade or forest text.
-- Underline only where it clarifies link behavior.
+**Tertiary:** text action with burgundy or crimson label; no container.
 
-**Warm accent — Clay**
-- Use sparingly for one promotional or low-risk secondary action, never as the main destructive style.
-- Ensure text contrast.
+**Dark:** midnight or wine fill with white label for prominent actions on light surfaces.
 
-**Destructive**
-- Danger text or danger-soft background for secondary destructive actions.
-- Solid danger fill only for explicit final confirmation.
+**Warm accent:** ember/orange background only for a special secondary action, with midnight text. Never use small white text on orange or gold.
 
-### 7.2 Button dimensions
-- Compact: 32–34 px high.
-- Standard: 40–44 px high.
-- Prominent: 48 px high.
-- Horizontal padding: 14–20 px.
-- Minimum mobile touch target: 44 × 44 px.
+**Destructive:** deep crimson fill or text, with confirmation for consequential actions.
 
-### 7.3 Button behavior
-- Use verb-first labels: “Send request”, “Save profile”, “Confirm session”.
-- Include loading state and prevent double submission.
-- Disabled controls must have a nearby explanation.
-- Keep one clear primary action per section.
-- Do not use icon-only buttons unless the icon is universally understood and an accessible name is supplied.
+Sizes:
+- Small: 32–34 px high.
+- Default: 40–44 px high.
+- Large: 48 px high.
 
-### 7.4 Inputs and forms
-- Standard input height: 44 px.
-- Textarea minimum height: 112 px.
-- Background: white or translucent paper with adequate opacity.
+Rules:
+- Button labels start with verbs: “Send request”, “Save changes”, “Confirm session”.
+- One primary button per main section where possible.
+- Include hover, active, focus, disabled, and loading states.
+- Prevent duplicate submissions.
+
+### 7.2 Inputs and forms
+
+- Default height: 42–44 px.
+- Textarea minimum height: 104 px.
+- Background: white or warm porcelain.
 - Border: `--color-line`.
-- Focus: jade border with a soft ring, not an oversized browser-default blue box.
-- Labels remain visible above the input; placeholders are examples only.
-- Helper text uses muted ink and remains readable.
-- Error text and field association must be accessible.
-- On focus, avoid dramatic scale or glow effects.
+- Focus: 2 px crimson ring with a subtle outer halo.
+- Labels are always visible; placeholders are examples only.
+- Helper text sits below the field.
+- Errors appear beside the affected field and are programmatically associated.
+- Preserve user-entered values when server validation fails.
+- Use field groups and short section headings for long forms.
 
-### 7.5 Selects, search, and filters
-- Search fields may include a leading search icon and a clear action.
-- Use compact filter chips with soft jade/clay backgrounds and text labels.
-- Active filters must be visible and removable.
-- Provide “Clear filters” when more than one filter is active.
-- Menus should use the frosted floating-surface style, but retain an opaque fallback.
+### 7.3 Cards and panels
 
-### 7.6 Skill chips
-- “Can teach” uses jade/sage treatment.
-- “Wants to learn” uses clay/amber treatment.
-- Level is a text label: Beginner, Intermediate, Advanced.
-- Keep chips compact and rectangular with 7–10 px radius.
-- Do not imply skill verification or proficiency scoring.
+- Use white surfaces for content needing maximum legibility.
+- Use pale blush or apricot panels for skill types and selected summaries.
+- Use dark gradient panels only for a small number of high-value areas, especially the dashboard hero.
+- Avoid nested cards.
+- Use lists and dividers when a card wrapper adds no information.
+
+### 7.4 Skill tags
+
+- “Can teach” uses deep burgundy/crimson text with a pale blush surface.
+- “Wants to learn” uses deep wine text with a pale apricot surface.
+- Skill level is a text label: Beginner, Intermediate, Advanced.
+- Use compact tags with clear contrast.
+- Never imply a self-selected skill level is independently verified.
+
+### 7.5 Member cards and rows
+
+Prioritize:
+
+1. Avatar or initials.
+2. Name and short introduction.
+3. Relevant reciprocal skill information.
+4. Availability summary when permitted.
+5. One clear action.
+
+Avoid showing exact weekly availability or private contact details to strangers unless the member explicitly chooses to share them.
+
+### 7.6 Status badges
+
+Use compact status chips with pale semantic backgrounds and dark readable labels. Include text for every state. Examples: Pending, Confirmed, Completed, Cancelled, Needs review, Suspended.
+
+- Pending: pale amber with midnight text.
+- Confirmed: pale warm neutral with burgundy marker.
+- Completed: pale gold with midnight text.
+- Cancelled: pale blush with burgundy text.
+- Error/suspended: pale red with deep crimson text.
+
+### 7.7 Tables
+
+- White or porcelain surface.
+- Quiet warm-neutral horizontal separators.
+- Dark readable headings.
+- Compact rows with consistent padding.
+- Actions aligned in a predictable final column.
+- Use sticky headers only when table height warrants it.
+- On mobile, reflow into labelled stacked records or contain horizontal scroll inside the table region.
+
+### 7.8 Dialogs and popovers
+
+- Use glass treatment for floating menus when it improves layering.
+- Use a solid or mostly solid dialog body for forms and important decisions.
+- Include title, explanation, and clear action hierarchy.
+- Escape closes non-destructive dialogs.
+- Focus is managed and returned to the trigger after closing.
+- Destructive dialog copy explains the exact consequence.
+
+### 7.9 Notifications and toasts
+
+- Notification popover may use light glass.
+- Each item includes a clear title, short context, and timestamp.
+- Unread state uses a small crimson or amber marker.
+- Toasts are concise and specific: “Connection request sent.”
+- Errors requiring action remain inline; do not rely only on a disappearing toast.
+
+### 7.10 Charts
+
+- Series order: midnight, burgundy, crimson, ember, gold.
+- Use the minimum number of series necessary.
+- Keep grid lines subtle.
+- Use clear axis labels, legends, and date ranges.
+- Avoid 3D charts and decorative charts with no useful meaning.
+- Provide a textual summary or accessible data alternative.
+- Use real values; never invent analytics.
 
 ---
 
 ## 8. Navigation and information architecture
 
-### 8.1 Member navigation
+### 8.1 Public navigation
+
+- Wordmark on the left.
+- Links: How it works, Explore skills (only if public browsing is supported), Sign in.
+- Primary action: “Create your profile”.
+- Use a transparent or warm-white nav over the landing hero; switch to solid when needed for readability.
+- Mobile uses an accessible menu with expanded state announced to assistive technology.
+
+### 8.2 Member navigation
+
 Recommended order:
+
 - Overview
 - Discover
 - Connections
@@ -433,411 +567,273 @@ Recommended order:
 - Profile
 - Settings
 
-### 8.2 Staff navigation
+Use icons from one icon family. Active item gets a translucent crimson background and a narrow gold or orange marker on the dark sidebar.
+
+### 8.3 Staff navigation
+
 - Overview
 - Reports
 - Members
 - Analytics
 - Activity log
 
-### 8.3 Navigation styling
-- Use a consistent line-icon family (Lucide is acceptable).
-- Icon size: 18–20 px.
-- Navigation item height: 44–48 px.
-- Use clear text labels; do not use icon-only desktop navigation.
-- Sidebar active state: translucent sage/white layer, slim jade indicator, white label.
-- Use quiet group labels only where they improve scanning.
-
-### 8.4 Mobile navigation
-- Collapse the desktop sidebar below 900 px.
-- Use a compact bottom navigation for the 4–5 most-used member destinations.
-- Put remaining destinations in an accessible “More” panel.
-- Ensure the bottom bar respects device safe areas.
-- Do not hide essential actions on hover.
+Staff navigation remains visually related to the member shell but may use a small “Staff workspace” label. Do not create a completely unrelated theme.
 
 ---
 
-## 9. Dashboard composition — new visual target
+## 9. Screen-by-screen design direction
 
-The current dashboard must be redesigned with the following composition. Do not simply recolor the existing empty panels.
+### 9.1 Landing page
 
-### 9.1 Page header
-- Greeting and short contextual sentence on the left.
-- Primary action “Discover partners” on the right.
-- Page title in forest ink; supporting line in muted ink.
-- Optional small eyebrow such as “YOUR LEARNING SPACE” in jade, with restrained letter spacing.
-- Divider is subtle or omitted if spacing already separates the sections.
+Create an editorial hero with a split composition rather than a generic centered heading above a grid of cards.
 
-### 9.2 Welcome/hero panel
-Use a wide, featured panel near the top of the page:
-- Dark evergreen-to-jade gradient.
-- 22–26 px radius.
-- White title and supporting text.
-- A small, understated exchange-loop motif on the far right.
-- Optional small label such as “YOUR SKILLS, IN MOTION”.
-- Do not use a giant decorative blob or stock illustration.
-- Include one primary action and at most one secondary text link.
+- Left: strong headline, concise explanation, primary and secondary CTAs.
+- Right: a visual composition illustrating reciprocal skill exchange using real product UI fragments or a carefully designed abstract exchange motif.
+- Hero backdrop: midnight-to-wine-to-crimson gradient.
+- Add a small ember/gold detail as a finishing accent, not a large yellow block.
+- Explain the three steps: list skills, find a partner, arrange a session.
+- State clearly that SkillSwap does not process payments or host video calls.
+- Do not invent testimonials, member counts, or success statistics.
 
-### 9.3 At-a-glance metrics
-Use a compact row of 3–4 meaningful metrics when data exists:
-- Skills listed.
-- Active connections.
-- Upcoming sessions.
-- Sessions completed.
+### 9.2 Authentication
 
-Each metric should have a clear label, value, and small context line. Use different subtle accent treatments, but no rainbow row of colored cards. If no data exists, show genuine zero states rather than invented values.
+- Use a split layout on desktop: warm porcelain form area and midnight/wine brand panel.
+- On mobile, place the brand mark and short message above the form.
+- Form surfaces remain solid and highly readable.
+- Use crimson for the primary submit action.
+- Validation, password visibility, loading, and error states must work.
 
-### 9.4 Skills overview
-- Use a balanced two-column composition on desktop: “Skills I can teach” and “Skills I want to learn”.
-- Give each side its own semantic chip color (jade vs clay/amber).
-- Include counts and a direct “Manage skills” action.
-- Empty states should guide the user to add the first skill.
-- Avoid large blank card containers with only a single sentence in the middle.
+### 9.3 Member dashboard
 
-### 9.5 Suggested partners
-- Prefer a list or a varied 2-column set of member cards over identical full-width boxes.
-- Show avatar/initials, name, short context, mutual skill exchange reason, level, and a clear action.
-- Match explanation should be written in human language (“You can teach Figma; Noor wants to learn it. Noor can teach Excel, which is on your list.”).
-- Do not display a compatibility percentage unless its scoring and interpretation are approved and clearly explained.
+The dashboard is a signature screen, but it must remain useful.
 
-### 9.6 Upcoming sessions
-- Use a compact timeline or agenda list.
-- Show date block, topic, partner, local time, and status.
-- Make the next upcoming session visually distinct with a soft jade surface.
-- Include a useful empty state with a “Find a partner” route.
+**Welcome hero**
+- Wide midnight/wine/crimson gradient panel.
+- Personalized greeting and short supporting sentence.
+- Primary “Discover partners” action.
+- Secondary link to manage skills.
+- Use restrained amber/orange exchange motif or a small glow detail.
+- Do not put every metric inside the hero.
 
-### 9.7 Visual rhythm
-Use a mix of full-width hero, compact metrics, split skill areas, member rows/cards, and an agenda. Do not repeat the same card geometry for every section.
+**Metric summary**
+- Show real values: skills listed, active connections, upcoming sessions, completed sessions.
+- Use distinct but related metric treatments; avoid four identical oversized cards.
+- Include labels and useful time context where relevant.
 
----
+**Skills overview**
+- Two-column desktop composition: Can teach and Wants to learn.
+- Can teach: pale blush surface and burgundy/crimson accents.
+- Wants to learn: pale apricot surface and ember accents.
+- On mobile, stack sections.
 
-## 10. Screen-specific design rules
+**Suggested partners**
+- Use elegant member rows or varied feature cards.
+- Show avatar/initials, name, short bio, reciprocal skill match, level, and one clear action.
+- Explain why the match is suggested.
+- Use actual returned members only.
 
-### 10.1 Public landing page
-- Use a warm parchment background with a dark evergreen hero or a split hero composition.
-- Headline: “Learn something new. Teach what you know.” or an equally clear alternative.
-- Supporting copy explains reciprocal exchange in plain language.
-- Main CTA: “Create your profile”. Secondary action: “See how it works”.
-- Use a single contextual image or simple custom diagram only if it adds meaning.
-- Use a 3-step process: list your skills, find a partner, arrange a session.
-- Explain that SkillSwap does not process payments or host video calls.
-- No fake testimonials, invented user counts, or fabricated outcomes.
+**Upcoming sessions**
+- Use a compact agenda/timeline.
+- Show date, time, timezone, partner, subject, and state.
+- Make the next session easy to identify without relying on color alone.
 
-### 10.2 Registration and login
-- Use a focused split layout: form on warm paper, secondary brand panel in deep evergreen.
-- Keep the form narrow and calm.
-- Use clear field labels, password visibility control, and inline errors.
-- Avoid a full-screen abstract gradient background.
-- Staff sign-in may be a separate route or role-aware flow, but staff permissions must be enforced server-side.
+### 9.4 Discover
 
-### 10.3 Onboarding
-- Use a stepper with simple step labels and a clear progress indicator.
-- One key decision per step.
-- Skills can be selected using searchable chips.
-- Show “Can teach” and “Want to learn” as distinct sections.
-- Allow the member to skip optional biography/avatar steps.
-- Explain why availability improves matching.
+- Search and filters sit at the top in a clear hierarchy.
+- Show active filters as removable chips.
+- Results should use a clean list with occasional feature emphasis, not a uniform wall of cards.
+- Show a plain-language match reason.
+- Use burgundy/crimson for strong reciprocal matches and ember for learning-interest highlights.
+- Keep private availability details hidden from unconnected users.
+- Empty state should offer a useful action such as broadening the search or adding a skill.
 
-### 10.4 Discover and match results
-- Search and filters sit together in a calm floating filter surface.
-- Results use a clean list or varied partner cards.
-- Show mutual skill exchange context prominently.
-- Make filter changes understandable and reversible.
-- Empty state offers broader filters or adding skills.
+### 9.5 Member profile
 
-### 10.5 Member profile
-- Show identity and introductory text first.
-- Separate teach and learn skills visually.
-- Show skill level as user-provided information.
-- Show general availability only where privacy settings permit.
-- Display ratings/reviews with honest context; do not overstate credibility.
-- Report action remains accessible but visually quiet.
+- Identity header with avatar, name, and concise bio.
+- Separate “Can teach” and “Wants to learn” sections.
+- Show level as member-provided information.
+- Display general availability only as permitted.
+- Reviews use readable text and clear rating labels.
+- Report action stays available but visually quiet.
 
-### 10.6 Connections
-- Split incoming, outgoing, and accepted connections using tabs or segmented navigation.
-- Use compact member rows with status and one relevant action.
-- Confirmation dialogs for reject/cancel where useful.
-- Explain pending and expired states in plain language.
+### 9.6 Connections
 
-### 10.7 Messaging
-- Use a two-panel desktop layout: conversation list and conversation thread.
-- Conversation list may use a subtle glass surface; message history itself should remain readable on solid surfaces.
-- Use distinct but restrained message bubbles: jade-tinted for the current member and warm white for the other person.
-- Keep the text measure readable.
-- Show send, pending, failed, and retry states.
-- Do not expose online/read receipts unless explicitly part of approved scope.
-- Keep report/block affordances in the conversation menu.
+- Separate incoming, outgoing, and accepted connections.
+- Use consistent member rows and contextual actions.
+- Pending states use amber markers; accepted states use a warm neutral surface with a dark status label.
+- Prevent duplicate request actions and reflect server state.
 
-### 10.8 Sessions and calendar
-- Default to agenda/list view; calendar view may be an additional option.
-- Give session statuses consistent labels and semantic colors.
-- Show the timezone explicitly when there could be ambiguity.
-- Use a clear proposal/confirmation timeline.
-- Reschedule and cancellation flows must explain who needs to confirm.
-- External meeting links are user-provided; label them as external and validate them.
+### 9.7 Messages
 
-### 10.9 History and reviews
-- Use a tidy chronological list with filters.
-- Completed sessions may expose the “Rate and review” action.
-- Review cards should be content-first, with rating and author/date metadata.
-- Avoid star-rating displays that imply a verified quality guarantee.
+- Two-panel desktop layout: conversation list and active conversation.
+- Warm porcelain conversation list with clear active-row treatment.
+- Current-user bubbles use deep burgundy/crimson with white text.
+- Received bubbles use warm neutral surfaces with midnight text.
+- Composer remains solid and readable; focus state uses crimson.
+- Include connection context and session proposal entry point.
+- Preserve reconnecting, failed-send, and empty states.
+- Do not expose conversations to non-participants.
 
-### 10.10 Notifications
-- Use a translucent popover with solid readable content.
-- Group by recent/today/earlier only if helpful.
-- Each notification has a type icon, short title, context, and timestamp.
-- Do not include private message contents in notification previews.
+### 9.8 Sessions
 
-### 10.11 Moderator workspace
-- More operational and information-dense than member screens, but retain the same brand palette.
-- Use paper surfaces and clear table/list hierarchy; do not overuse glass.
-- Show report status, reason, target, date, and available action.
-- Report details need enough context for fair review.
-- Require a reason for consequential moderation actions.
+- Use an agenda/list as the primary view; calendar can be secondary if implemented.
+- Highlight the next session with a small crimson/ember accent.
+- Display timezone explicitly where relevant.
+- Status states: Proposed, Confirmed, Declined, Completed, Cancelled.
+- Reschedule and cancel are contextual actions with clear confirmation.
+- Keep meeting links optional and user-supplied; do not imply SkillSwap hosts calls.
 
-### 10.12 Administrator workspace
-- Use a calm analytical layout with a small number of well-defined metrics.
-- Charts use a consistent palette and include date range, labels, and a textual summary.
-- Tables prioritize scanability over decoration.
-- Activity logs are read-only and visibly labelled as such.
-- Export actions must be easy to locate but not visually dominant.
+### 9.9 History and reviews
 
-### 10.13 Settings
-- Use a left-side settings index on desktop and a stacked section list on mobile.
-- Group account, privacy, notification, and security settings.
-- Provide clear save/cancel behavior and unsaved-change feedback.
+- Chronological list of past sessions.
+- Show partner, topic, date, status, and review eligibility.
+- Completed sessions may show “Leave a review” when eligible.
+- Use a gold rating marker sparingly and retain accessible text labels.
+- Distinguish member-authored reviews from platform-verified information; do not claim skill verification.
+
+### 9.10 Profile and settings
+
+- Profile page uses a focused identity header and sections for introduction, teach skills, learn skills, level, and availability.
+- Settings use grouped sections with concise descriptions.
+- Place save actions consistently.
+- Do not put every setting in a separate floating card.
+
+### 9.11 Moderator workspace
+
+- Prioritize report queue and resolution workflow.
+- Use a dense but readable table/list with status, reason, report target, timestamp, and assigned moderator.
+- Report detail uses a two-column layout on desktop: reported content/context and decision controls.
+- Moderation actions require confirmation and a reason.
+- Use deep crimson only for destructive or high-risk actions.
+
+### 9.12 Admin workspace
+
+- Overview metrics with definitions and date range.
+- Popular skills and session completion trends use meaningful charts.
+- Member management and activity logs use readable tables.
+- Keep staff tools functional and information-dense without excessive glass or oversized hero panels.
+- Clearly distinguish administrator-only actions.
+- Use the palette consistently, with gold/orange only as chart accents.
 
 ---
 
-## 11. Cards, lists, tables, and data visualization
+## 10. Responsive behavior
 
-### 11.1 Cards
-Use cards only when content is a coherent unit. Vary composition:
-- Featured hero surface.
-- Standard paper card.
-- Glass summary surface.
-- Borderless content group.
+Breakpoints:
 
-Do not put every heading, row, and paragraph inside its own card.
-
-### 11.2 Member cards
-Order of information:
-1. Avatar/initials and display name.
-2. Short introduction or context.
-3. Mutual teach/learn skill evidence.
-4. General availability or level context when permitted.
-5. One clear action.
-
-### 11.3 Tables
-- Warm paper background, thin warm border, clear header contrast.
-- Compact but comfortable row padding.
-- Highlight row hover with very subtle sage.
-- Keep action placement consistent.
-- On mobile, reflow into labelled stacked items or provide a controlled horizontal scroll region.
-- Do not use colored row stripes as the only grouping method.
-
-### 11.4 Charts
-Use a consistent sequence:
-1. Evergreen `#1B3934`
-2. Jade `#348777`
-3. Clay `#C96F55`
-4. Amber `#B9853F`
-5. Sky `#527C91`
-6. Sage `#91A995`
+- Small mobile: 0–479 px.
+- Mobile: 480–639 px.
+- Tablet: 640–899 px.
+- Desktop: 900–1279 px.
+- Wide: 1280 px and above.
 
 Rules:
-- Use no more than 4–5 series in one chart unless the chart type demands it.
-- Label units and time ranges.
-- Provide a textual summary and accessible data alternative.
-- Do not use 3D charts, decorative gauges, or unexplained percentages.
-- Color must not be the only differentiator between data series.
 
----
-
-## 12. Iconography, avatars, and imagery
-
-### 12.1 Icons
-- Use one line-icon family consistently (Lucide is acceptable).
-- Sizes: 16 px inline, 18 px form/control, 20 px navigation, 24 px empty-state illustration.
-- Stroke weight: approximately 1.75–2 px.
-- Icons support labels; they do not replace unfamiliar text labels.
-- Use filled icons only for selected states or where the icon family provides a consistent variant.
-
-### 12.2 Avatars
-- Use actual member-uploaded images where provided.
-- Otherwise use initials on a subtle jade, clay, or sky-tinted background.
-- Never use fabricated people or random AI portraits to populate a real member list.
-- Use consistent avatar sizes: 32 px compact, 40 px standard, 48 px profile/list feature, 80–96 px profile header.
-
-### 12.3 Imagery
-- Avoid generic stock photos as decoration.
-- If marketing photography is used, choose natural, documentary-style images of people learning or collaborating; use consistent cropping and subtle color grading.
-- Do not make the application dependent on images to communicate functionality.
-- Prefer small custom diagrams or abstract line motifs when they explain the exchange process.
-
----
-
-## 13. Motion and micro-interactions
-
-Motion should make the product feel considered, not playful for its own sake.
-
-### 13.1 Timing
-- Hover/press: 120–160 ms.
-- Menus/popovers: 160–200 ms.
-- Modal: 180–220 ms.
-- Page transitions: 180–240 ms, only if they improve continuity.
-
-### 13.2 Allowed motion
-- Subtle card lift (1–2 px) on hover.
-- Slight background tint change on navigation hover.
-- Gentle fade/slide for popovers and dialogs.
-- Small icon state changes.
-- Smooth progress/stepper updates.
-- Button press feedback.
-
-### 13.3 Avoid
-- Parallax.
-- Bouncing or spring-heavy UI.
-- Constantly moving backgrounds.
-- Animated gradient loops.
-- Scroll-jacking.
-- Loading animations that shift page layout.
-
-Respect `prefers-reduced-motion: reduce` and remove nonessential transitions when requested.
-
----
-
-## 14. Responsive behavior
-
-### 14.1 Breakpoints
-
-| Name | Range |
-|---|---|
-| Small mobile | 0–374 px |
-| Mobile | 375–639 px |
-| Tablet | 640–899 px |
-| Desktop | 900–1279 px |
-| Wide | 1280 px and above |
-
-### 14.2 Responsive rules
 - No horizontal page overflow at 320 px.
-- Sidebar becomes a drawer or bottom navigation below 900 px.
-- Dashboard hero stacks its content on mobile.
-- Metrics use 2 columns on compact screens and 3–4 columns where space allows.
-- Split skill sections stack on mobile.
-- Forms become single-column on mobile.
+- Sidebar becomes a drawer or compact bottom navigation on mobile.
+- Mobile navigation exposes the 4–5 highest-use destinations; secondary items go in a labelled More menu.
+- Dashboard metrics reflow into two columns or a compact list.
+- Hero content stacks and reduces decorative layers.
+- Member profiles become single-column.
 - Tables reflow or scroll inside their own container.
-- Dialogs become near-full-screen sheets on narrow phones when appropriate.
-- Touch targets must be at least 44 × 44 px.
-- Do not hide essential actions behind hover-only interactions.
-- Preserve comfortable spacing; do not simply shrink desktop layouts.
-
-### 14.3 Responsive test widths
-Verify at 320, 375, 390, 640, 768, 900, 1024, 1280, and 1440 px.
+- Messaging switches to a single-view navigation pattern.
+- Dialogs may become full-height sheets on narrow screens.
+- Touch targets should be at least 44 × 44 px.
+- Do not hide essential actions only on hover.
+- Bright orange and gold surfaces must not reduce text legibility on mobile.
 
 ---
 
-## 15. Accessibility and focus treatment
+## 11. Motion and interaction
+
+Motion should make the interface feel responsive and polished, not animated for its own sake.
+
+- Standard transitions: 140–200 ms.
+- Use ease-out for entrances and ease-in for exits.
+- Small hover lift: 1–2 px maximum.
+- Popovers: subtle opacity and 4–6 px vertical movement.
+- Buttons: subtle background and shadow transition.
+- Avoid springy overshoot on operational screens.
+- No autoplay backgrounds, parallax, or continuous motion.
+- Respect `prefers-reduced-motion: reduce`.
+- Avoid layout shifts when skeletons or images load.
+
+---
+
+## 12. States every screen must define
+
+Every data-driven screen must include:
+
+1. Initial/loading state.
+2. Loaded state.
+3. Empty state.
+4. Error state with retry where appropriate.
+5. Permission-denied state.
+6. Offline/reconnecting state where relevant.
+7. Success feedback after mutations.
+8. Disabled state with an explanation.
+
+Empty states should have a short heading, one useful sentence, and one relevant next action. Do not use generic “Nothing here!” copy.
+
+---
+
+## 13. Accessibility and contrast
 
 Target WCAG 2.2 AA.
 
-- Maintain contrast for text, controls, borders, and focus indicators.
-- Use semantic landmarks and logical heading order.
-- All controls must work by keyboard.
-- Inputs must have persistent labels.
-- Errors must be associated with relevant fields and announced.
-- Dialogs must manage focus and return it to the trigger.
-- Use status text/icons in addition to color.
-- Glass surfaces must have sufficient opacity and contrast.
-- Support browser zoom to 200% without loss of content.
-- Respect reduced-motion settings.
-
-### Focus styling
-Do not remove focus outlines. Use a branded, high-contrast dual ring that works on light and dark surfaces:
-
-```css
-:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
-}
-
-.sidebar :focus-visible {
-  outline-color: #F3D8A7;
-}
-```
-
-The screenshot's harsh blue outline around the active Overview item should not be replicated as an active state. The active item gets the designed translucent highlight; keyboard focus gets the separate accessible ring only while focused.
+- Normal text contrast: at least 4.5:1.
+- Large text contrast: at least 3:1.
+- UI component boundaries and focus indicators must be discernible.
+- Use white text on deep ink, wine, burgundy, and tested crimson backgrounds.
+- Use midnight ink on orange, amber, and gold backgrounds.
+- Never use small white text on `#DC2F02`, `#E85D04`, `#F48C06`, `#FAA307`, or `#FFBA08`.
+- Provide a visible 2 px focus ring on every interactive element.
+- On dark surfaces, use `#FFBA08` or another verified light focus token.
+- Do not communicate status through color alone.
+- Use semantic HTML and logical heading order.
+- Provide accessible names for icon-only buttons.
+- Announce asynchronous status changes to assistive technology.
+- Manage dialog focus and Escape behavior.
+- Support zoom to 200% without loss of content.
+- Respect reduced motion.
+- Verify each foreground/background pair in the rendered application; do not assume brand colors automatically pass contrast.
 
 ---
 
-## 16. Required interface states
+## 14. CSS token starter
 
-Every data-driven screen must define:
-- Initial/loading state.
-- Loaded state.
-- Empty state.
-- Error state with retry when appropriate.
-- Permission-denied state.
-- Offline/reconnecting state for messaging.
-- Mutation success feedback.
-- Disabled state with explanation.
-- Skeleton placeholders for loading where they improve perceived stability.
-
-Empty states should feel intentional. Use a small line illustration or exchange motif only when it clarifies the action; otherwise use a concise message, one helpful explanation, and one clear CTA. Do not leave a large blank bordered box with a sentence floating in its center.
-
----
-
-## 17. Writing and content style
-
-- Use short, natural, specific language.
-- Prefer “Find a learning partner” over “Unlock your potential”.
-- Prefer “Skills you can teach” over “Your superpowers”.
-- Prefer “Your next session” over “Your transformational journey”.
-- Never claim SkillSwap verifies skills unless a verification feature is formally added.
-- Avoid fake urgency, fake social proof, and generic AI-style marketing phrases.
-- Use local date/time formatting and show timezone when ambiguous.
-- Use member-friendly status names: Pending, Accepted, Confirmed, Completed, Cancelled, Declined.
-
----
-
-## 18. CSS token starter
-
-Use these tokens as the implementation baseline. Components may add component-level tokens, but do not hard-code unrelated colors throughout the codebase.
+Use this as the starting token layer. Components should consume these variables instead of hardcoding colors.
 
 ```css
 :root {
   color-scheme: light;
 
-  --color-forest-950: #142b28;
-  --color-forest-900: #1b3934;
-  --color-forest-800: #245047;
-  --color-jade-700: #287565;
-  --color-jade-600: #348777;
-  --color-jade-100: #dcede6;
-  --color-sage-100: #eaf0e8;
-  --color-parchment: #f5f1e8;
-  --color-paper: #fffefa;
-  --color-white: #ffffff;
-  --color-ink: #1e2c29;
-  --color-ink-soft: #465650;
-  --color-muted: #75817a;
-  --color-line: #e4e4d9;
-  --color-clay-600: #c96f55;
-  --color-clay-100: #f6e5de;
-  --color-amber-600: #b9853f;
-  --color-amber-100: #f5ebd7;
-  --color-sky-700: #527c91;
-  --color-sky-100: #e2eef2;
-  --color-danger: #b34e4a;
-  --color-success: #32745a;
-  --color-warning: #a8752d;
-  --color-focus: #76a9d5;
+  /* Supplied SkillSwap brand palette */
+  --color-ink-950: #03071e;
+  --color-wine-900: #370617;
+  --color-burgundy-800: #6a040f;
+  --color-crimson-700: #9d0208;
+  --color-crimson-600: #d00000;
+  --color-vermilion-600: #dc2f02;
+  --color-ember-600: #e85d04;
+  --color-orange-500: #f48c06;
+  --color-amber-500: #faa307;
+  --color-gold-400: #ffba08;
 
-  --gradient-brand: linear-gradient(120deg, #1b3934 0%, #287565 58%, #57917b 100%);
-  --gradient-sidebar: linear-gradient(180deg, #142b28 0%, #1b3934 55%, #20473f 100%);
+  /* Supporting neutrals */
+  --color-paper: #faf7f4;
+  --color-paper-warm: #f3ece7;
+  --color-surface: #fffefc;
+  --color-surface-raised: #ffffff;
+  --color-line: #e8ddd7;
+  --color-ink-soft: #282435;
+  --color-muted: #726a70;
+  --color-muted-light: #91878a;
+  --color-focus: #9d0208;
+  --color-focus-dark: #ffba08;
 
-  --font-display: "Manrope", "Avenir Next", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "DM Sans", Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -849,124 +845,100 @@ Use these tokens as the implementation baseline. Components may add component-le
   --space-10: 40px;
   --space-12: 48px;
   --space-16: 64px;
+  --space-20: 80px;
 
-  --radius-xs: 6px;
-  --radius-sm: 9px;
-  --radius-md: 14px;
-  --radius-lg: 18px;
-  --radius-xl: 24px;
+  --radius-control: 9px;
+  --radius-card: 14px;
+  --radius-feature: 18px;
+  --radius-hero: 22px;
+  --radius-dialog: 18px;
 
-  --shadow-soft: 0 4px 16px rgba(23, 49, 43, .055);
-  --shadow-card: 0 10px 28px rgba(23, 49, 43, .075);
-  --shadow-float: 0 16px 44px rgba(23, 49, 43, .14);
+  --gradient-brand: linear-gradient(118deg, #03071e 0%, #370617 48%, #9d0208 100%);
+  --gradient-sidebar: linear-gradient(180deg, #03071e 0%, #370617 62%, #6a040f 100%);
+  --gradient-crimson: linear-gradient(110deg, #6a040f 0%, #9d0208 100%);
+  --gradient-ember: linear-gradient(110deg, #d00000 0%, #dc2f02 55%, #e85d04 100%);
+  --gradient-gold: linear-gradient(110deg, #f48c06 0%, #faa307 55%, #ffba08 100%);
+  --gradient-soft: linear-gradient(135deg, #faf7f4 0%, #f3ece7 58%, #f8e7df 100%);
 
-  --glass-bg: rgba(255, 254, 250, .68);
-  --glass-border: rgba(255, 255, 255, .74);
-  --glass-blur: 18px;
-}
-
-.app-canvas {
-  min-height: 100vh;
-  color: var(--color-ink);
-  background:
-    radial-gradient(ellipse at 88% 4%, rgba(52, 135, 119, .09), transparent 28rem),
-    radial-gradient(ellipse at 18% 78%, rgba(201, 111, 85, .055), transparent 26rem),
-    var(--color-parchment);
-}
-
-.app-sidebar {
-  color: rgba(255, 255, 255, .88);
-  background: var(--gradient-sidebar);
-}
-
-.app-topbar {
-  background: rgba(255, 254, 250, .78);
-  border-bottom: 1px solid rgba(228, 228, 217, .75);
-  backdrop-filter: blur(18px) saturate(145%);
-  -webkit-backdrop-filter: blur(18px) saturate(145%);
-}
-
-.paper-surface {
-  background: var(--color-paper);
-  border: 1px solid rgba(228, 228, 217, .9);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
-}
-
-.glass-surface {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-float);
-  backdrop-filter: blur(var(--glass-blur)) saturate(145%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(145%);
-}
-
-.button-primary {
-  color: var(--color-white);
-  background: var(--gradient-brand);
-  border: 0;
-  border-radius: var(--radius-md);
-  box-shadow: 0 5px 14px rgba(40, 117, 101, .20);
-}
-
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .glass-surface,
-  .app-topbar {
-    background: #fffefa;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    scroll-behavior: auto !important;
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
+  --shadow-xs: 0 1px 2px rgba(3, 7, 30, .04);
+  --shadow-sm: 0 4px 14px rgba(3, 7, 30, .06);
+  --shadow-md: 0 10px 28px rgba(3, 7, 30, .09);
+  --shadow-lg: 0 18px 48px rgba(3, 7, 30, .14);
+  --shadow-popover: 0 16px 42px rgba(3, 7, 30, .16);
 }
 ```
 
-**Implementation note:** the canonical `--color-jade-100` value is `#DCEDE6`. Use that exact six-character hex value in code.
+---
+
+## 15. Frontend implementation rules
+
+1. Make this design system the only visual source of truth.
+2. Centralize tokens in the global theme layer.
+3. Use CSS variables or the project's approved styling system.
+4. Avoid hardcoded one-off colors in page components.
+5. Build reusable primitives for buttons, fields, cards, tags, badges, dialogs, and navigation.
+6. Preserve all existing API calls, route paths, validation rules, and application behavior during visual refactoring.
+7. Do not replace real data with static sample content.
+8. Do not remove controls or actions simply to simplify the layout.
+9. Remove old styles only after confirming they are no longer referenced.
+10. Ensure every page has matching desktop, tablet, and mobile compositions.
+11. Do not use orange or gold as default text colors on white surfaces.
+12. Avoid using the warm palette as a full-screen saturated background.
+13. Keep destructive actions semantically clear even though crimson is also a brand color.
+14. Use the supplied ten HEX colors exactly; do not introduce a second competing brand palette.
+
+Suggested shared components:
+
+- `AppShell`
+- `AppSidebar`
+- `AppTopbar`
+- `PageHeader`
+- `WelcomeHero`
+- `MetricTile`
+- `PaperPanel`
+- `GlassPanel`
+- `SkillTag`
+- `MemberRow`
+- `MemberFeatureCard`
+- `SessionAgendaItem`
+- `MessageBubble`
+- `StatusBadge`
+- `NotificationPopover`
+- `FilterPopover`
+- `FormField`
+- `Dialog`
+- `Toast`
+- `EmptyState`
+- `LoadingSkeleton`
+- `DataTable`
 
 ---
 
-## 19. Design quality checklist
+## 16. Visual QA checklist
 
-### Brand and composition
-- [ ] Evergreen navigation creates a strong brand anchor.
-- [ ] Warm parchment replaces flat grey as the main workspace canvas.
-- [ ] Jade, clay, amber, and sky accents are used semantically and sparingly.
-- [ ] The dashboard has a clear hero, useful metrics, skills, matches, and session agenda.
-- [ ] Page compositions vary according to user task; not every section is an identical card.
+Before accepting a redesigned route:
 
-### Glass and depth
-- [ ] Glassmorphism is selective and not applied to every surface.
-- [ ] Glass text remains legible and has an opaque fallback.
-- [ ] Paper surfaces, floating surfaces, and canvas are visually distinct.
-- [ ] Shadows are soft and consistent.
-
-### Components
-- [ ] Buttons, fields, chips, tables, menus, dialogs, toasts, and status tags follow shared tokens.
-- [ ] Active navigation and keyboard focus are visually distinct.
-- [ ] Loading, empty, error, success, and permission states exist.
-- [ ] No fake metrics, members, ratings, or testimonials are shown.
-
-### Responsive and accessible
-- [ ] Works at 320 px without page-level horizontal overflow.
-- [ ] Sidebar changes to a mobile-friendly navigation pattern.
-- [ ] Touch targets meet minimum size.
+- [ ] Supplied ten-color palette is used exactly.
+- [ ] Midnight/wine sidebar and branded active state are correct.
+- [ ] Main workspace uses warm paper/porcelain surfaces.
+- [ ] Primary actions use deep crimson with verified contrast.
+- [ ] Bright orange and gold are used as accents, not body-text colors.
+- [ ] Glassmorphism is selective and text remains readable.
+- [ ] Layout has a clear visual focal point.
+- [ ] Page is not just a set of repeated cards.
+- [ ] Heading and body typography follow the scale.
+- [ ] Buttons and fields have hover, focus, active, disabled, and loading states.
+- [ ] Empty/loading/error/permission states exist.
+- [ ] No fabricated users, reviews, or statistics.
+- [ ] Works at 320 px without horizontal overflow.
 - [ ] Keyboard focus is visible on light and dark surfaces.
-- [ ] Contrast meets WCAG 2.2 AA.
-- [ ] Reduced-motion settings are respected.
-
-### Craft
-- [ ] No generic AI-style gradient blobs, neon glow, or overdecorated interface.
-- [ ] No inconsistent radii, spacing, colors, or typography.
-- [ ] No unnecessary animation or nested-card overload.
-- [ ] The result feels warm, premium, distinctive, and trustworthy.
+- [ ] Contrast is verified for actual foreground/background pairs.
+- [ ] Existing functionality and API integration remain intact.
 
 ---
 
-## 20. Final implementation instruction
+## 17. Final design acceptance standard
 
-Treat this file as mandatory visual acceptance criteria. Before considering frontend implementation complete, compare every major route against this system. The member dashboard shown in the supplied reference screenshot must be redesigned—not simply recolored—to use the evergreen shell, warm atmospheric canvas, selective frosted-glass elements, stronger typography, more purposeful dashboard composition, and the full Verdant Atelier palette.
+The redesign is complete only when the whole application—not just the dashboard—uses this system consistently. Public pages, authentication, member workspace, discovery, profiles, connections, messaging, sessions, history, settings, moderator tools, and admin tools must all feel like parts of the same polished product.
+
+The design should be visually rich but not noisy, warm but not childish, layered but not blurry, and premium without sacrificing clarity. The defining combination is midnight structure, oxblood depth, crimson confidence, ember energy, golden detail, and warm porcelain surfaces.

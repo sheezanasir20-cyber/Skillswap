@@ -34,10 +34,10 @@ export const StaffActivityPage: React.FC = () => {
     <div style={{ maxWidth: '1080px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--color-ink)' }}>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--color-ink-950)' }}>
           Staff Activity & Audit Trail
         </h1>
-        <p style={{ color: 'var(--color-ink-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
+        <p style={{ color: 'var(--color-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
           Immutable log of all administrative actions, warnings, suspensions, and moderation resolutions.
         </p>
       </div>
@@ -61,7 +61,7 @@ export const StaffActivityPage: React.FC = () => {
             onKeyDown={(e) => e.key === 'Enter' && loadActivity()}
           />
         </div>
-        <Button onClick={loadActivity} style={{ height: '42px' }}>
+        <Button variant="primary" onClick={loadActivity} style={{ height: '42px' }}>
           <Search size={16} /> Filter Logs
         </Button>
       </div>
@@ -85,18 +85,18 @@ export const StaffActivityPage: React.FC = () => {
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.875rem' }}>
               <thead>
-                <tr style={{ borderBottom: '1px solid var(--color-line)', backgroundColor: 'var(--color-parchment-200)' }}>
-                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink)' }}>Timestamp</th>
-                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink)' }}>Action</th>
-                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink)' }}>Staff Actor</th>
-                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink)' }}>Target</th>
-                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink)' }}>Reason / Notes</th>
+                <tr style={{ borderBottom: '1px solid var(--color-line)', backgroundColor: 'rgba(3, 7, 30, 0.03)' }}>
+                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink-950)' }}>Timestamp</th>
+                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink-950)' }}>Action</th>
+                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink-950)' }}>Staff Actor</th>
+                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink-950)' }}>Target</th>
+                  <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink-950)' }}>Reason / Notes</th>
                 </tr>
               </thead>
               <tbody>
                 {logs.map((log) => (
-                  <tr key={log.id} style={{ borderBottom: '1px solid var(--color-line-subtle)' }}>
-                    <td style={{ padding: 'var(--space-3) var(--space-4)', color: 'var(--color-ink-muted)', whiteSpace: 'nowrap' }}>
+                  <tr key={log.id} style={{ borderBottom: '1px solid var(--color-line)' }}>
+                    <td style={{ padding: 'var(--space-3) var(--space-4)', color: 'var(--color-muted)', whiteSpace: 'nowrap' }}>
                       {new Date(log.createdAt).toLocaleString()}
                     </td>
                     <td style={{ padding: 'var(--space-3) var(--space-4)' }}>
@@ -106,21 +106,21 @@ export const StaffActivityPage: React.FC = () => {
                           borderRadius: 'var(--radius-pill)',
                           fontSize: '0.75rem',
                           fontWeight: 600,
-                          backgroundColor: 'var(--color-parchment-200)',
-                          color: 'var(--color-ink)',
+                          backgroundColor: 'rgba(3, 7, 30, 0.05)',
+                          color: 'var(--color-ink-950)',
                           fontFamily: 'monospace',
                         }}
                       >
                         {log.action}
                       </span>
                     </td>
-                    <td style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink)' }}>
+                    <td style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink-950)' }}>
                       {log.actor?.displayName || log.actorId}
                     </td>
-                    <td style={{ padding: 'var(--space-3) var(--space-4)', color: 'var(--color-ink-muted)', fontFamily: 'monospace', fontSize: '0.8125rem' }}>
+                    <td style={{ padding: 'var(--space-3) var(--space-4)', color: 'var(--color-muted)', fontFamily: 'monospace', fontSize: '0.8125rem' }}>
                       {log.targetType}:{log.targetId}
                     </td>
-                    <td style={{ padding: 'var(--space-3) var(--space-4)', color: 'var(--color-ink)' }}>
+                    <td style={{ padding: 'var(--space-3) var(--space-4)', color: 'var(--color-ink-950)' }}>
                       {log.reason || '—'}
                     </td>
                   </tr>

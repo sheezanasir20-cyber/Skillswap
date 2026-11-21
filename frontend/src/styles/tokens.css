@@ -1,53 +1,68 @@
 :root {
-  /* Verdant Atelier Core Palette */
-  --color-forest-950: #142b28;
-  --color-forest-900: #1b3934;
-  --color-forest-800: #245047;
-  --color-jade-700: #287565;
-  --color-jade-600: #348777;
-  --color-jade-100: #dcede6;
-  --color-sage-100: #eaf0e8;
-  --color-sage-600: #91a995;
-  --color-parchment: #f5f1e8;
-  --color-paper: #fffefa;
-  --color-white: #ffffff;
-  --color-ink: #1e2c29;
-  --color-ink-soft: #465650;
-  --color-muted: #75817a;
-  --color-line: #e4e4d9;
-  --color-clay-600: #c96f55;
-  --color-clay-100: #f6e5de;
-  --color-amber-600: #b9853f;
-  --color-amber-100: #f5ebd7;
-  --color-sky-700: #527c91;
-  --color-sky-100: #e2eef2;
-  --color-danger: #b34e4a;
-  --color-danger-soft: #f8e7e4;
-  --color-success: #32745a;
-  --color-success-soft: #e2f0e7;
-  --color-warning: #a8752d;
-  --color-warning-soft: #f7eedb;
-  --color-focus: #76a9d5;
+  color-scheme: light;
 
-  /* Backward Compatibility Semantic Aliases */
-  --color-surface: var(--color-paper);
-  --color-accent: var(--color-jade-700);
-  --color-accent-soft: var(--color-jade-100);
+  /* ========================================================
+     1. Supplied SkillSwap Brand Palette (Ember Noir)
+     ======================================================== */
+  --color-ink-950: #03071e;       /* Midnight Ink: deepest brand ink; sidebar base */
+  --color-wine-900: #370617;      /* Deep Wine: sidebar depth and dark panels */
+  --color-burgundy-800: #6a040f;  /* Deep Burgundy: strong hover and feature surface */
+  --color-crimson-700: #9d0208;   /* Primary brand action; active navigation marker */
+  --color-crimson-600: #d00000;   /* High-emphasis crimson; links and selected accents */
+  --color-vermilion-600: #dc2f02; /* Warm action accent and prominent highlights */
+  --color-ember-600: #e85d04;     /* Discovery and editorial accent */
+  --color-orange-500: #f48c06;    /* Warm highlight and progress detail */
+  --color-amber-500: #faa307;     /* Small accent, selected marker, chart series */
+  --color-gold-400: #ffba08;      /* Tiny highlight and decorative emphasis */
+
+  /* ========================================================
+     2. Neutral Utility Palette (Ember Noir)
+     ======================================================== */
+  --color-paper: #faf7f4;         /* Main authenticated canvas */
+  --color-paper-warm: #f3ece7;    /* Alternate section background */
+  --color-surface: #fffefc;      /* Cards, form surfaces, menus (Porcelain) */
+  --color-surface-raised: #ffffff;/* Dialogs and elevated content (Raised White) */
+  --color-line: #e8ddd7;          /* Borders and separators */
+  --color-line-subtle: rgba(232, 221, 215, 0.7);
+  --color-ink-soft: #282435;      /* Body text and headings on light surfaces */
+  --color-muted: #726a70;         /* Secondary metadata */
+  --color-muted-light: #91878a;   /* Nonessential metadata only */
+  --color-focus: #9d0208;         /* Keyboard focus on light surfaces */
+  --color-focus-dark: #ffba08;    /* Keyboard focus on dark surfaces */
+
+  /* Semantic Aliases & Compatibility */
+  --color-ink: var(--color-ink-soft);
   --color-ink-muted: var(--color-muted);
+  --color-accent: var(--color-crimson-700);
+  --color-accent-soft: rgba(157, 2, 8, 0.08);
 
-  /* Signature Gradients */
-  --gradient-brand: linear-gradient(120deg, #1b3934 0%, #287565 58%, #57917b 100%);
-  --gradient-sidebar: linear-gradient(180deg, #142b28 0%, #1b3934 55%, #20473f 100%);
-  --gradient-warm: linear-gradient(120deg, #f5f1e8 0%, #f3e9dc 52%, #e8f0e8 100%);
-  --gradient-clay: linear-gradient(120deg, #c96f55 0%, #d58b66 100%);
-  --gradient-hero: linear-gradient(135deg, #142b28 0%, #1b3934 60%, #287565 100%);
+  /* Semantic Statuses */
+  --color-danger: #d00000;
+  --color-danger-soft: rgba(208, 0, 0, 0.08);
+  --color-warning: #e85d04;
+  --color-warning-soft: rgba(232, 93, 4, 0.1);
+  --color-success: #9d0208;
+  --color-success-soft: rgba(106, 4, 15, 0.08);
 
-  /* Typography Stacks */
-  --font-display: "Manrope", "Avenir Next", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "DM Sans", Inter, ui-sans-serif, system-ui, sans-serif;
+  /* Reciprocal Skill Roles */
+  --color-teach-bg: rgba(106, 4, 15, 0.08);
+  --color-teach-text: #6a040f;
+  --color-teach-border: rgba(106, 4, 15, 0.22);
+  --color-learn-bg: rgba(232, 93, 4, 0.08);
+  --color-learn-text: #9d0208;
+  --color-learn-border: rgba(232, 93, 4, 0.25);
+
+  /* ========================================================
+     3. Typography Stacks (Manrope + Inter)
+     ======================================================== */
+  --font-heading: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-heading);
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-body);
 
-  /* Spacing Scale (4px base) */
+  /* ========================================================
+     4. Spacing Scale (4px base)
+     ======================================================== */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -60,37 +75,62 @@
   --space-16: 64px;
   --space-20: 80px;
 
-  /* Border Radii */
+  /* ========================================================
+     5. Shape and Radii
+     ======================================================== */
   --radius-xs: 6px;
   --radius-sm: 9px;
   --radius-md: 14px;
   --radius-lg: 18px;
-  --radius-xl: 24px;
+  --radius-xl: 22px;
   --radius-pill: 999px;
 
-  /* Legacy Radii Aliases */
   --radius-control: var(--radius-sm);
+  --radius-card: var(--radius-md);
   --radius-panel: var(--radius-lg);
+  --radius-hero: var(--radius-xl);
+  --radius-dialog: var(--radius-lg);
   --radius-tag: var(--radius-xs);
   --radius-full: var(--radius-pill);
 
-  /* Selective Glassmorphism */
-  --glass-bg: rgba(255, 254, 250, 0.72);
-  --glass-bg-strong: rgba(255, 254, 250, 0.88);
-  --glass-border: rgba(255, 255, 255, 0.74);
-  --glass-shadow: 0 14px 40px rgba(23, 49, 43, 0.10);
-  --glass-blur: 18px;
+  /* ========================================================
+     6. Brand Gradients
+     ======================================================== */
+  --gradient-brand: linear-gradient(118deg, #03071e 0%, #370617 48%, #9d0208 100%);
+  --gradient-sidebar: linear-gradient(180deg, #03071e 0%, #370617 62%, #6a040f 100%);
+  --gradient-crimson: linear-gradient(110deg, #6a040f 0%, #9d0208 100%);
+  --gradient-ember: linear-gradient(110deg, #d00000 0%, #dc2f02 55%, #e85d04 100%);
+  --gradient-gold: linear-gradient(110deg, #f48c06 0%, #faa307 55%, #ffba08 100%);
+  --gradient-soft: linear-gradient(135deg, #faf7f4 0%, #f3ece7 58%, #f8e7df 100%);
+  --gradient-hero: var(--gradient-brand);
 
-  /* Depth and Shadows */
-  --shadow-soft: 0 4px 16px rgba(23, 49, 43, 0.055);
-  --shadow-card: 0 10px 28px rgba(23, 49, 43, 0.075);
-  --shadow-float: 0 16px 44px rgba(23, 49, 43, 0.14);
-  --shadow-modal: 0 24px 72px rgba(13, 31, 27, 0.22);
+  /* ========================================================
+     7. Elevation and Shadows
+     ======================================================== */
+  --shadow-xs: 0 1px 2px rgba(3, 7, 30, 0.04);
+  --shadow-sm: 0 4px 14px rgba(3, 7, 30, 0.06);
+  --shadow-md: 0 10px 28px rgba(3, 7, 30, 0.09);
+  --shadow-lg: 0 18px 48px rgba(3, 7, 30, 0.14);
+  --shadow-popover: 0 16px 42px rgba(3, 7, 30, 0.16);
+
+  --shadow-soft: var(--shadow-sm);
+  --shadow-card: var(--shadow-md);
+  --shadow-float: var(--shadow-lg);
+  --shadow-modal: var(--shadow-popover);
   --shadow-overlay: var(--shadow-modal);
-  --shadow-subtle: var(--shadow-soft);
+  --shadow-subtle: var(--shadow-xs);
+
+  /* ========================================================
+     8. Glassmorphism Specification
+     ======================================================== */
+  --glass-bg: rgba(255, 254, 252, 0.78);
+  --glass-bg-strong: rgba(255, 254, 252, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.82);
+  --glass-shadow: 0 12px 36px rgba(3, 7, 30, 0.08);
+  --glass-blur: 18px;
 
   /* Transitions */
   --transition-fast: 140ms ease;
-  --transition-normal: 200ms ease;
-  --transition-slow: 300ms ease;
+  --transition-normal: 180ms ease;
+  --transition-slow: 240ms ease;
 }

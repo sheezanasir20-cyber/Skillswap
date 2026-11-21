@@ -72,7 +72,7 @@ export const RegisterPage: React.FC = () => {
                 fontSize: '1.75rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 800,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 letterSpacing: '-0.02em',
                 marginBottom: 'var(--space-1)',
               }}
@@ -90,9 +90,9 @@ export const RegisterPage: React.FC = () => {
               style={{
                 padding: 'var(--space-3) var(--space-4)',
                 borderRadius: 'var(--radius-sm)',
-                backgroundColor: 'var(--color-danger-soft)',
-                border: '1px solid rgba(179, 78, 74, 0.3)',
-                color: 'var(--color-danger)',
+                backgroundColor: 'rgba(208, 0, 0, 0.08)',
+                border: '1px solid rgba(208, 0, 0, 0.25)',
+                color: 'var(--color-crimson-600)',
                 fontSize: '0.875rem',
                 fontWeight: 500,
                 marginBottom: 'var(--space-4)',
@@ -157,13 +157,13 @@ export const RegisterPage: React.FC = () => {
             }}
           >
             Already have an account?{' '}
-            <Link to="/login" style={{ fontWeight: 700, color: 'var(--color-jade-700)', textDecoration: 'none' }}>
+            <Link to="/login" style={{ fontWeight: 700, color: 'var(--color-crimson-600)', textDecoration: 'none' }}>
               Sign in
             </Link>
           </div>
         </div>
 
-        {/* Right: Deep Evergreen Brand Panel */}
+        {/* Right: Ember Noir Brand Panel */}
         <div
           style={{
             background: 'var(--gradient-sidebar)',
@@ -177,7 +177,7 @@ export const RegisterPage: React.FC = () => {
           }}
         >
           {/* Subtle line motif background */}
-          <div style={{ position: 'absolute', right: '-20px', bottom: '-20px', opacity: 0.1, pointerEvents: 'none' }}>
+          <div style={{ position: 'absolute', right: '-20px', bottom: '-20px', opacity: 0.08, pointerEvents: 'none' }}>
             <svg width="240" height="240" viewBox="0 0 100 100" fill="none">
               <circle cx="50" cy="50" r="45" stroke="#FFF" strokeWidth="4" />
               <path d="M25 50 C25 35, 50 35, 50 50 C50 65, 75 65, 75 50" stroke="#FFF" strokeWidth="5" />
@@ -198,31 +198,31 @@ export const RegisterPage: React.FC = () => {
                 fontWeight: 700,
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
-                color: 'var(--color-jade-100)',
+                color: 'var(--color-amber-400)',
                 marginBottom: 'var(--space-3)',
               }}
             >
-              <Sparkles size={13} color="var(--color-amber-100)" />
+              <Sparkles size={13} color="var(--color-amber-400)" />
               The Reciprocal Agreement
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)', marginTop: 'var(--space-4)' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--space-3)' }}>
-                <CheckCircle2 size={18} color="var(--color-jade-100)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 size={18} color="var(--color-amber-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'rgba(255, 255, 255, 0.9)' }}>
                   <strong>Equal Standing:</strong> Every member teaches and learns in reciprocal turns.
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--space-3)' }}>
-                <CheckCircle2 size={18} color="var(--color-jade-100)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 size={18} color="var(--color-amber-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'rgba(255, 255, 255, 0.9)' }}>
                   <strong>Zero Commercialization:</strong> No subscriptions, paid bookings, or platform tokens.
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--space-3)' }}>
-                <CheckCircle2 size={18} color="var(--color-jade-100)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 size={18} color="var(--color-amber-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'rgba(255, 255, 255, 0.9)' }}>
                   <strong>Verified Feedback:</strong> Transparent community reviews recorded after actual sessions.
                 </div>
@@ -236,10 +236,10 @@ export const RegisterPage: React.FC = () => {
               alignItems: 'center',
               gap: 'var(--space-2)',
               fontSize: '0.75rem',
-              color: 'rgba(226, 237, 230, 0.7)',
+              color: 'rgba(255, 255, 255, 0.7)',
             }}
           >
-            <Shield size={14} color="var(--color-jade-100)" />
+            <Shield size={14} color="var(--color-gold-400)" />
             By signing up, you agree to our Terms of Service & Privacy Policy.
           </div>
         </div>

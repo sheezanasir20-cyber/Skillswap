@@ -22,6 +22,14 @@ The supplied SRS establishes product behavior but leaves several implementation 
 | Session completion | Participant action, with dispute handling to define | Yes |
 | Analytics definitions | Define each metric and date basis | Yes |
 | Custom skills | Catalogue-first; custom skill approval workflow to define | Yes |
+| Visual design system | Ember Noir in `design/design.md` is authoritative; use the supplied ten-color Coolors palette | Product owner/design approval recommended |
+
+## Visual implementation guardrails
+- Do not reuse the former monochrome, Verdant Atelier, or forest/jade/parchment palette.
+- Use the exact Ember Noir tokens and semantic color roles from `design/design.md`; do not reintroduce earlier blue/teal/lilac palettes.
+- Apply glassmorphism selectively to navigation chrome, overlays, and a small number of feature surfaces; keep dense content on solid surfaces.
+- Redesign every route, not only the dashboard.
+- Preserve backend behavior, route paths, API contracts, permissions, and data semantics during UI work.
 
 ## Source fidelity
-The product scope and FR/NFR mapping are based on the supplied “Skill swape” SRS. Architecture, stack, endpoint shapes, schema, scoring weights, reminder schedule, and some safety enhancements are proposals added to make the pack actionable. They should be reviewed rather than treated as already-approved SRS requirements.
+The product scope and FR/NFR mapping are based on the supplied SkillSwap SRS. Architecture, stack, endpoint shapes, schema, scoring weights, reminder schedule, and some safety enhancements are proposals added to make the pack actionable. They should be reviewed rather than treated as already-approved SRS requirements.

@@ -14,7 +14,7 @@ export const PublicLayout: React.FC = () => {
       <header
         className="glass-surface"
         style={{
-          borderBottom: '1px solid rgba(228, 228, 217, 0.75)',
+          borderBottom: '1px solid var(--color-line)',
           position: 'sticky',
           top: 0,
           zIndex: 100,
@@ -55,7 +55,7 @@ export const PublicLayout: React.FC = () => {
             <Link
               to="/login"
               style={{
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 fontWeight: 650,
                 fontSize: '0.9375rem',
                 textDecoration: 'none',
@@ -82,7 +82,7 @@ export const PublicLayout: React.FC = () => {
               border: 'none',
               cursor: 'pointer',
               padding: 'var(--space-2)',
-              color: 'var(--color-forest-950)',
+              color: 'var(--color-ink-950)',
             }}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -106,7 +106,7 @@ export const PublicLayout: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               style={{
                 padding: 'var(--space-2) 0',
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 fontWeight: 600,
                 fontSize: '1rem',
                 textDecoration: 'none',
@@ -119,7 +119,7 @@ export const PublicLayout: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               style={{
                 padding: 'var(--space-2) 0',
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 fontWeight: 600,
                 fontSize: '1rem',
                 textDecoration: 'none',
@@ -152,7 +152,7 @@ export const PublicLayout: React.FC = () => {
           backgroundColor: 'var(--color-paper)',
           padding: 'var(--space-12) 0',
           marginTop: 'auto',
-          boxShadow: '0 -4px 20px rgba(20, 43, 40, 0.03)',
+          boxShadow: '0 -4px 24px rgba(3, 7, 30, 0.04)',
         }}
       >
         <div
@@ -192,7 +192,7 @@ export const PublicLayout: React.FC = () => {
           <div
             style={{
               paddingTop: 'var(--space-6)',
-              borderTop: '1px solid rgba(228, 228, 217, 0.7)',
+              borderTop: '1px solid var(--color-line)',
               display: 'flex',
               flexWrap: 'wrap',
               justifyContent: 'space-between',

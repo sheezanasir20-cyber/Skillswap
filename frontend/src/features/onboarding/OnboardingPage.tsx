@@ -71,7 +71,7 @@ export const OnboardingPage: React.FC = () => {
       {/* Stepper Header per design.md §10.3 */}
       <div style={{ marginBottom: 'var(--space-8)' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 'var(--space-3)' }}>
-          <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-jade-700)' }}>
+          <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-crimson-600)' }}>
             Studio Setup Wizard
           </div>
           <div style={{ fontSize: '0.8125rem', fontWeight: 650, color: 'var(--color-muted)' }}>
@@ -81,9 +81,9 @@ export const OnboardingPage: React.FC = () => {
 
         {/* Visual Progress Track */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-2)' }}>
-          <div style={{ height: '4px', borderRadius: 'var(--radius-pill)', backgroundColor: step >= 1 ? 'var(--color-jade-700)' : 'var(--color-line)' }} />
-          <div style={{ height: '4px', borderRadius: 'var(--radius-pill)', backgroundColor: step >= 2 ? 'var(--color-jade-700)' : 'var(--color-line)' }} />
-          <div style={{ height: '4px', borderRadius: 'var(--radius-pill)', backgroundColor: step >= 3 ? 'var(--color-jade-700)' : 'var(--color-line)' }} />
+          <div style={{ height: '4px', borderRadius: 'var(--radius-pill)', backgroundColor: step >= 1 ? 'var(--color-crimson-600)' : 'var(--color-line)' }} />
+          <div style={{ height: '4px', borderRadius: 'var(--radius-pill)', backgroundColor: step >= 2 ? 'var(--color-crimson-600)' : 'var(--color-line)' }} />
+          <div style={{ height: '4px', borderRadius: 'var(--radius-pill)', backgroundColor: step >= 3 ? 'var(--color-crimson-600)' : 'var(--color-line)' }} />
         </div>
       </div>
 
@@ -96,7 +96,7 @@ export const OnboardingPage: React.FC = () => {
                   fontSize: '1.75rem',
                   fontFamily: 'var(--font-display)',
                   fontWeight: 800,
-                  color: 'var(--color-forest-950)',
+                  color: 'var(--color-ink-950)',
                   letterSpacing: '-0.02em',
                   marginBottom: 'var(--space-1)',
                 }}
@@ -138,21 +138,22 @@ export const OnboardingPage: React.FC = () => {
                   fontWeight: 700,
                   textTransform: 'uppercase',
                   letterSpacing: '0.08em',
-                  color: 'var(--color-jade-700)',
-                  backgroundColor: 'var(--color-jade-100)',
+                  color: 'var(--color-burgundy-800)',
+                  backgroundColor: 'rgba(106, 4, 15, 0.08)',
                   padding: '3px 8px',
                   borderRadius: 'var(--radius-pill)',
+                  border: '1px solid rgba(106, 4, 15, 0.25)',
                   marginBottom: 'var(--space-2)',
                 }}
               >
-                Jade Role
+                Teaching Role
               </div>
               <h1
                 style={{
                   fontSize: '1.75rem',
                   fontFamily: 'var(--font-display)',
                   fontWeight: 800,
-                  color: 'var(--color-forest-950)',
+                  color: 'var(--color-ink-950)',
                   letterSpacing: '-0.02em',
                   marginBottom: 'var(--space-1)',
                 }}
@@ -166,8 +167,8 @@ export const OnboardingPage: React.FC = () => {
 
             <div
               style={{
-                backgroundColor: 'rgba(220, 237, 230, 0.25)',
-                border: '1px solid rgba(52, 135, 119, 0.25)',
+                backgroundColor: 'rgba(106, 4, 15, 0.04)',
+                border: '1px solid rgba(106, 4, 15, 0.16)',
                 borderRadius: 'var(--radius-lg)',
                 padding: 'var(--space-5)',
                 marginBottom: 'var(--space-6)',
@@ -201,8 +202,8 @@ export const OnboardingPage: React.FC = () => {
               </div>
 
               {teachSkills.length > 0 ? (
-                <div style={{ marginTop: 'var(--space-4)', paddingTop: 'var(--space-4)', borderTop: '1px solid rgba(52, 135, 119, 0.2)' }}>
-                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-jade-700)', marginBottom: 'var(--space-2)' }}>
+                <div style={{ marginTop: 'var(--space-4)', paddingTop: 'var(--space-4)', borderTop: '1px solid rgba(106, 4, 15, 0.15)' }}>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-burgundy-800)', marginBottom: 'var(--space-2)' }}>
                     Added Teaching Skills ({teachSkills.length})
                   </div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-2)' }}>
@@ -243,21 +244,22 @@ export const OnboardingPage: React.FC = () => {
                   fontWeight: 700,
                   textTransform: 'uppercase',
                   letterSpacing: '0.08em',
-                  color: 'var(--color-clay-600)',
-                  backgroundColor: 'var(--color-clay-100)',
+                  color: 'var(--color-crimson-600)',
+                  backgroundColor: 'rgba(232, 93, 4, 0.08)',
                   padding: '3px 8px',
                   borderRadius: 'var(--radius-pill)',
+                  border: '1px solid rgba(232, 93, 4, 0.25)',
                   marginBottom: 'var(--space-2)',
                 }}
               >
-                Clay Role
+                Learning Role
               </div>
               <h1
                 style={{
                   fontSize: '1.75rem',
                   fontFamily: 'var(--font-display)',
                   fontWeight: 800,
-                  color: 'var(--color-forest-950)',
+                  color: 'var(--color-ink-950)',
                   letterSpacing: '-0.02em',
                   marginBottom: 'var(--space-1)',
                 }}
@@ -271,8 +273,8 @@ export const OnboardingPage: React.FC = () => {
 
             <div
               style={{
-                backgroundColor: 'rgba(246, 229, 222, 0.25)',
-                border: '1px solid rgba(201, 111, 85, 0.25)',
+                backgroundColor: 'rgba(232, 93, 4, 0.04)',
+                border: '1px solid rgba(232, 93, 4, 0.16)',
                 borderRadius: 'var(--radius-lg)',
                 padding: 'var(--space-5)',
                 marginBottom: 'var(--space-6)',
@@ -306,8 +308,8 @@ export const OnboardingPage: React.FC = () => {
               </div>
 
               {learnSkills.length > 0 ? (
-                <div style={{ marginTop: 'var(--space-4)', paddingTop: 'var(--space-4)', borderTop: '1px solid rgba(201, 111, 85, 0.2)' }}>
-                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-clay-600)', marginBottom: 'var(--space-2)' }}>
+                <div style={{ marginTop: 'var(--space-4)', paddingTop: 'var(--space-4)', borderTop: '1px solid rgba(232, 93, 4, 0.15)' }}>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-crimson-600)', marginBottom: 'var(--space-2)' }}>
                     Added Learning Goals ({learnSkills.length})
                   </div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-2)' }}>

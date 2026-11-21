@@ -20,7 +20,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
             style={{
               fontSize: '0.8125rem',
               fontWeight: 650,
-              color: 'var(--color-forest-950)',
+              color: 'var(--color-ink-950)',
               fontFamily: 'var(--font-body)',
               letterSpacing: '-0.01em',
             }}
@@ -37,11 +37,11 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
             padding: '0 var(--space-4)',
             borderRadius: 'var(--radius-sm)',
             border: `1.5px solid ${error ? 'var(--color-danger)' : 'var(--color-line)'}`,
-            backgroundColor: 'var(--color-paper)',
+            backgroundColor: 'var(--color-surface)',
             color: 'var(--color-ink)',
             fontSize: '0.9375rem',
             fontFamily: 'var(--font-body)',
-            boxShadow: 'var(--shadow-soft)',
+            boxShadow: 'var(--shadow-xs)',
             cursor: 'pointer',
             ...style,
           }}

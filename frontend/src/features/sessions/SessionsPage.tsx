@@ -121,7 +121,7 @@ export const SessionsPage: React.FC = () => {
       {/* Page Header */}
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-4)' }}>
         <div>
-          <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-jade-700)', marginBottom: 'var(--space-1)' }}>
+          <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-crimson-600)', marginBottom: 'var(--space-1)' }}>
             Calendar & Scheduling
           </div>
           <h1
@@ -129,7 +129,7 @@ export const SessionsPage: React.FC = () => {
               fontSize: '2rem',
               fontFamily: 'var(--font-display)',
               fontWeight: 800,
-              color: 'var(--color-forest-950)',
+              color: 'var(--color-ink-950)',
               letterSpacing: '-0.02em',
             }}
           >
@@ -171,8 +171,8 @@ export const SessionsPage: React.FC = () => {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   gap: 'var(--space-6)',
-                  backgroundColor: isConfirmed ? 'var(--color-paper)' : 'rgba(255, 254, 250, 0.75)',
-                  borderLeft: isConfirmed ? '4px solid var(--color-jade-600)' : '4px solid var(--color-amber-600)',
+                  backgroundColor: isConfirmed ? 'var(--color-paper)' : 'rgba(255, 254, 252, 0.85)',
+                  borderLeft: isConfirmed ? '4px solid var(--color-crimson-600)' : '4px solid var(--color-amber-500)',
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-5)' }}>
@@ -182,7 +182,7 @@ export const SessionsPage: React.FC = () => {
                       width: '56px',
                       height: '56px',
                       borderRadius: 'var(--radius-md)',
-                      backgroundColor: isConfirmed ? 'var(--color-jade-100)' : 'var(--color-amber-100)',
+                      backgroundColor: isConfirmed ? 'rgba(208, 0, 0, 0.08)' : 'rgba(250, 163, 7, 0.12)',
                       border: '1px solid var(--color-line)',
                       display: 'flex',
                       flexDirection: 'column',
@@ -196,7 +196,7 @@ export const SessionsPage: React.FC = () => {
                         fontSize: '0.6875rem',
                         fontWeight: 700,
                         textTransform: 'uppercase',
-                        color: isConfirmed ? 'var(--color-jade-700)' : 'var(--color-amber-600)',
+                        color: isConfirmed ? 'var(--color-crimson-600)' : 'var(--color-amber-500)',
                       }}
                     >
                       {dateObj.toLocaleDateString('en-US', { month: 'short' })}
@@ -206,7 +206,7 @@ export const SessionsPage: React.FC = () => {
                         fontSize: '1.375rem',
                         fontWeight: 800,
                         fontFamily: 'var(--font-display)',
-                        color: 'var(--color-forest-950)',
+                        color: 'var(--color-ink-950)',
                         lineHeight: 1,
                       }}
                     >
@@ -221,7 +221,7 @@ export const SessionsPage: React.FC = () => {
                           fontSize: '1.125rem',
                           fontFamily: 'var(--font-display)',
                           fontWeight: 700,
-                          color: 'var(--color-forest-950)',
+                          color: 'var(--color-ink-950)',
                         }}
                       >
                         {session.title}
@@ -234,9 +234,9 @@ export const SessionsPage: React.FC = () => {
                           letterSpacing: '0.04em',
                           padding: '3px 8px',
                           borderRadius: 'var(--radius-pill)',
-                          backgroundColor: isConfirmed ? 'var(--color-jade-100)' : 'var(--color-amber-100)',
-                          color: isConfirmed ? 'var(--color-jade-700)' : 'var(--color-amber-600)',
-                          border: `1px solid ${isConfirmed ? 'rgba(52, 135, 119, 0.3)' : 'rgba(185, 133, 63, 0.3)'}`,
+                          backgroundColor: isConfirmed ? 'rgba(208, 0, 0, 0.08)' : 'rgba(250, 163, 7, 0.12)',
+                          color: isConfirmed ? 'var(--color-crimson-600)' : 'var(--color-amber-500)',
+                          border: `1px solid ${isConfirmed ? 'rgba(208, 0, 0, 0.25)' : 'rgba(250, 163, 7, 0.3)'}`,
                         }}
                       >
                         {session.status}
@@ -268,7 +268,7 @@ export const SessionsPage: React.FC = () => {
                             gap: '4px',
                             fontSize: '0.8125rem',
                             fontWeight: 650,
-                            color: 'var(--color-jade-700)',
+                            color: 'var(--color-crimson-600)',
                           }}
                         >
                           <Video size={14} /> Join Meeting Room <ExternalLink size={12} />

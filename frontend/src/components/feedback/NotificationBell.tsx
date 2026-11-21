@@ -35,10 +35,10 @@ export const NotificationBell: React.FC = () => {
   };
 
   const getIcon = (type: string) => {
-    if (type.includes('message')) return <MessageSquare size={16} color="var(--color-jade-700)" />;
-    if (type.includes('session')) return <Calendar size={16} color="var(--color-clay-600)" />;
-    if (type.includes('connection')) return <UserCheck size={16} color="var(--color-sky-700)" />;
-    return <Sparkles size={16} color="var(--color-amber-600)" />;
+    if (type.includes('message')) return <MessageSquare size={16} color="var(--color-crimson-700)" />;
+    if (type.includes('session')) return <Calendar size={16} color="var(--color-ember-600)" />;
+    if (type.includes('connection')) return <UserCheck size={16} color="var(--color-burgundy-800)" />;
+    return <Sparkles size={16} color="var(--color-gold-400)" />;
   };
 
   return (
@@ -53,7 +53,7 @@ export const NotificationBell: React.FC = () => {
           border: 'none',
           cursor: 'pointer',
           padding: 'var(--space-2)',
-          color: 'var(--color-forest-900)',
+          color: 'var(--color-ink-950)',
           borderRadius: 'var(--radius-pill)',
           display: 'flex',
           alignItems: 'center',
@@ -70,8 +70,8 @@ export const NotificationBell: React.FC = () => {
               right: '4px',
               width: '9px',
               height: '9px',
-              backgroundColor: 'var(--color-amber-600)',
-              border: '2px solid var(--color-paper)',
+              backgroundColor: 'var(--color-amber-500)',
+              border: '2px solid var(--color-surface)',
               borderRadius: '50%',
             }}
           />
@@ -80,7 +80,7 @@ export const NotificationBell: React.FC = () => {
 
       {open ? (
         <div
-          className="glass-surface-strong"
+          className="glass-surface"
           style={{
             position: 'absolute',
             right: 0,
@@ -92,6 +92,8 @@ export const NotificationBell: React.FC = () => {
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
+            border: '1px solid var(--color-line)',
+            boxShadow: 'var(--shadow-popover)',
           }}
         >
           <div
@@ -101,10 +103,10 @@ export const NotificationBell: React.FC = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              backgroundColor: 'rgba(255, 254, 250, 0.65)',
+              backgroundColor: 'var(--color-surface)',
             }}
           >
-            <span style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-forest-950)', fontFamily: 'var(--font-display)' }}>
+            <span style={{ fontSize: '0.875rem', fontWeight: 700, fontFamily: 'var(--font-heading)', color: 'var(--color-ink-950)' }}>
               Notifications
             </span>
             {unreadCount > 0 ? (
@@ -114,53 +116,56 @@ export const NotificationBell: React.FC = () => {
                 style={{
                   background: 'none',
                   border: 'none',
-                  cursor: 'pointer',
-                  color: 'var(--color-jade-700)',
                   fontSize: '0.75rem',
-                  fontWeight: 650,
+                  fontWeight: 600,
+                  color: 'var(--color-crimson-700)',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
                 }}
               >
-                Mark all read
+                <Check size={12} /> Mark all read
               </button>
             ) : null}
           </div>
 
-          <div style={{ overflowY: 'auto', flex: 1 }}>
+          <div style={{ overflowY: 'auto', flex: 1, backgroundColor: 'var(--color-surface)' }}>
             {notifications.length === 0 ? (
-              <div
-                style={{
-                  padding: 'var(--space-8) var(--space-4)',
-                  textAlign: 'center',
-                  fontSize: '0.8125rem',
-                  color: 'var(--color-muted)',
-                }}
-              >
-                No notifications yet.
+              <div style={{ padding: 'var(--space-8)', textAlign: 'center', color: 'var(--color-muted)', fontSize: '0.875rem' }}>
+                No notifications right now.
               </div>
             ) : (
-              notifications.map((n) => (
-                <div
-                  key={n.id}
-                  style={{
-                    padding: 'var(--space-3) var(--space-5)',
-                    borderBottom: '1px solid rgba(228, 228, 217, 0.6)',
-                    backgroundColor: n.readAt ? 'transparent' : 'rgba(220, 237, 230, 0.45)',
-                    fontSize: '0.8125rem',
-                    display: 'flex',
-                    gap: 'var(--space-3)',
-                    alignItems: 'flex-start',
-                  }}
-                >
-                  <div style={{ marginTop: '2px', flexShrink: 0 }}>{getIcon(n.type)}</div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: 650, color: 'var(--color-forest-950)' }}>{n.title}</div>
-                    <div style={{ color: 'var(--color-ink-soft)', marginTop: '2px', lineHeight: 1.4 }}>{n.body}</div>
-                    <div style={{ fontSize: '0.6875rem', color: 'var(--color-muted)', marginTop: '4px' }}>
-                      {new Date(n.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+              notifications.map((n) => {
+                const unread = !n.readAt;
+                return (
+                  <div
+                    key={n.id}
+                    style={{
+                      padding: 'var(--space-3) var(--space-4)',
+                      borderBottom: '1px solid var(--color-line-subtle)',
+                      backgroundColor: unread ? 'rgba(106, 4, 15, 0.04)' : 'transparent',
+                      display: 'flex',
+                      gap: 'var(--space-3)',
+                      alignItems: 'flex-start',
+                      transition: 'background-color var(--transition-fast)',
+                    }}
+                  >
+                    <div style={{ marginTop: '2px', flexShrink: 0 }}>{getIcon(n.type)}</div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: '0.8125rem', fontWeight: unread ? 700 : 500, color: 'var(--color-ink-950)' }}>
+                        {n.title}
+                      </div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--color-muted)', marginTop: '2px', lineHeight: 1.4 }}>
+                        {n.body}
+                      </div>
+                      <div style={{ fontSize: '0.6875rem', color: 'var(--color-muted-light)', marginTop: '4px' }}>
+                        {new Date(n.createdAt).toLocaleDateString()}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))
+                );
+              })
             )}
           </div>
         </div>

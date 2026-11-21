@@ -10,7 +10,7 @@
 
 html {
   font-family: var(--font-body);
-  background-color: var(--color-parchment);
+  background-color: var(--color-paper);
   color: var(--color-ink);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-parchment);
+  background-color: var(--color-paper);
   color: var(--color-ink);
 }
 
@@ -31,36 +31,37 @@ body {
   min-height: 100vh;
 }
 
-/* Atmospheric canvas per design.md §3.3 */
+/* Atmospheric canvas per design.md §3.6 */
 .app-canvas {
   background:
-    radial-gradient(ellipse at 88% 4%, rgba(52, 135, 119, 0.09), transparent 28rem),
-    radial-gradient(ellipse at 18% 78%, rgba(201, 111, 85, 0.055), transparent 26rem),
-    var(--color-parchment);
+    radial-gradient(ellipse at 94% 0%, rgba(220, 47, 2, 0.045), transparent 30rem),
+    radial-gradient(ellipse at 4% 82%, rgba(106, 4, 15, 0.035), transparent 26rem),
+    var(--color-paper);
   min-height: 100vh;
 }
 
-/* Accessible visible focus ring per design.md §15 */
+/* Accessible visible focus ring per design.md §13 */
 :focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
 }
 
-/* Sidebar accessible focus */
+/* Sidebar dark surface accessible focus */
 .sidebar :focus-visible {
-  outline-color: #f3d8a7;
+  outline: 2px solid var(--color-focus-dark);
+  outline-offset: 2px;
 }
 
-/* Typography scale per design.md §4 */
+/* Typography scale per design.md §4.2 */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--color-forest-950);
+  color: var(--color-ink-950);
   letter-spacing: -0.015em;
 }
 
@@ -70,7 +71,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   line-height: 1.22;
 }
 
@@ -97,13 +98,13 @@ small,
 }
 
 a {
-  color: var(--color-jade-700);
+  color: var(--color-crimson-700);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--color-jade-600);
+  color: var(--color-burgundy-800);
 }
 
 button {
@@ -118,34 +119,35 @@ select {
   font-size: 0.9375rem;
 }
 
-/* Reusable Glass Surface per design.md §6.3 */
-.glass-surface {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
-  backdrop-filter: blur(var(--glass-blur)) saturate(145%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+/* Reusable Glass Surface per design.md §6.2 */
+.glass-surface,
+.glass-light {
+  background: rgba(255, 254, 252, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 36px rgba(3, 7, 30, 0.08);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
 }
 
-.glass-surface-strong {
-  background: var(--glass-bg-strong);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--shadow-float);
-  backdrop-filter: blur(var(--glass-blur)) saturate(145%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+.glass-dark {
+  background: rgba(55, 6, 23, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 16px 44px rgba(3, 7, 30, 0.24);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
 }
 
-/* Standard Paper Card Surface per design.md §6.4 */
+/* Standard Paper Card Surface per design.md §6.1 */
 .paper-card {
-  background-color: var(--color-paper);
+  background-color: var(--color-surface);
   border: 1px solid var(--color-line);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .paper-card:hover {
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-md);
 }
 
 /* Utility container classes */
@@ -179,15 +181,15 @@ select {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(30, 44, 41, 0.18);
+  background: rgba(40, 36, 53, 0.18);
   border-radius: var(--radius-pill);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(30, 44, 41, 0.32);
+  background: rgba(40, 36, 53, 0.32);
 }
 
-/* Respect reduced motion per design.md §13 */
+/* Respect reduced motion per design.md §11 */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

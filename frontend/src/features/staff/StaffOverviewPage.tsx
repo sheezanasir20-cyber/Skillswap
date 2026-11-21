@@ -37,16 +37,16 @@ export const StaffOverviewPage: React.FC = () => {
     <div style={{ maxWidth: '1080px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
       {/* Header */}
       <div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', color: 'var(--color-amber-600)', marginBottom: 'var(--space-1)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', color: 'var(--color-amber-500)', marginBottom: 'var(--space-1)' }}>
           <ShieldCheck size={18} />
           <span style={{ fontSize: '0.8125rem', fontWeight: 600, letterSpacing: '0.04em', textTransform: 'uppercase' }}>
             Staff Operations
           </span>
         </div>
-        <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.875rem', fontWeight: 700, color: 'var(--color-ink)' }}>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.875rem', fontWeight: 700, color: 'var(--color-ink-950)' }}>
           Moderation & Administration
         </h1>
-        <p style={{ color: 'var(--color-ink-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
+        <p style={{ color: 'var(--color-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
           Monitor community health, resolve pending reports, review platform metrics, and audit actions.
         </p>
       </div>
@@ -59,20 +59,20 @@ export const StaffOverviewPage: React.FC = () => {
           className="paper-card"
           style={{
             cursor: 'pointer',
-            borderTop: '3px solid var(--color-amber-600)',
+            borderTop: '3px solid var(--color-crimson-600)',
             transition: 'transform 0.15s ease, box-shadow 0.15s ease',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--color-amber-600)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--color-crimson-600)' }}>
             <span style={{ fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Pending Reports
             </span>
             <AlertTriangle size={18} />
           </div>
-          <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.25rem', fontWeight: 700, color: 'var(--color-ink)', marginTop: 'var(--space-2)' }}>
+          <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.25rem', fontWeight: 700, color: 'var(--color-ink-950)', marginTop: 'var(--space-2)' }}>
             {analytics?.reports?.pending || 0}
           </div>
-          <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '4px' }}>
+          <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '4px' }}>
             Requires immediate moderator review
           </div>
         </div>
@@ -83,20 +83,20 @@ export const StaffOverviewPage: React.FC = () => {
           className="paper-card"
           style={{
             cursor: 'pointer',
-            borderTop: '3px solid var(--color-jade-600)',
+            borderTop: '3px solid var(--color-wine-900)',
             transition: 'transform 0.15s ease, box-shadow 0.15s ease',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--color-jade-700)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--color-wine-900)' }}>
             <span style={{ fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Total Members
             </span>
             <Users size={18} />
           </div>
-          <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.25rem', fontWeight: 700, color: 'var(--color-ink)', marginTop: 'var(--space-2)' }}>
+          <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.25rem', fontWeight: 700, color: 'var(--color-ink-950)', marginTop: 'var(--space-2)' }}>
             {analytics?.members?.total || 0}
           </div>
-          <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '4px' }}>
+          <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '4px' }}>
             {analytics?.members?.active || 0} verified active members
           </div>
         </div>
@@ -107,20 +107,20 @@ export const StaffOverviewPage: React.FC = () => {
           className="paper-card"
           style={{
             cursor: 'pointer',
-            borderTop: '3px solid var(--color-sky-700)',
+            borderTop: '3px solid var(--color-ember-600)',
             transition: 'transform 0.15s ease, box-shadow 0.15s ease',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--color-sky-700)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--color-ember-600)' }}>
             <span style={{ fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Completed Sessions
             </span>
             <BarChart3 size={18} />
           </div>
-          <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.25rem', fontWeight: 700, color: 'var(--color-ink)', marginTop: 'var(--space-2)' }}>
+          <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.25rem', fontWeight: 700, color: 'var(--color-ink-950)', marginTop: 'var(--space-2)' }}>
             {analytics?.sessions?.completed || 0}
           </div>
-          <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '4px' }}>
+          <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '4px' }}>
             {analytics?.sessions?.confirmed || 0} sessions currently scheduled
           </div>
         </div>
@@ -131,20 +131,20 @@ export const StaffOverviewPage: React.FC = () => {
           className="paper-card"
           style={{
             cursor: 'pointer',
-            borderTop: '3px solid var(--color-forest-900)',
+            borderTop: '3px solid var(--color-burgundy-800)',
             transition: 'transform 0.15s ease, box-shadow 0.15s ease',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--color-forest-900)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--color-burgundy-800)' }}>
             <span style={{ fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Staff Activity Log
             </span>
             <Activity size={18} />
           </div>
-          <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-ink)', marginTop: 'var(--space-3)' }}>
+          <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-ink-950)', marginTop: 'var(--space-3)' }}>
             Inspect Audit Trail
           </div>
-          <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '4px' }}>
+          <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '4px' }}>
             Immutable administrative records
           </div>
         </div>
@@ -154,10 +154,10 @@ export const StaffOverviewPage: React.FC = () => {
       <div className="paper-card" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: 'var(--space-2)' }}>
           <div>
-            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-ink)' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-ink-950)' }}>
               Reports Requiring Immediate Attention
             </h2>
-            <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '2px' }}>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '2px' }}>
               Review user-flagged profiles, communications, and feedback submissions.
             </p>
           </div>
@@ -168,7 +168,7 @@ export const StaffOverviewPage: React.FC = () => {
               alignItems: 'center',
               gap: '4px',
               fontSize: '0.875rem',
-              color: 'var(--color-jade-700)',
+              color: 'var(--color-crimson-600)',
               fontWeight: 600,
               textDecoration: 'none',
             }}
@@ -182,16 +182,16 @@ export const StaffOverviewPage: React.FC = () => {
             style={{
               padding: 'var(--space-8)',
               textAlign: 'center',
-              backgroundColor: 'var(--color-parchment-200)',
-              borderRadius: 'var(--radius-control)',
+              backgroundColor: 'rgba(3, 7, 30, 0.03)',
+              borderRadius: 'var(--radius-sm)',
               border: '1px dashed var(--color-line)',
             }}
           >
-            <CheckCircle2 size={32} style={{ color: 'var(--color-jade-600)', margin: '0 auto var(--space-2) auto' }} />
-            <div style={{ fontWeight: 600, fontSize: '0.9375rem', color: 'var(--color-ink)' }}>
+            <CheckCircle2 size={32} style={{ color: 'var(--color-crimson-600)', margin: '0 auto var(--space-2) auto' }} />
+            <div style={{ fontWeight: 600, fontSize: '0.9375rem', color: 'var(--color-ink-950)' }}>
               All reports are currently resolved!
             </div>
-            <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', margin: '4px 0 0 0' }}>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', margin: '4px 0 0 0' }}>
               The community queue is clean. Check back later or review historical cases in the audit log.
             </p>
           </div>
@@ -202,9 +202,9 @@ export const StaffOverviewPage: React.FC = () => {
                 key={r.id}
                 style={{
                   padding: 'var(--space-4)',
-                  backgroundColor: 'var(--color-parchment-200)',
-                  borderRadius: 'var(--radius-control)',
-                  border: '1px solid var(--color-line-subtle)',
+                  backgroundColor: 'rgba(3, 7, 30, 0.03)',
+                  borderRadius: 'var(--radius-sm)',
+                  border: '1px solid var(--color-line)',
                   display: 'flex',
                   flexWrap: 'wrap',
                   alignItems: 'center',
@@ -220,19 +220,19 @@ export const StaffOverviewPage: React.FC = () => {
                         borderRadius: 'var(--radius-pill)',
                         fontSize: '0.6875rem',
                         fontWeight: 700,
-                        backgroundColor: 'rgba(185, 133, 63, 0.15)',
-                        color: 'var(--color-amber-600)',
+                        backgroundColor: 'rgba(250, 163, 7, 0.12)',
+                        color: 'var(--color-amber-500)',
                         textTransform: 'uppercase',
                         letterSpacing: '0.04em',
                       }}
                     >
                       {r.targetType}
                     </span>
-                    <span style={{ fontWeight: 600, fontSize: '0.9375rem', color: 'var(--color-ink)' }}>
+                    <span style={{ fontWeight: 600, fontSize: '0.9375rem', color: 'var(--color-ink-950)' }}>
                       {r.reason}
                     </span>
                   </div>
-                  <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '4px' }}>
+                  <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '4px' }}>
                     Reported by {r.reporter?.displayName || 'Member'} on{' '}
                     {new Date(r.createdAt).toLocaleDateString()}
                   </div>
@@ -246,7 +246,7 @@ export const StaffOverviewPage: React.FC = () => {
                     gap: '4px',
                     fontSize: '0.8125rem',
                     fontWeight: 600,
-                    color: 'var(--color-jade-700)',
+                    color: 'var(--color-crimson-600)',
                     textDecoration: 'none',
                     padding: '6px 12px',
                     borderRadius: 'var(--radius-control)',

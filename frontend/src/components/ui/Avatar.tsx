@@ -16,13 +16,13 @@ export const Avatar: React.FC<AvatarProps> = ({ name, avatarUrl, size = 40, styl
     return n.slice(0, 2).toUpperCase();
   };
 
-  // Deterministic pastel palette from name per design.md §12.2
+  // Deterministic Ember Noir palette
   const palettes = [
-    { bg: 'var(--color-jade-100)', color: 'var(--color-forest-950)', border: 'rgba(52, 135, 119, 0.3)' },
-    { bg: 'var(--color-clay-100)', color: 'var(--color-clay-600)', border: 'rgba(201, 111, 85, 0.3)' },
-    { bg: 'var(--color-sky-100)', color: 'var(--color-sky-700)', border: 'rgba(82, 124, 145, 0.3)' },
-    { bg: 'var(--color-amber-100)', color: 'var(--color-amber-600)', border: 'rgba(185, 133, 63, 0.3)' },
-    { bg: 'var(--color-sage-100)', color: 'var(--color-forest-900)', border: 'rgba(145, 169, 149, 0.35)' },
+    { bg: 'rgba(106, 4, 15, 0.12)', color: 'var(--color-burgundy-800)', border: 'rgba(106, 4, 15, 0.3)' },
+    { bg: 'rgba(232, 93, 4, 0.12)', color: 'var(--color-crimson-700)', border: 'rgba(232, 93, 4, 0.3)' },
+    { bg: 'rgba(244, 140, 6, 0.14)', color: 'var(--color-ink-950)', border: 'rgba(244, 140, 6, 0.35)' },
+    { bg: 'rgba(55, 6, 23, 0.12)', color: 'var(--color-wine-900)', border: 'rgba(55, 6, 23, 0.3)' },
+    { bg: 'rgba(255, 186, 8, 0.16)', color: 'var(--color-ink-950)', border: 'rgba(255, 186, 8, 0.4)' },
   ];
 
   let hash = 0;
@@ -42,7 +42,7 @@ export const Avatar: React.FC<AvatarProps> = ({ name, avatarUrl, size = 40, styl
           borderRadius: 'var(--radius-pill)',
           objectFit: 'cover',
           border: '1.5px solid var(--color-line)',
-          boxShadow: 'var(--shadow-soft)',
+          boxShadow: 'var(--shadow-sm)',
           ...style,
         }}
       />
@@ -60,13 +60,13 @@ export const Avatar: React.FC<AvatarProps> = ({ name, avatarUrl, size = 40, styl
         backgroundColor: theme.bg,
         color: theme.color,
         fontWeight: 700,
-        fontFamily: 'var(--font-display)',
+        fontFamily: 'var(--font-heading)',
         fontSize: `${Math.round(size * 0.38)}px`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         border: `1.5px solid ${theme.border}`,
-        boxShadow: 'var(--shadow-soft)',
+        boxShadow: 'var(--shadow-xs)',
         userSelect: 'none',
         letterSpacing: '-0.02em',
         ...style,

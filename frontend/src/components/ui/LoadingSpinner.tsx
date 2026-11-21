@@ -23,12 +23,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ message = 'Loadi
           width: '28px',
           height: '28px',
           border: '3px solid var(--color-line)',
-          borderTopColor: 'var(--color-accent)',
+          borderTopColor: 'var(--color-crimson-700)',
           borderRadius: '50%',
           animation: 'spin 0.8s linear infinite',
         }}
       />
-      <span style={{ fontSize: '0.875rem', color: 'var(--color-ink-muted)' }}>{message}</span>
+      <span style={{ fontSize: '0.875rem', color: 'var(--color-muted)' }}>{message}</span>
       <style>{`
         @keyframes spin {
           0% { transform: rotate(0deg); }

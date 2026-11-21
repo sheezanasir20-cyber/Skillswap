@@ -55,7 +55,7 @@ export const ForgotPasswordPage: React.FC = () => {
                 fontSize: '1.75rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 800,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 letterSpacing: '-0.02em',
                 marginBottom: 'var(--space-1)',
               }}
@@ -72,17 +72,17 @@ export const ForgotPasswordPage: React.FC = () => {
               style={{
                 padding: 'var(--space-5)',
                 borderRadius: 'var(--radius-md)',
-                backgroundColor: 'rgba(220, 237, 230, 0.45)',
-                border: '1px solid rgba(52, 135, 119, 0.3)',
+                backgroundColor: 'rgba(250, 163, 7, 0.1)',
+                border: '1px solid rgba(250, 163, 7, 0.3)',
                 display: 'flex',
                 gap: 'var(--space-3)',
                 alignItems: 'flex-start',
                 marginBottom: 'var(--space-6)',
               }}
             >
-              <CheckCircle2 size={20} color="var(--color-jade-700)" style={{ flexShrink: 0, marginTop: '2px' }} />
+              <CheckCircle2 size={20} color="var(--color-amber-500)" style={{ flexShrink: 0, marginTop: '2px' }} />
               <div>
-                <div style={{ fontWeight: 700, color: 'var(--color-forest-950)', fontSize: '0.9375rem' }}>
+                <div style={{ fontWeight: 700, color: 'var(--color-ink-950)', fontSize: '0.9375rem' }}>
                   Check your inbox
                 </div>
                 <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-soft)', marginTop: '4px', lineHeight: 1.5 }}>
@@ -112,7 +112,7 @@ export const ForgotPasswordPage: React.FC = () => {
               style={{
                 fontSize: '0.875rem',
                 fontWeight: 650,
-                color: 'var(--color-forest-900)',
+                color: 'var(--color-crimson-600)',
                 textDecoration: 'none',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -150,7 +150,7 @@ export const ForgotPasswordPage: React.FC = () => {
                 marginBottom: 'var(--space-4)',
               }}
             >
-              <KeyRound size={20} color="var(--color-amber-100)" />
+              <KeyRound size={20} color="var(--color-amber-400)" />
             </div>
             <h2 style={{ fontSize: '1.375rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-white)', marginBottom: 'var(--space-2)' }}>
               Account Security First
@@ -160,8 +160,8 @@ export const ForgotPasswordPage: React.FC = () => {
             </p>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', fontSize: '0.75rem', color: 'rgba(226, 237, 230, 0.7)' }}>
-            <Shield size={14} color="var(--color-jade-100)" />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.7)' }}>
+            <Shield size={14} color="var(--color-gold-400)" />
             Cryptographically signed recovery tokens
           </div>
         </div>

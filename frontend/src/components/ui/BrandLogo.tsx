@@ -28,7 +28,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         userSelect: 'none',
       }}
     >
-      {/* Signature exchange-loop motif per design.md §2.2 */}
+      {/* Signature exchange-loop motif per design.md §2.2 (Ember Noir: Crimson + Gold) */}
       <svg
         width={markSize}
         height={markSize}
@@ -37,17 +37,17 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         xmlns="http://www.w3.org/2000/svg"
         style={{ flexShrink: 0 }}
       >
-        <circle cx="16" cy="16" r="15" fill={isDark ? 'rgba(52, 135, 119, 0.2)' : 'var(--color-sage-100)'} />
+        <circle cx="16" cy="16" r="15" fill={isDark ? 'rgba(106, 4, 15, 0.3)' : 'var(--color-paper-warm)'} />
         <path
           d="M9 16 C9 11, 16 11, 16 16 C16 21, 23 21, 23 16"
-          stroke="var(--color-jade-600)"
-          strokeWidth="3"
+          stroke="var(--color-crimson-600)"
+          strokeWidth="3.2"
           strokeLinecap="round"
         />
         <path
           d="M23 16 C23 11, 16 11, 16 16 C16 21, 9 21, 9 16"
-          stroke="var(--color-amber-600)"
-          strokeWidth="2.2"
+          stroke="var(--color-gold-400)"
+          strokeWidth="2.4"
           strokeLinecap="round"
           strokeDasharray="2 3"
         />
@@ -56,27 +56,27 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <span
           style={{
-            fontFamily: 'var(--font-display)',
+            fontFamily: 'var(--font-heading)',
             fontSize: textSize,
             fontWeight: 800,
-            color: isDark ? 'var(--color-paper)' : 'var(--color-forest-950)',
+            color: isDark ? 'var(--color-surface)' : 'var(--color-ink-950)',
             letterSpacing: '-0.025em',
             lineHeight: 1.1,
           }}
         >
-          Skill<span style={{ color: isDark ? 'var(--color-jade-100)' : 'var(--color-jade-600)' }}>Swap</span>
+          Skill<span style={{ color: isDark ? 'var(--color-gold-400)' : 'var(--color-crimson-700)' }}>Swap</span>
         </span>
         {showTagline ? (
           <span
             style={{
               fontSize: '0.6875rem',
-              color: isDark ? 'rgba(255, 255, 255, 0.65)' : 'var(--color-muted)',
+              color: isDark ? 'rgba(255, 250, 247, 0.76)' : 'var(--color-muted)',
               fontFamily: 'var(--font-body)',
               marginTop: '1px',
               letterSpacing: '0.02em',
             }}
           >
-            Exchange knowledge, not money
+            Share what you know. Discover what's next.
           </span>
         ) : null}
       </div>

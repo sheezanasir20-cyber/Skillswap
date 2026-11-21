@@ -70,7 +70,7 @@ export const DiscoverPage: React.FC = () => {
     <div style={{ maxWidth: '1040px', display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
       {/* Title */}
       <div>
-        <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-jade-700)', marginBottom: 'var(--space-1)' }}>
+        <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-crimson-600)', marginBottom: 'var(--space-1)' }}>
           Directory & Algorithm
         </div>
         <h1
@@ -78,7 +78,7 @@ export const DiscoverPage: React.FC = () => {
             fontSize: '2rem',
             fontFamily: 'var(--font-display)',
             fontWeight: 800,
-            color: 'var(--color-forest-950)',
+            color: 'var(--color-ink-950)',
             letterSpacing: '-0.02em',
           }}
         >
@@ -93,7 +93,7 @@ export const DiscoverPage: React.FC = () => {
       <div
         style={{
           display: 'inline-flex',
-          backgroundColor: 'rgba(23, 49, 43, 0.06)',
+          backgroundColor: 'rgba(3, 7, 30, 0.06)',
           padding: '4px',
           borderRadius: 'var(--radius-pill)',
           width: 'fit-content',
@@ -106,9 +106,9 @@ export const DiscoverPage: React.FC = () => {
             padding: '8px 20px',
             borderRadius: 'var(--radius-pill)',
             border: 'none',
-            backgroundColor: tab === 'matches' ? 'var(--color-paper)' : 'transparent',
+            backgroundColor: tab === 'matches' ? 'var(--color-surface)' : 'transparent',
             fontWeight: tab === 'matches' ? 700 : 500,
-            color: tab === 'matches' ? 'var(--color-forest-950)' : 'var(--color-muted)',
+            color: tab === 'matches' ? 'var(--color-ink-950)' : 'var(--color-muted)',
             boxShadow: tab === 'matches' ? 'var(--shadow-soft)' : 'none',
             cursor: 'pointer',
             fontSize: '0.875rem',
@@ -118,7 +118,7 @@ export const DiscoverPage: React.FC = () => {
             transition: 'all var(--transition-fast)',
           }}
         >
-          <Sparkles size={16} color={tab === 'matches' ? 'var(--color-amber-600)' : 'currentColor'} />
+          <Sparkles size={16} color={tab === 'matches' ? 'var(--color-amber-500)' : 'currentColor'} />
           Suggested Reciprocal Matches
         </button>
 
@@ -129,9 +129,9 @@ export const DiscoverPage: React.FC = () => {
             padding: '8px 20px',
             borderRadius: 'var(--radius-pill)',
             border: 'none',
-            backgroundColor: tab === 'search' ? 'var(--color-paper)' : 'transparent',
+            backgroundColor: tab === 'search' ? 'var(--color-surface)' : 'transparent',
             fontWeight: tab === 'search' ? 700 : 500,
-            color: tab === 'search' ? 'var(--color-forest-950)' : 'var(--color-muted)',
+            color: tab === 'search' ? 'var(--color-ink-950)' : 'var(--color-muted)',
             boxShadow: tab === 'search' ? 'var(--shadow-soft)' : 'none',
             cursor: 'pointer',
             fontSize: '0.875rem',
@@ -206,7 +206,7 @@ export const DiscoverPage: React.FC = () => {
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: 'var(--color-danger)',
+                  color: 'var(--color-crimson-600)',
                   fontSize: '0.8125rem',
                   fontWeight: 650,
                   cursor: 'pointer',
@@ -257,7 +257,7 @@ export const DiscoverPage: React.FC = () => {
                           fontSize: '1.125rem',
                           fontFamily: 'var(--font-display)',
                           fontWeight: 700,
-                          color: 'var(--color-forest-950)',
+                          color: 'var(--color-ink-950)',
                         }}
                       >
                         {item.member.displayName}
@@ -274,13 +274,13 @@ export const DiscoverPage: React.FC = () => {
                   <div
                     style={{
                       padding: 'var(--space-3) var(--space-4)',
-                      backgroundColor: 'rgba(220, 237, 230, 0.45)',
+                      backgroundColor: 'rgba(106, 4, 15, 0.05)',
                       borderRadius: 'var(--radius-sm)',
                       fontSize: '0.8125rem',
-                      color: 'var(--color-forest-950)',
+                      color: 'var(--color-ink-950)',
                       fontWeight: 550,
                       lineHeight: 1.45,
-                      border: '1px solid rgba(52, 135, 119, 0.25)',
+                      border: '1px solid rgba(106, 4, 15, 0.16)',
                       marginBottom: 'var(--space-4)',
                     }}
                   >
@@ -336,7 +336,7 @@ export const DiscoverPage: React.FC = () => {
                       fontSize: '1rem',
                       fontWeight: 700,
                       fontFamily: 'var(--font-display)',
-                      color: 'var(--color-forest-950)',
+                      color: 'var(--color-ink-950)',
                     }}
                   >
                     {member.displayName}

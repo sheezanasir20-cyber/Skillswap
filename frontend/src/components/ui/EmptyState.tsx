@@ -37,29 +37,29 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
           width: '56px',
           height: '56px',
           borderRadius: 'var(--radius-pill)',
-          backgroundColor: 'var(--color-sage-100)',
-          color: 'var(--color-jade-700)',
+          backgroundColor: 'rgba(106, 4, 15, 0.08)',
+          color: 'var(--color-burgundy-800)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           marginBottom: 'var(--space-2)',
-          boxShadow: 'var(--shadow-soft)',
+          boxShadow: 'var(--shadow-xs)',
         }}
       >
         {icon || (
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
             <path
               d="M8 16 C8 10, 16 10, 16 16 C16 22, 24 22, 24 16"
-              stroke="var(--color-jade-700)"
-              strokeWidth="2.5"
+              stroke="var(--color-crimson-600)"
+              strokeWidth="2.8"
               strokeLinecap="round"
             />
             <path
               d="M24 16 C24 10, 16 10, 16 16 C16 22, 8 22, 8 16"
-              stroke="var(--color-amber-600)"
-              strokeWidth="2"
+              stroke="var(--color-gold-400)"
+              strokeWidth="2.2"
               strokeLinecap="round"
-              strokeDasharray="1 3"
+              strokeDasharray="2 3"
             />
           </svg>
         )}
@@ -69,8 +69,8 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
         style={{
           fontSize: '1.25rem',
           fontWeight: 700,
-          color: 'var(--color-forest-950)',
-          fontFamily: 'var(--font-display)',
+          color: 'var(--color-ink-950)',
+          fontFamily: 'var(--font-heading)',
           letterSpacing: '-0.015em',
         }}
       >
@@ -79,7 +79,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
       <p
         style={{
           fontSize: '0.9375rem',
-          color: 'var(--color-ink-soft)',
+          color: 'var(--color-muted)',
           maxWidth: '460px',
           lineHeight: 1.55,
         }}

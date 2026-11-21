@@ -98,7 +98,7 @@ export const MessagesPage: React.FC = () => {
         style={{
           width: '320px',
           borderRight: '1px solid var(--color-line)',
-          backgroundColor: 'rgba(255, 254, 250, 0.65)',
+          backgroundColor: 'rgba(255, 254, 252, 0.75)',
           display: 'flex',
           flexDirection: 'column',
           flexShrink: 0,
@@ -114,13 +114,13 @@ export const MessagesPage: React.FC = () => {
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
-            <MessageSquare size={18} color="var(--color-jade-700)" />
+            <MessageSquare size={18} color="var(--color-crimson-600)" />
             <span
               style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
                 fontSize: '1rem',
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
               }}
             >
               Conversations
@@ -145,9 +145,9 @@ export const MessagesPage: React.FC = () => {
                   onClick={() => navigate(`/app/messages/${c.id}`)}
                   style={{
                     padding: 'var(--space-4) var(--space-5)',
-                    borderBottom: '1px solid rgba(228, 228, 217, 0.6)',
-                    backgroundColor: isSelected ? 'var(--color-jade-100)' : 'transparent',
-                    borderLeft: isSelected ? '3px solid var(--color-jade-700)' : '3px solid transparent',
+                    borderBottom: '1px solid var(--color-line)',
+                    backgroundColor: isSelected ? 'rgba(208, 0, 0, 0.08)' : 'transparent',
+                    borderLeft: isSelected ? '3px solid var(--color-crimson-600)' : '3px solid transparent',
                     cursor: 'pointer',
                     display: 'flex',
                     alignItems: 'center',
@@ -161,7 +161,7 @@ export const MessagesPage: React.FC = () => {
                       style={{
                         fontWeight: isSelected ? 700 : 600,
                         fontSize: '0.875rem',
-                        color: 'var(--color-forest-950)',
+                        color: 'var(--color-ink-950)',
                         fontFamily: 'var(--font-display)',
                       }}
                     >
@@ -170,7 +170,7 @@ export const MessagesPage: React.FC = () => {
                     <div
                       style={{
                         fontSize: '0.75rem',
-                        color: isSelected ? 'var(--color-forest-900)' : 'var(--color-muted)',
+                        color: isSelected ? 'var(--color-ink-950)' : 'var(--color-muted)',
                         whiteSpace: 'nowrap',
                         overflow: 'hidden',
                         textOverflow: 'ellipsis',
@@ -199,7 +199,7 @@ export const MessagesPage: React.FC = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              backgroundColor: 'rgba(255, 254, 250, 0.9)',
+              backgroundColor: 'rgba(255, 254, 252, 0.95)',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
@@ -209,7 +209,7 @@ export const MessagesPage: React.FC = () => {
                 size={36}
               />
               <div>
-                <span style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--color-forest-950)', fontFamily: 'var(--font-display)' }}>
+                <span style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--color-ink-950)', fontFamily: 'var(--font-display)' }}>
                   {activeConversation.partner.displayName}
                 </span>
                 <div style={{ fontSize: '0.6875rem', color: 'var(--color-muted)' }}>
@@ -252,7 +252,7 @@ export const MessagesPage: React.FC = () => {
               display: 'flex',
               flexDirection: 'column',
               gap: 'var(--space-3)',
-              backgroundColor: 'rgba(245, 241, 232, 0.25)',
+              backgroundColor: 'rgba(243, 236, 231, 0.35)',
             }}
           >
             {messages.length === 0 ? (
@@ -262,16 +262,16 @@ export const MessagesPage: React.FC = () => {
                     width: '48px',
                     height: '48px',
                     borderRadius: 'var(--radius-pill)',
-                    backgroundColor: 'var(--color-sage-100)',
+                    backgroundColor: 'rgba(208, 0, 0, 0.08)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     margin: '0 auto var(--space-3)',
                   }}
                 >
-                  <MessageSquare size={22} color="var(--color-jade-700)" />
+                  <MessageSquare size={22} color="var(--color-crimson-600)" />
                 </div>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--color-forest-950)', fontFamily: 'var(--font-display)', marginBottom: 'var(--space-1)' }}>
+                <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--color-ink-950)', fontFamily: 'var(--font-display)', marginBottom: 'var(--space-1)' }}>
                   Start your conversation
                 </h3>
                 <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)', lineHeight: 1.5 }}>
@@ -294,9 +294,9 @@ export const MessagesPage: React.FC = () => {
                   >
                     <div
                       style={{
-                        backgroundColor: isMe ? 'var(--color-jade-700)' : 'var(--color-paper)',
-                        color: isMe ? 'var(--color-white)' : 'var(--color-forest-950)',
-                        border: isMe ? '1px solid rgba(40, 117, 101, 0.3)' : '1px solid var(--color-line)',
+                        backgroundColor: isMe ? 'var(--color-burgundy-800)' : 'var(--color-surface)',
+                        color: isMe ? 'var(--color-white)' : 'var(--color-ink-950)',
+                        border: isMe ? '1px solid rgba(106, 4, 15, 0.35)' : '1px solid var(--color-line)',
                         padding: '10px 16px',
                         borderRadius: isMe ? '16px 16px 3px 16px' : '16px 16px 16px 3px',
                         fontSize: '0.9375rem',
@@ -330,7 +330,7 @@ export const MessagesPage: React.FC = () => {
             style={{
               padding: 'var(--space-4) var(--space-6)',
               borderTop: '1px solid var(--color-line)',
-              backgroundColor: 'var(--color-paper)',
+              backgroundColor: 'var(--color-surface)',
               display: 'flex',
               gap: 'var(--space-3)',
               alignItems: 'center',
@@ -348,10 +348,10 @@ export const MessagesPage: React.FC = () => {
                 padding: '0 var(--space-4)',
                 borderRadius: 'var(--radius-sm)',
                 border: '1.5px solid var(--color-line)',
-                backgroundColor: 'var(--color-paper)',
+                backgroundColor: 'var(--color-surface)',
                 outline: 'none',
                 fontSize: '0.9375rem',
-                color: 'var(--color-ink)',
+                color: 'var(--color-ink-950)',
                 boxShadow: 'var(--shadow-soft)',
               }}
             />

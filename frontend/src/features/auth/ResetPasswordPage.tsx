@@ -70,7 +70,7 @@ export const ResetPasswordPage: React.FC = () => {
                 fontSize: '1.75rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 800,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 letterSpacing: '-0.02em',
                 marginBottom: 'var(--space-1)',
               }}
@@ -88,17 +88,17 @@ export const ResetPasswordPage: React.FC = () => {
                 style={{
                   padding: 'var(--space-5)',
                   borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'rgba(220, 237, 230, 0.45)',
-                  border: '1px solid rgba(52, 135, 119, 0.3)',
+                  backgroundColor: 'rgba(250, 163, 7, 0.1)',
+                  border: '1px solid rgba(250, 163, 7, 0.3)',
                   display: 'flex',
                   gap: 'var(--space-3)',
                   alignItems: 'flex-start',
                   marginBottom: 'var(--space-6)',
                 }}
               >
-                <CheckCircle2 size={20} color="var(--color-jade-700)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <CheckCircle2 size={20} color="var(--color-amber-500)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <div style={{ fontWeight: 700, color: 'var(--color-forest-950)', fontSize: '0.9375rem' }}>
+                  <div style={{ fontWeight: 700, color: 'var(--color-ink-950)', fontSize: '0.9375rem' }}>
                     Password updated
                   </div>
                   <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-soft)', marginTop: '4px' }}>
@@ -118,9 +118,9 @@ export const ResetPasswordPage: React.FC = () => {
                   style={{
                     padding: 'var(--space-3) var(--space-4)',
                     borderRadius: 'var(--radius-sm)',
-                    backgroundColor: 'var(--color-danger-soft)',
-                    border: '1px solid rgba(179, 78, 74, 0.3)',
-                    color: 'var(--color-danger)',
+                    backgroundColor: 'rgba(208, 0, 0, 0.08)',
+                    border: '1px solid rgba(208, 0, 0, 0.25)',
+                    color: 'var(--color-crimson-600)',
                     fontSize: '0.875rem',
                     fontWeight: 500,
                   }}
@@ -180,7 +180,7 @@ export const ResetPasswordPage: React.FC = () => {
                 marginBottom: 'var(--space-4)',
               }}
             >
-              <Lock size={20} color="var(--color-jade-100)" />
+              <Lock size={20} color="var(--color-amber-400)" />
             </div>
             <h2 style={{ fontSize: '1.375rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-white)', marginBottom: 'var(--space-2)' }}>
               Protected Credentials
@@ -190,8 +190,8 @@ export const ResetPasswordPage: React.FC = () => {
             </p>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', fontSize: '0.75rem', color: 'rgba(226, 237, 230, 0.7)' }}>
-            <Shield size={14} color="var(--color-jade-100)" />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.7)' }}>
+            <Shield size={14} color="var(--color-gold-400)" />
             Encrypted storage and secure sessions
           </div>
         </div>

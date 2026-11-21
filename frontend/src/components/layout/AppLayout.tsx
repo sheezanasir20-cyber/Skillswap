@@ -73,8 +73,8 @@ export const AppLayout: React.FC = () => {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: 'var(--color-parchment)' }}>
-      {/* Desktop Evergreen Sidebar (256px wide per design.md §5.1, collapses below 900px) */}
+    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: 'var(--color-paper)' }}>
+      {/* Desktop Ember Noir Sidebar (256px wide per design.md §5.1, collapses below 900px) */}
       <aside
         className="app-sidebar sidebar"
         style={{
@@ -88,7 +88,7 @@ export const AppLayout: React.FC = () => {
           bottom: 0,
           left: 0,
           zIndex: 90,
-          boxShadow: '4px 0 24px rgba(20, 43, 40, 0.15)',
+          boxShadow: '4px 0 28px rgba(3, 7, 30, 0.35)',
         }}
       >
         {/* Brand Lockup */}
@@ -121,11 +121,11 @@ export const AppLayout: React.FC = () => {
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: '0.08em',
-              color: 'rgba(226, 237, 230, 0.5)',
+              color: 'rgba(255, 255, 255, 0.45)',
               padding: '0 var(--space-3) var(--space-2)',
             }}
           >
-            Workspace
+            Learning Workspace
           </div>
 
           {navItems.map((item) => {
@@ -142,16 +142,16 @@ export const AppLayout: React.FC = () => {
                   borderRadius: 'var(--radius-sm)',
                   fontSize: '0.875rem',
                   fontWeight: isActive ? 650 : 500,
-                  color: isActive ? 'var(--color-white)' : 'rgba(255, 255, 255, 0.78)',
-                  backgroundColor: isActive ? 'rgba(220, 237, 230, 0.14)' : 'transparent',
-                  borderLeft: isActive ? '3px solid var(--color-jade-600)' : '3px solid transparent',
+                  color: isActive ? 'var(--color-white)' : 'rgba(255, 255, 255, 0.76)',
+                  backgroundColor: isActive ? 'rgba(208, 0, 0, 0.18)' : 'transparent',
+                  borderLeft: isActive ? '3px solid var(--color-gold-400)' : '3px solid transparent',
                   textDecoration: 'none',
                   transition: 'all var(--transition-fast)',
                 }}
               >
                 <span
                   style={{
-                    color: isActive ? 'var(--color-jade-100)' : 'rgba(226, 237, 230, 0.72)',
+                    color: isActive ? 'var(--color-gold-400)' : 'rgba(255, 255, 255, 0.72)',
                     display: 'flex',
                     alignItems: 'center',
                   }}
@@ -176,13 +176,13 @@ export const AppLayout: React.FC = () => {
                   borderRadius: 'var(--radius-sm)',
                   fontSize: '0.875rem',
                   fontWeight: 650,
-                  color: 'var(--color-amber-100)',
-                  backgroundColor: 'rgba(185, 133, 63, 0.16)',
-                  border: '1px solid rgba(185, 133, 63, 0.3)',
+                  color: 'var(--color-amber-400)',
+                  backgroundColor: 'rgba(250, 163, 7, 0.12)',
+                  border: '1px solid rgba(250, 163, 7, 0.28)',
                   textDecoration: 'none',
                 }}
               >
-                <Shield size={19} color="var(--color-amber-600)" />
+                <Shield size={19} color="var(--color-amber-400)" />
                 Staff Portal
               </Link>
             </div>
@@ -194,7 +194,7 @@ export const AppLayout: React.FC = () => {
           style={{
             padding: 'var(--space-4) var(--space-5)',
             borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-            backgroundColor: 'rgba(20, 43, 40, 0.4)',
+            backgroundColor: 'rgba(3, 7, 30, 0.45)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -217,7 +217,7 @@ export const AppLayout: React.FC = () => {
               >
                 {currentUser?.displayName || 'Member'}
               </div>
-              <div style={{ fontSize: '0.6875rem', color: 'rgba(226, 237, 230, 0.65)', textTransform: 'capitalize' }}>
+              <div style={{ fontSize: '0.6875rem', color: 'rgba(255, 255, 255, 0.6)', textTransform: 'capitalize' }}>
                 {currentUser?.role || 'member'}
               </div>
             </div>
@@ -252,7 +252,7 @@ export const AppLayout: React.FC = () => {
           className="glass-surface"
           style={{
             height: '72px',
-            borderBottom: '1px solid rgba(228, 228, 217, 0.75)',
+            borderBottom: '1px solid var(--color-line)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -272,7 +272,7 @@ export const AppLayout: React.FC = () => {
                 display: 'none',
                 background: 'none',
                 border: 'none',
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 cursor: 'pointer',
                 padding: 'var(--space-1)',
               }}
@@ -285,7 +285,7 @@ export const AppLayout: React.FC = () => {
                 fontSize: '1.25rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 letterSpacing: '-0.015em',
               }}
             >
@@ -340,8 +340,8 @@ export const AppLayout: React.FC = () => {
                   borderRadius: 'var(--radius-sm)',
                   fontSize: '0.9375rem',
                   fontWeight: 600,
-                  color: location.pathname === item.path ? 'var(--color-jade-700)' : 'var(--color-ink)',
-                  backgroundColor: location.pathname === item.path ? 'var(--color-jade-100)' : 'transparent',
+                  color: location.pathname === item.path ? 'var(--color-crimson-700)' : 'var(--color-ink-950)',
+                  backgroundColor: location.pathname === item.path ? 'rgba(208, 0, 0, 0.08)' : 'transparent',
                   textDecoration: 'none',
                 }}
               >
@@ -374,7 +374,7 @@ export const AppLayout: React.FC = () => {
             left: 0,
             right: 0,
             height: '64px',
-            borderTop: '1px solid rgba(228, 228, 217, 0.8)',
+            borderTop: '1px solid var(--color-line)',
             display: 'none',
             justifyContent: 'space-around',
             alignItems: 'center',
@@ -394,7 +394,7 @@ export const AppLayout: React.FC = () => {
                   alignItems: 'center',
                   fontSize: '0.6875rem',
                   fontWeight: isActive ? 700 : 500,
-                  color: isActive ? 'var(--color-jade-700)' : 'var(--color-muted)',
+                  color: isActive ? 'var(--color-crimson-700)' : 'var(--color-muted)',
                   textDecoration: 'none',
                   gap: '3px',
                 }}

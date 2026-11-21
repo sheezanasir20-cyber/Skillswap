@@ -43,7 +43,7 @@ export const OverviewDashboard: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <LoadingSpinner message="Loading your Verdant learning studio..." />;
+    return <LoadingSpinner message="Loading your reciprocal learning studio..." />;
   }
 
   const teachSkills = profile?.skills?.filter((s) => s.intent === 'teach') || [];
@@ -69,7 +69,7 @@ export const OverviewDashboard: React.FC = () => {
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: '0.08em',
-              color: 'var(--color-jade-700)',
+              color: 'var(--color-crimson-600)',
               marginBottom: 'var(--space-1)',
             }}
           >
@@ -80,7 +80,7 @@ export const OverviewDashboard: React.FC = () => {
               fontSize: '2rem',
               fontFamily: 'var(--font-display)',
               fontWeight: 800,
-              color: 'var(--color-forest-950)',
+              color: 'var(--color-ink-950)',
               letterSpacing: '-0.02em',
               lineHeight: 1.15,
             }}
@@ -99,7 +99,7 @@ export const OverviewDashboard: React.FC = () => {
       {/* 2. Welcome Hero Panel per design.md §9.2 */}
       <div
         style={{
-          background: 'var(--gradient-hero)',
+          background: 'var(--gradient-brand)',
           borderRadius: 'var(--radius-xl)',
           padding: 'var(--space-8) var(--space-10)',
           color: 'var(--color-white)',
@@ -115,14 +115,14 @@ export const OverviewDashboard: React.FC = () => {
             position: 'absolute',
             right: '-30px',
             top: '-40px',
-            opacity: 0.12,
+            opacity: 0.1,
             pointerEvents: 'none',
           }}
         >
           <svg width="260" height="260" viewBox="0 0 100 100" fill="none">
             <circle cx="50" cy="50" r="45" stroke="#FFF" strokeWidth="3" />
             <path d="M25 50 C25 35, 50 35, 50 50 C50 65, 75 65, 75 50" stroke="#FFF" strokeWidth="5" />
-            <path d="M75 50 C75 35, 50 35, 50 50 C50 65, 25 65, 25 50" stroke="#F5EBD7" strokeWidth="4" strokeDasharray="3 4" />
+            <path d="M75 50 C75 35, 50 35, 50 50 C50 65, 25 65, 25 50" stroke="#FFBA08" strokeWidth="4" strokeDasharray="3 4" />
           </svg>
         </div>
 
@@ -136,14 +136,14 @@ export const OverviewDashboard: React.FC = () => {
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: '0.08em',
-              color: 'var(--color-jade-100)',
+              color: 'var(--color-amber-400)',
               backgroundColor: 'rgba(255, 255, 255, 0.1)',
               padding: '4px 10px',
               borderRadius: 'var(--radius-pill)',
               marginBottom: 'var(--space-3)',
             }}
           >
-            <Sparkles size={12} color="var(--color-amber-100)" />
+            <Sparkles size={12} color="var(--color-gold-400)" />
             Your Skills, In Motion
           </div>
           <h2
@@ -160,7 +160,7 @@ export const OverviewDashboard: React.FC = () => {
           </h2>
           <p
             style={{
-              color: 'rgba(255, 254, 250, 0.85)',
+              color: 'rgba(255, 254, 252, 0.88)',
               fontSize: '0.9375rem',
               lineHeight: 1.6,
               marginBottom: 'var(--space-6)',
@@ -173,8 +173,8 @@ export const OverviewDashboard: React.FC = () => {
               variant="secondary"
               onClick={() => navigate('/app/discover')}
               style={{
-                backgroundColor: 'var(--color-paper)',
-                color: 'var(--color-forest-950)',
+                backgroundColor: 'var(--color-surface)',
+                color: 'var(--color-ink-950)',
                 fontWeight: 700,
               }}
             >
@@ -183,7 +183,7 @@ export const OverviewDashboard: React.FC = () => {
             <Link
               to="/app/profile"
               style={{
-                color: 'var(--color-jade-100)',
+                color: 'var(--color-gold-400)',
                 fontWeight: 650,
                 fontSize: '0.875rem',
                 textDecoration: 'none',
@@ -211,13 +211,13 @@ export const OverviewDashboard: React.FC = () => {
                 width: '32px',
                 height: '32px',
                 borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'var(--color-jade-100)',
+                backgroundColor: 'rgba(106, 4, 15, 0.08)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
-              <BookOpen size={16} color="var(--color-jade-700)" />
+              <BookOpen size={16} color="var(--color-burgundy-800)" />
             </span>
           </div>
           <div
@@ -225,7 +225,7 @@ export const OverviewDashboard: React.FC = () => {
               fontSize: '1.875rem',
               fontWeight: 800,
               fontFamily: 'var(--font-display)',
-              color: 'var(--color-forest-950)',
+              color: 'var(--color-ink-950)',
               marginTop: 'var(--space-2)',
             }}
           >
@@ -244,13 +244,13 @@ export const OverviewDashboard: React.FC = () => {
                 width: '32px',
                 height: '32px',
                 borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'var(--color-sky-100)',
+                backgroundColor: 'rgba(55, 6, 23, 0.08)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
-              <Users size={16} color="var(--color-sky-700)" />
+              <Users size={16} color="var(--color-wine-900)" />
             </span>
           </div>
           <div
@@ -258,7 +258,7 @@ export const OverviewDashboard: React.FC = () => {
               fontSize: '1.875rem',
               fontWeight: 800,
               fontFamily: 'var(--font-display)',
-              color: 'var(--color-forest-950)',
+              color: 'var(--color-ink-950)',
               marginTop: 'var(--space-2)',
             }}
           >
@@ -277,13 +277,13 @@ export const OverviewDashboard: React.FC = () => {
                 width: '32px',
                 height: '32px',
                 borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'var(--color-amber-100)',
+                backgroundColor: 'rgba(250, 163, 7, 0.12)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
-              <Calendar size={16} color="var(--color-amber-600)" />
+              <Calendar size={16} color="var(--color-amber-500)" />
             </span>
           </div>
           <div
@@ -291,7 +291,7 @@ export const OverviewDashboard: React.FC = () => {
               fontSize: '1.875rem',
               fontWeight: 800,
               fontFamily: 'var(--font-display)',
-              color: 'var(--color-forest-950)',
+              color: 'var(--color-ink-950)',
               marginTop: 'var(--space-2)',
             }}
           >
@@ -310,13 +310,13 @@ export const OverviewDashboard: React.FC = () => {
                 width: '32px',
                 height: '32px',
                 borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'var(--color-success-soft)',
+                backgroundColor: 'rgba(255, 186, 8, 0.15)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
-              <CheckCircle2 size={16} color="var(--color-success)" />
+              <CheckCircle2 size={16} color="var(--color-crimson-600)" />
             </span>
           </div>
           <div
@@ -324,7 +324,7 @@ export const OverviewDashboard: React.FC = () => {
               fontSize: '1.875rem',
               fontWeight: 800,
               fontFamily: 'var(--font-display)',
-              color: 'var(--color-forest-950)',
+              color: 'var(--color-ink-950)',
               marginTop: 'var(--space-2)',
             }}
           >
@@ -354,13 +354,13 @@ export const OverviewDashboard: React.FC = () => {
                 fontSize: '1.25rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
               }}
             >
               Your Skills Overview
             </h2>
             <p style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '2px' }}>
-              Distinct visual roles: Jade represents knowledge you offer; Clay represents topics you want to explore.
+              Distinct visual roles: Burgundy represents knowledge you offer; Crimson & Ember represent topics you want to explore.
             </p>
           </div>
           <Link
@@ -368,7 +368,7 @@ export const OverviewDashboard: React.FC = () => {
             style={{
               fontSize: '0.875rem',
               fontWeight: 650,
-              color: 'var(--color-jade-700)',
+              color: 'var(--color-crimson-600)',
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
@@ -380,11 +380,11 @@ export const OverviewDashboard: React.FC = () => {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 'var(--space-8)' }}>
-          {/* Left Column: Skills I Can Teach (Jade/Sage) */}
+          {/* Left Column: Skills I Can Teach (Burgundy/Blush) */}
           <div
             style={{
-              backgroundColor: 'rgba(220, 237, 230, 0.25)',
-              border: '1px solid rgba(52, 135, 119, 0.25)',
+              backgroundColor: 'rgba(106, 4, 15, 0.04)',
+              border: '1px solid rgba(106, 4, 15, 0.16)',
               borderRadius: 'var(--radius-lg)',
               padding: 'var(--space-5)',
             }}
@@ -397,7 +397,7 @@ export const OverviewDashboard: React.FC = () => {
                 marginBottom: 'var(--space-4)',
               }}
             >
-              <div style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-forest-950)' }}>
+              <div style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-ink-950)' }}>
                 Skills you can teach
               </div>
               <span
@@ -406,8 +406,8 @@ export const OverviewDashboard: React.FC = () => {
                   fontWeight: 700,
                   padding: '2px 8px',
                   borderRadius: 'var(--radius-pill)',
-                  backgroundColor: 'var(--color-jade-100)',
-                  color: 'var(--color-jade-700)',
+                  backgroundColor: 'rgba(106, 4, 15, 0.08)',
+                  color: 'var(--color-burgundy-800)',
                 }}
               >
                 {teachSkills.length} active
@@ -432,11 +432,11 @@ export const OverviewDashboard: React.FC = () => {
             )}
           </div>
 
-          {/* Right Column: Skills I Want to Learn (Clay/Amber) */}
+          {/* Right Column: Skills I Want to Learn (Crimson/Apricot) */}
           <div
             style={{
-              backgroundColor: 'rgba(246, 229, 222, 0.25)',
-              border: '1px solid rgba(201, 111, 85, 0.25)',
+              backgroundColor: 'rgba(232, 93, 4, 0.04)',
+              border: '1px solid rgba(232, 93, 4, 0.16)',
               borderRadius: 'var(--radius-lg)',
               padding: 'var(--space-5)',
             }}
@@ -449,7 +449,7 @@ export const OverviewDashboard: React.FC = () => {
                 marginBottom: 'var(--space-4)',
               }}
             >
-              <div style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-forest-950)' }}>
+              <div style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-ink-950)' }}>
                 Skills you want to learn
               </div>
               <span
@@ -458,8 +458,8 @@ export const OverviewDashboard: React.FC = () => {
                   fontWeight: 700,
                   padding: '2px 8px',
                   borderRadius: 'var(--radius-pill)',
-                  backgroundColor: 'var(--color-clay-100)',
-                  color: 'var(--color-clay-600)',
+                  backgroundColor: 'rgba(232, 93, 4, 0.08)',
+                  color: 'var(--color-crimson-600)',
                 }}
               >
                 {learnSkills.length} active
@@ -502,7 +502,7 @@ export const OverviewDashboard: React.FC = () => {
                 fontSize: '1.25rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
               }}
             >
               Suggested Learning Partners
@@ -516,7 +516,7 @@ export const OverviewDashboard: React.FC = () => {
             style={{
               fontSize: '0.875rem',
               fontWeight: 650,
-              color: 'var(--color-jade-700)',
+              color: 'var(--color-crimson-600)',
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
@@ -556,7 +556,7 @@ export const OverviewDashboard: React.FC = () => {
                         style={{
                           fontWeight: 700,
                           fontSize: '1rem',
-                          color: 'var(--color-forest-950)',
+                          color: 'var(--color-ink-950)',
                           fontFamily: 'var(--font-display)',
                         }}
                       >
@@ -572,12 +572,12 @@ export const OverviewDashboard: React.FC = () => {
                   <div
                     style={{
                       fontSize: '0.8125rem',
-                      color: 'var(--color-forest-900)',
-                      backgroundColor: 'rgba(220, 237, 230, 0.4)',
+                      color: 'var(--color-ink-950)',
+                      backgroundColor: 'rgba(106, 4, 15, 0.05)',
                       padding: '8px 12px',
                       borderRadius: 'var(--radius-sm)',
                       lineHeight: 1.45,
-                      border: '1px solid rgba(52, 135, 119, 0.2)',
+                      border: '1px solid rgba(106, 4, 15, 0.16)',
                     }}
                   >
                     {item.match.explanation}
@@ -615,7 +615,7 @@ export const OverviewDashboard: React.FC = () => {
                 fontSize: '1.25rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
               }}
             >
               Upcoming Confirmed Sessions
@@ -629,7 +629,7 @@ export const OverviewDashboard: React.FC = () => {
             style={{
               fontSize: '0.875rem',
               fontWeight: 650,
-              color: 'var(--color-jade-700)',
+              color: 'var(--color-crimson-600)',
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
@@ -664,8 +664,8 @@ export const OverviewDashboard: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     gap: 'var(--space-4)',
-                    backgroundColor: isNext ? 'rgba(220, 237, 230, 0.28)' : 'var(--color-paper)',
-                    borderColor: isNext ? 'rgba(52, 135, 119, 0.4)' : 'var(--color-line)',
+                    backgroundColor: isNext ? 'rgba(208, 0, 0, 0.04)' : 'var(--color-paper)',
+                    borderColor: isNext ? 'rgba(208, 0, 0, 0.25)' : 'var(--color-line)',
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)' }}>
@@ -675,7 +675,7 @@ export const OverviewDashboard: React.FC = () => {
                         width: '52px',
                         height: '52px',
                         borderRadius: 'var(--radius-md)',
-                        backgroundColor: isNext ? 'var(--color-jade-100)' : 'var(--color-sage-100)',
+                        backgroundColor: isNext ? 'rgba(208, 0, 0, 0.08)' : 'var(--color-paper-warm)',
                         border: '1px solid var(--color-line)',
                         display: 'flex',
                         flexDirection: 'column',
@@ -684,7 +684,7 @@ export const OverviewDashboard: React.FC = () => {
                         flexShrink: 0,
                       }}
                     >
-                      <span style={{ fontSize: '0.6875rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-jade-700)' }}>
+                      <span style={{ fontSize: '0.6875rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-crimson-600)' }}>
                         {dateObj.toLocaleDateString('en-US', { month: 'short' })}
                       </span>
                       <span
@@ -692,7 +692,7 @@ export const OverviewDashboard: React.FC = () => {
                           fontSize: '1.25rem',
                           fontWeight: 800,
                           fontFamily: 'var(--font-display)',
-                          color: 'var(--color-forest-950)',
+                          color: 'var(--color-ink-950)',
                           lineHeight: 1,
                         }}
                       >
@@ -702,7 +702,7 @@ export const OverviewDashboard: React.FC = () => {
 
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
-                        <span style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--color-forest-950)', fontFamily: 'var(--font-display)' }}>
+                        <span style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--color-ink-950)', fontFamily: 'var(--font-display)' }}>
                           {sess.title}
                         </span>
                         {isNext ? (
@@ -713,7 +713,7 @@ export const OverviewDashboard: React.FC = () => {
                               textTransform: 'uppercase',
                               padding: '2px 8px',
                               borderRadius: 'var(--radius-pill)',
-                              backgroundColor: 'var(--color-jade-700)',
+                              backgroundColor: 'var(--color-crimson-600)',
                               color: 'var(--color-white)',
                             }}
                           >
@@ -739,6 +739,9 @@ export const OverviewDashboard: React.FC = () => {
           </div>
         )}
       </div>
+    </div>
+  );
+};
     </div>
   );
 };

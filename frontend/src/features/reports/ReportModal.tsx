@@ -80,8 +80,8 @@ export const ReportModal: React.FC<ReportModalProps> = ({
               width: '48px',
               height: '48px',
               borderRadius: '50%',
-              backgroundColor: 'var(--color-jade-100)',
-              color: 'var(--color-jade-700)',
+              backgroundColor: 'rgba(208, 0, 0, 0.08)',
+              color: 'var(--color-crimson-600)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -90,10 +90,10 @@ export const ReportModal: React.FC<ReportModalProps> = ({
           >
             <CheckCircle2 size={24} />
           </div>
-          <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink)', marginBottom: 'var(--space-1)' }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink-950)', marginBottom: 'var(--space-1)' }}>
             Report Submitted
           </h3>
-          <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-muted)', marginBottom: 'var(--space-6)', maxWidth: '380px', margin: '0 auto var(--space-6) auto' }}>
+          <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)', marginBottom: 'var(--space-6)', maxWidth: '380px', margin: '0 auto var(--space-6) auto' }}>
             Thank you for helping uphold our community code of conduct. A staff moderator will review this case shortly.
           </p>
           <Button onClick={handleClose}>Close Window</Button>
@@ -105,9 +105,9 @@ export const ReportModal: React.FC<ReportModalProps> = ({
               role="alert"
               style={{
                 padding: 'var(--space-3) var(--space-4)',
-                borderRadius: 'var(--radius-control)',
-                backgroundColor: 'rgba(179, 78, 74, 0.08)',
-                color: 'var(--color-danger)',
+                borderRadius: 'var(--radius-sm)',
+                backgroundColor: 'rgba(208, 0, 0, 0.08)',
+                color: 'var(--color-crimson-600)',
                 fontSize: '0.875rem',
               }}
             >

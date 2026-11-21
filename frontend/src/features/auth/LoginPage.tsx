@@ -61,7 +61,7 @@ export const LoginPage: React.FC = () => {
                 fontSize: '1.75rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 800,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 letterSpacing: '-0.02em',
                 marginBottom: 'var(--space-1)',
               }}
@@ -79,9 +79,9 @@ export const LoginPage: React.FC = () => {
               style={{
                 padding: 'var(--space-3) var(--space-4)',
                 borderRadius: 'var(--radius-sm)',
-                backgroundColor: 'var(--color-danger-soft)',
-                border: '1px solid rgba(179, 78, 74, 0.3)',
-                color: 'var(--color-danger)',
+                backgroundColor: 'rgba(208, 0, 0, 0.08)',
+                border: '1px solid rgba(208, 0, 0, 0.25)',
+                color: 'var(--color-crimson-600)',
                 fontSize: '0.875rem',
                 fontWeight: 500,
                 marginBottom: 'var(--space-4)',
@@ -104,12 +104,12 @@ export const LoginPage: React.FC = () => {
 
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-1)' }}>
-                <label style={{ fontSize: '0.8125rem', fontWeight: 650, color: 'var(--color-forest-950)' }}>
+                <label style={{ fontSize: '0.8125rem', fontWeight: 650, color: 'var(--color-ink-950)' }}>
                   Password
                 </label>
                 <Link
                   to="/forgot-password"
-                  style={{ fontSize: '0.75rem', color: 'var(--color-jade-700)', fontWeight: 600, textDecoration: 'none' }}
+                  style={{ fontSize: '0.75rem', color: 'var(--color-crimson-600)', fontWeight: 600, textDecoration: 'none' }}
                 >
                   Forgot password?
                 </Link>
@@ -146,13 +146,13 @@ export const LoginPage: React.FC = () => {
             }}
           >
             Don't have an account yet?{' '}
-            <Link to="/register" style={{ fontWeight: 700, color: 'var(--color-jade-700)', textDecoration: 'none' }}>
+            <Link to="/register" style={{ fontWeight: 700, color: 'var(--color-crimson-600)', textDecoration: 'none' }}>
               Create an account
             </Link>
           </div>
         </div>
 
-        {/* Right: Deep Evergreen Brand Panel */}
+        {/* Right: Ember Noir Brand Panel */}
         <div
           style={{
             background: 'var(--gradient-sidebar)',
@@ -166,7 +166,7 @@ export const LoginPage: React.FC = () => {
           }}
         >
           {/* Subtle line motif background */}
-          <div style={{ position: 'absolute', right: '-20px', bottom: '-20px', opacity: 0.1, pointerEvents: 'none' }}>
+          <div style={{ position: 'absolute', right: '-20px', bottom: '-20px', opacity: 0.08, pointerEvents: 'none' }}>
             <svg width="240" height="240" viewBox="0 0 100 100" fill="none">
               <circle cx="50" cy="50" r="45" stroke="#FFF" strokeWidth="4" />
               <path d="M25 50 C25 35, 50 35, 50 50 C50 65, 75 65, 75 50" stroke="#FFF" strokeWidth="5" />
@@ -187,11 +187,11 @@ export const LoginPage: React.FC = () => {
                 fontWeight: 700,
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
-                color: 'var(--color-jade-100)',
+                color: 'var(--color-amber-400)',
                 marginBottom: 'var(--space-3)',
               }}
             >
-              <Sparkles size={13} color="var(--color-amber-100)" />
+              <Sparkles size={13} color="var(--color-amber-400)" />
               Peer Knowledge Exchange
             </div>
             <blockquote
@@ -217,10 +217,10 @@ export const LoginPage: React.FC = () => {
               alignItems: 'center',
               gap: 'var(--space-2)',
               fontSize: '0.75rem',
-              color: 'rgba(226, 237, 230, 0.7)',
+              color: 'rgba(255, 255, 255, 0.7)',
             }}
           >
-            <Shield size={14} color="var(--color-jade-100)" />
+            <Shield size={14} color="var(--color-gold-400)" />
             Zero fees • Zero tutoring monetization • Equal exchange
           </div>
         </div>

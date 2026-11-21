@@ -29,15 +29,16 @@ export const LandingPage: React.FC = () => {
                   gap: 'var(--space-2)',
                   padding: '5px 12px',
                   borderRadius: 'var(--radius-pill)',
-                  backgroundColor: 'var(--color-jade-100)',
-                  color: 'var(--color-jade-700)',
+                  backgroundColor: 'rgba(232, 93, 4, 0.1)',
+                  color: 'var(--color-ember-600)',
                   fontSize: '0.8125rem',
                   fontWeight: 700,
                   marginBottom: 'var(--space-4)',
                   letterSpacing: '0.02em',
+                  border: '1px solid rgba(232, 93, 4, 0.25)',
                 }}
               >
-                <Sparkles size={14} color="var(--color-amber-600)" />
+                <Sparkles size={14} color="var(--color-amber-500)" />
                 Reciprocal Learning Community
               </div>
 
@@ -48,13 +49,13 @@ export const LandingPage: React.FC = () => {
                   fontWeight: 800,
                   lineHeight: 1.1,
                   letterSpacing: '-0.03em',
-                  color: 'var(--color-forest-950)',
+                  color: 'var(--color-ink-950)',
                   marginBottom: 'var(--space-4)',
                 }}
               >
                 Learn something new.
                 <br />
-                <span style={{ color: 'var(--color-jade-700)' }}>Teach what you know.</span>
+                <span style={{ color: 'var(--color-crimson-600)' }}>Teach what you know.</span>
               </h1>
 
               <p
@@ -86,7 +87,7 @@ export const LandingPage: React.FC = () => {
                   marginTop: 'var(--space-8)',
                   padding: 'var(--space-3) var(--space-4)',
                   borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'rgba(255, 254, 250, 0.75)',
+                  backgroundColor: 'rgba(255, 254, 252, 0.85)',
                   border: '1px solid var(--color-line)',
                   fontSize: '0.8125rem',
                   color: 'var(--color-muted)',
@@ -95,7 +96,7 @@ export const LandingPage: React.FC = () => {
                   gap: 'var(--space-3)',
                 }}
               >
-                <Shield size={18} style={{ color: 'var(--color-jade-700)', flexShrink: 0 }} />
+                <Shield size={18} style={{ color: 'var(--color-crimson-600)', flexShrink: 0 }} />
                 <span>
                   <strong>Pure Peer-to-Peer:</strong> Sessions occur via external video tools you choose (Google Meet, Zoom). SkillSwap coordinates discovery, scheduling, and reviews. No payments are ever processed.
                 </span>
@@ -109,7 +110,7 @@ export const LandingPage: React.FC = () => {
                 padding: 'var(--space-6)',
                 position: 'relative',
                 boxShadow: 'var(--shadow-card)',
-                background: 'linear-gradient(145deg, #FFFFFF 0%, #F5F1E8 100%)',
+                background: 'linear-gradient(145deg, #FFFFFF 0%, #FAF7F4 100%)',
               }}
             >
               <div
@@ -140,7 +141,7 @@ export const LandingPage: React.FC = () => {
               >
                 <Avatar name="Elena Rostova" size={42} />
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-forest-950)' }}>Elena Rostova</div>
+                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-ink-950)' }}>Elena Rostova</div>
                   <div style={{ display: 'flex', gap: 'var(--space-1)', marginTop: '4px' }}>
                     <SkillBadge name="Figma Design" intent="teach" level="advanced" />
                     <SkillBadge name="Python" intent="learn" />
@@ -157,16 +158,16 @@ export const LandingPage: React.FC = () => {
                     gap: 'var(--space-2)',
                     fontSize: '0.75rem',
                     fontWeight: 700,
-                    color: 'var(--color-jade-700)',
-                    backgroundColor: 'var(--color-jade-100)',
+                    color: 'var(--color-burgundy-800)',
+                    backgroundColor: 'rgba(106, 4, 15, 0.08)',
                     padding: '4px 12px',
                     borderRadius: 'var(--radius-pill)',
-                    border: '1px solid rgba(52, 135, 119, 0.3)',
+                    border: '1px solid rgba(106, 4, 15, 0.25)',
                   }}
                 >
                   <svg width="16" height="16" viewBox="0 0 32 32" fill="none">
-                    <path d="M8 16 C8 10, 16 10, 16 16 C16 22, 24 22, 24 16" stroke="var(--color-jade-700)" strokeWidth="3" strokeLinecap="round" />
-                    <path d="M24 16 C24 10, 16 10, 16 16 C16 22, 8 22, 8 16" stroke="var(--color-amber-600)" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="2 3" />
+                    <path d="M8 16 C8 10, 16 10, 16 16 C16 22, 24 22, 24 16" stroke="var(--color-crimson-600)" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M24 16 C24 10, 16 10, 16 16 C16 22, 8 22, 8 16" stroke="var(--color-gold-400)" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="2 3" />
                   </svg>
                   Mutual 1-to-1 Exchange
                 </div>
@@ -186,7 +187,7 @@ export const LandingPage: React.FC = () => {
               >
                 <Avatar name="David Chen" size={42} />
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-forest-950)' }}>David Chen</div>
+                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-ink-950)' }}>David Chen</div>
                   <div style={{ display: 'flex', gap: 'var(--space-1)', marginTop: '4px' }}>
                     <SkillBadge name="Python" intent="teach" level="intermediate" />
                     <SkillBadge name="Figma Design" intent="learn" />
@@ -207,7 +208,7 @@ export const LandingPage: React.FC = () => {
                 fontSize: '2rem',
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                color: 'var(--color-forest-950)',
+                color: 'var(--color-ink-950)',
                 letterSpacing: '-0.02em',
                 marginBottom: 'var(--space-2)',
               }}
@@ -232,19 +233,19 @@ export const LandingPage: React.FC = () => {
                   width: '44px',
                   height: '44px',
                   borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'var(--color-jade-100)',
+                  backgroundColor: 'rgba(106, 4, 15, 0.08)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginBottom: 'var(--space-4)',
                 }}
               >
-                <BookOpen size={22} color="var(--color-jade-700)" />
+                <BookOpen size={22} color="var(--color-burgundy-800)" />
               </div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-jade-700)', letterSpacing: '0.08em', marginBottom: 'var(--space-1)' }}>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-burgundy-800)', letterSpacing: '0.08em', marginBottom: 'var(--space-1)' }}>
                 Step 01
               </div>
-              <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)', marginBottom: 'var(--space-2)' }}>
+              <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)', marginBottom: 'var(--space-2)' }}>
                 List your skills
               </h3>
               <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>
@@ -258,19 +259,19 @@ export const LandingPage: React.FC = () => {
                   width: '44px',
                   height: '44px',
                   borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'var(--color-amber-100)',
+                  backgroundColor: 'rgba(250, 163, 7, 0.12)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginBottom: 'var(--space-4)',
                 }}
               >
-                <Sparkles size={22} color="var(--color-amber-600)" />
+                <Sparkles size={22} color="var(--color-amber-500)" />
               </div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-amber-600)', letterSpacing: '0.08em', marginBottom: 'var(--space-1)' }}>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-amber-500)', letterSpacing: '0.08em', marginBottom: 'var(--space-1)' }}>
                 Step 02
               </div>
-              <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)', marginBottom: 'var(--space-2)' }}>
+              <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)', marginBottom: 'var(--space-2)' }}>
                 Find your match
               </h3>
               <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>
@@ -284,19 +285,19 @@ export const LandingPage: React.FC = () => {
                   width: '44px',
                   height: '44px',
                   borderRadius: 'var(--radius-md)',
-                  backgroundColor: 'var(--color-clay-100)',
+                  backgroundColor: 'rgba(232, 93, 4, 0.1)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginBottom: 'var(--space-4)',
                 }}
               >
-                <Calendar size={22} color="var(--color-clay-600)" />
+                <Calendar size={22} color="var(--color-ember-600)" />
               </div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-clay-600)', letterSpacing: '0.08em', marginBottom: 'var(--space-1)' }}>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-ember-600)', letterSpacing: '0.08em', marginBottom: 'var(--space-1)' }}>
                 Step 03
               </div>
-              <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)', marginBottom: 'var(--space-2)' }}>
+              <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)', marginBottom: 'var(--space-2)' }}>
                 Schedule & learn
               </h3>
               <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>
@@ -312,7 +313,7 @@ export const LandingPage: React.FC = () => {
         <div className="container" style={{ maxWidth: '960px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-8)', alignItems: 'center' }}>
             <div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-jade-700)', letterSpacing: '0.08em', marginBottom: 'var(--space-2)' }}>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-crimson-600)', letterSpacing: '0.08em', marginBottom: 'var(--space-2)' }}>
                 Trust & Verification
               </div>
               <h2
@@ -320,7 +321,7 @@ export const LandingPage: React.FC = () => {
                   fontSize: '1.875rem',
                   fontFamily: 'var(--font-display)',
                   fontWeight: 700,
-                  color: 'var(--color-forest-950)',
+                  color: 'var(--color-ink-950)',
                   letterSpacing: '-0.02em',
                   lineHeight: 1.25,
                   marginBottom: 'var(--space-4)',
@@ -340,7 +341,7 @@ export const LandingPage: React.FC = () => {
               <div className="paper-card" style={{ padding: 'var(--space-4) var(--space-5)', display: 'flex', gap: 'var(--space-3)' }}>
                 <CheckCircle2 size={20} color="var(--color-success)" style={{ marginTop: '2px', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-forest-950)' }}>Verified Post-Session Reviews</div>
+                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-ink-950)' }}>Verified Post-Session Reviews</div>
                   <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '2px' }}>
                     Ratings can only be submitted after a mutually confirmed session finishes, preventing fake testimonials.
                   </div>
@@ -350,7 +351,7 @@ export const LandingPage: React.FC = () => {
               <div className="paper-card" style={{ padding: 'var(--space-4) var(--space-5)', display: 'flex', gap: 'var(--space-3)' }}>
                 <CheckCircle2 size={20} color="var(--color-success)" style={{ marginTop: '2px', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-forest-950)' }}>Active Human Moderation</div>
+                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-ink-950)' }}>Active Human Moderation</div>
                   <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '2px' }}>
                     Staff review reported accounts, messages, and profiles with an auditable moderation pipeline.
                   </div>
@@ -360,7 +361,7 @@ export const LandingPage: React.FC = () => {
               <div className="paper-card" style={{ padding: 'var(--space-4) var(--space-5)', display: 'flex', gap: 'var(--space-3)' }}>
                 <CheckCircle2 size={20} color="var(--color-success)" style={{ marginTop: '2px', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-forest-950)' }}>Private Connection Boundary</div>
+                  <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-ink-950)' }}>Private Connection Boundary</div>
                   <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '2px' }}>
                     Messaging and calendar proposals are restricted strictly to approved connections.
                   </div>
@@ -415,8 +416,8 @@ export const LandingPage: React.FC = () => {
                 variant="secondary"
                 onClick={() => navigate('/register')}
                 style={{
-                  backgroundColor: 'var(--color-paper)',
-                  color: 'var(--color-forest-950)',
+                  backgroundColor: 'var(--color-surface)',
+                  color: 'var(--color-ink-950)',
                   fontWeight: 700,
                 }}
               >

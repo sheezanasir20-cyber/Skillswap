@@ -101,10 +101,10 @@ export const ProfileSettingsPage: React.FC = () => {
     <div style={{ maxWidth: '860px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
       {/* Page Title */}
       <div>
-        <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--color-ink)' }}>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--color-ink-950)' }}>
           Profile & Skills
         </h1>
-        <p style={{ color: 'var(--color-ink-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
+        <p style={{ color: 'var(--color-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
           Keep your public profile up to date and curate the skills you want to teach or learn.
         </p>
       </div>
@@ -117,10 +117,10 @@ export const ProfileSettingsPage: React.FC = () => {
             alignItems: 'center',
             gap: 'var(--space-2)',
             padding: 'var(--space-3) var(--space-4)',
-            borderRadius: 'var(--radius-control)',
-            backgroundColor: 'var(--color-jade-100)',
-            color: 'var(--color-jade-700)',
-            border: '1px solid rgba(52, 135, 119, 0.25)',
+            borderRadius: 'var(--radius-sm)',
+            backgroundColor: 'rgba(208, 0, 0, 0.08)',
+            color: 'var(--color-crimson-600)',
+            border: '1px solid rgba(208, 0, 0, 0.25)',
             fontSize: '0.875rem',
             fontWeight: 500,
           }}
@@ -140,11 +140,11 @@ export const ProfileSettingsPage: React.FC = () => {
           gap: 'var(--space-5)',
         }}
       >
-        <div style={{ borderBottom: '1px solid var(--color-line-subtle)', paddingBottom: 'var(--space-3)' }}>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink)' }}>
+        <div style={{ borderBottom: '1px solid var(--color-line)', paddingBottom: 'var(--space-3)' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink-950)' }}>
             Public Profile Information
           </h2>
-          <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '2px' }}>
+          <p style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '2px' }}>
             This information is visible to other members when browsing or scheduling sessions.
           </p>
         </div>
@@ -182,7 +182,7 @@ export const ProfileSettingsPage: React.FC = () => {
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 'var(--space-2)' }}>
-          <Button type="submit" isLoading={saving}>
+          <Button type="submit" variant="primary" isLoading={saving}>
             Save Profile Changes
           </Button>
         </div>
@@ -197,11 +197,11 @@ export const ProfileSettingsPage: React.FC = () => {
           gap: 'var(--space-6)',
         }}
       >
-        <div style={{ borderBottom: '1px solid var(--color-line-subtle)', paddingBottom: 'var(--space-3)' }}>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink)' }}>
+        <div style={{ borderBottom: '1px solid var(--color-line)', paddingBottom: 'var(--space-3)' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink-950)' }}>
             Skill Matrix & Reciprocal Exchange
           </h2>
-          <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '2px' }}>
+          <p style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '2px' }}>
             Add skills you can share with peers and skills you aspire to acquire.
           </p>
         </div>
@@ -215,9 +215,9 @@ export const ProfileSettingsPage: React.FC = () => {
             gap: 'var(--space-3)',
             alignItems: 'flex-end',
             padding: 'var(--space-4)',
-            backgroundColor: 'var(--color-parchment-200)',
-            borderRadius: 'var(--radius-panel)',
-            border: '1px solid var(--color-line-subtle)',
+            backgroundColor: 'rgba(3, 7, 30, 0.03)',
+            borderRadius: 'var(--radius-md)',
+            border: '1px solid var(--color-line)',
           }}
         >
           <div style={{ flex: '1 1 200px' }}>
@@ -254,6 +254,79 @@ export const ProfileSettingsPage: React.FC = () => {
             />
           </div>
 
+          <Button type="submit" variant="secondary">
+            + Add to Matrix
+          </Button>
+        </form>
+
+        {/* Split Teach / Learn Display */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 'var(--space-6)' }}>
+          {/* Teach Skills */}
+          <div
+            style={{
+              padding: 'var(--space-4)',
+              borderRadius: 'var(--radius-md)',
+              backgroundColor: 'rgba(106, 4, 15, 0.04)',
+              border: '1px solid rgba(106, 4, 15, 0.16)',
+            }}
+          >
+            <div style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-burgundy-800)', marginBottom: 'var(--space-3)' }}>
+              Skills You Can Teach ({teachSkills.length})
+            </div>
+            {teachSkills.length === 0 ? (
+              <p style={{ fontSize: '0.8125rem', color: 'var(--color-muted)' }}>No teaching skills listed.</p>
+            ) : (
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-2)' }}>
+                {teachSkills.map((s) => (
+                  <SkillBadge
+                    key={s.id}
+                    name={s.name}
+                    intent="teach"
+                    level={s.level}
+                    onRemove={() => handleRemoveSkill(s.id)}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Learn Skills */}
+          <div
+            style={{
+              padding: 'var(--space-4)',
+              borderRadius: 'var(--radius-md)',
+              backgroundColor: 'rgba(232, 93, 4, 0.04)',
+              border: '1px solid rgba(232, 93, 4, 0.16)',
+            }}
+          >
+            <div style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-crimson-600)', marginBottom: 'var(--space-3)' }}>
+              Skills You Want to Learn ({learnSkills.length})
+            </div>
+            {learnSkills.length === 0 ? (
+              <p style={{ fontSize: '0.8125rem', color: 'var(--color-muted)' }}>No learning goals listed.</p>
+            ) : (
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-2)' }}>
+                {learnSkills.map((s) => (
+                  <SkillBadge
+                    key={s.id}
+                    name={s.name}
+                    intent="learn"
+                    level={s.level}
+                    onRemove={() => handleRemoveSkill(s.id)}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+                { value: 'intermediate', label: 'Intermediate' },
+                { value: 'advanced', label: 'Advanced' },
+              ]}
+            />
+          </div>
+
           <Button type="submit" variant="secondary" style={{ height: '42px' }}>
             <Plus size={16} /> Add Skill
           </Button>
@@ -261,17 +334,17 @@ export const ProfileSettingsPage: React.FC = () => {
 
         {/* Listed Skills Split Columns */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-6)' }}>
-          {/* Can Teach Column (Jade) */}
+          {/* Can Teach Column (Burgundy) */}
           <div
             style={{
               padding: 'var(--space-4)',
               borderRadius: 'var(--radius-panel)',
-              backgroundColor: 'rgba(52, 135, 119, 0.04)',
-              border: '1px solid rgba(52, 135, 119, 0.18)',
+              backgroundColor: 'var(--color-teach-bg)',
+              border: '1px solid var(--color-teach-border)',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 'var(--space-3)' }}>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.9375rem', fontWeight: 600, color: 'var(--color-jade-700)' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.9375rem', fontWeight: 600, color: 'var(--color-teach-text)' }}>
                 Skills You Can Teach ({teachSkills.length})
               </h3>
             </div>
@@ -294,17 +367,17 @@ export const ProfileSettingsPage: React.FC = () => {
             )}
           </div>
 
-          {/* Want to Learn Column (Clay) */}
+          {/* Want to Learn Column (Crimson/Amber) */}
           <div
             style={{
               padding: 'var(--space-4)',
               borderRadius: 'var(--radius-panel)',
-              backgroundColor: 'rgba(201, 111, 85, 0.04)',
-              border: '1px solid rgba(201, 111, 85, 0.18)',
+              backgroundColor: 'var(--color-learn-bg)',
+              border: '1px solid var(--color-learn-border)',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 'var(--space-3)' }}>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.9375rem', fontWeight: 600, color: 'var(--color-clay-600)' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.9375rem', fontWeight: 600, color: 'var(--color-learn-text)' }}>
                 Skills You Want to Learn ({learnSkills.length})
               </h3>
             </div>

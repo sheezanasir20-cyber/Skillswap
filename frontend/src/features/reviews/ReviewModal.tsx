@@ -72,16 +72,16 @@ export const ReviewModal: React.FC<ReviewModalProps> = ({
         <div
           style={{
             padding: 'var(--space-4)',
-            backgroundColor: 'var(--color-parchment-200)',
-            borderRadius: 'var(--radius-control)',
-            border: '1px solid var(--color-line-subtle)',
+            backgroundColor: 'rgba(250, 163, 7, 0.08)',
+            borderRadius: 'var(--radius-sm)',
+            border: '1px solid rgba(250, 163, 7, 0.25)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             gap: 'var(--space-2)',
           }}
         >
-          <label style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--color-ink)' }}>
+          <label style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--color-ink-950)' }}>
             Overall Learning Experience
           </label>
           <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
@@ -107,14 +107,14 @@ export const ReviewModal: React.FC<ReviewModalProps> = ({
                 >
                   <Star
                     size={32}
-                    fill={active ? 'var(--color-amber-600)' : 'none'}
-                    color={active ? 'var(--color-amber-600)' : 'var(--color-line)'}
+                    fill={active ? '#FFBA08' : 'none'}
+                    color={active ? '#FFBA08' : 'var(--color-line)'}
                   />
                 </button>
               );
             })}
           </div>
-          <div style={{ fontSize: '0.75rem', color: 'var(--color-ink-muted)', fontWeight: 500 }}>
+          <div style={{ fontSize: '0.75rem', color: 'var(--color-muted)', fontWeight: 500 }}>
             {hoverRating ? `${hoverRating} of 5 Stars` : `${rating} of 5 Stars`}
           </div>
         </div>

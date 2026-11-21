@@ -91,10 +91,10 @@ export const StaffReportsPage: React.FC = () => {
     <div style={{ maxWidth: '1080px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--color-ink)' }}>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--color-ink-950)' }}>
           Community Moderation Queue
         </h1>
-        <p style={{ color: 'var(--color-ink-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
+        <p style={{ color: 'var(--color-muted)', fontSize: '0.9375rem', marginTop: 'var(--space-1)' }}>
           Review reported profiles, messages, and feedback with full audit logging and transparent dispute management.
         </p>
       </div>
@@ -119,9 +119,9 @@ export const StaffReportsPage: React.FC = () => {
                 padding: 'var(--space-2) var(--space-4)',
                 background: 'none',
                 border: 'none',
-                borderBottom: isActive ? '3px solid var(--color-jade-600)' : '3px solid transparent',
+                borderBottom: isActive ? '3px solid var(--color-crimson-600)' : '3px solid transparent',
                 fontWeight: isActive ? 600 : 500,
-                color: isActive ? 'var(--color-jade-700)' : 'var(--color-ink-muted)',
+                color: isActive ? 'var(--color-crimson-600)' : 'var(--color-muted)',
                 cursor: 'pointer',
                 fontSize: '0.9375rem',
                 textTransform: 'capitalize',
@@ -162,19 +162,19 @@ export const StaffReportsPage: React.FC = () => {
                         borderRadius: 'var(--radius-pill)',
                         fontSize: '0.6875rem',
                         fontWeight: 700,
-                        backgroundColor: 'rgba(185, 133, 63, 0.15)',
-                        color: 'var(--color-amber-600)',
+                        backgroundColor: 'rgba(250, 163, 7, 0.12)',
+                        color: 'var(--color-amber-500)',
                         textTransform: 'uppercase',
                         letterSpacing: '0.04em',
                       }}
                     >
                       {rep.targetType}
                     </span>
-                    <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink)', margin: 0 }}>
+                    <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.125rem', fontWeight: 600, color: 'var(--color-ink-950)', margin: 0 }}>
                       {rep.reason}
                     </h2>
                   </div>
-                  <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '4px' }}>
+                  <div style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '4px' }}>
                     Reported by {rep.reporter?.displayName || 'Anonymous'} ({rep.reporter?.email}) •{' '}
                     {new Date(rep.createdAt).toLocaleString()}
                   </div>
@@ -186,6 +186,7 @@ export const StaffReportsPage: React.FC = () => {
                     <>
                       <Button
                         size="sm"
+                        variant="primary"
                         onClick={() => {
                           setActiveReport(rep);
                           setResolutionAction('resolved');
@@ -213,8 +214,8 @@ export const StaffReportsPage: React.FC = () => {
                         borderRadius: 'var(--radius-pill)',
                         fontSize: '0.75rem',
                         fontWeight: 600,
-                        backgroundColor: rep.status === 'resolved' ? 'var(--color-jade-100)' : 'var(--color-parchment-200)',
-                        color: rep.status === 'resolved' ? 'var(--color-jade-700)' : 'var(--color-ink-muted)',
+                        backgroundColor: rep.status === 'resolved' ? 'rgba(208, 0, 0, 0.08)' : 'rgba(3, 7, 30, 0.05)',
+                        color: rep.status === 'resolved' ? 'var(--color-crimson-600)' : 'var(--color-muted)',
                         textTransform: 'capitalize',
                       }}
                     >
@@ -228,15 +229,15 @@ export const StaffReportsPage: React.FC = () => {
                 <div
                   style={{
                     fontSize: '0.875rem',
-                    color: 'var(--color-ink)',
+                    color: 'var(--color-ink-950)',
                     lineHeight: 1.55,
-                    backgroundColor: 'var(--color-parchment-200)',
+                    backgroundColor: 'rgba(3, 7, 30, 0.03)',
                     padding: 'var(--space-3) var(--space-4)',
-                    borderRadius: 'var(--radius-control)',
-                    border: '1px solid var(--color-line-subtle)',
+                    borderRadius: 'var(--radius-sm)',
+                    border: '1px solid var(--color-line)',
                   }}
                 >
-                  <strong style={{ color: 'var(--color-ink)' }}>Reporter note:</strong> {rep.description}
+                  <strong style={{ color: 'var(--color-ink-950)' }}>Reporter note:</strong> {rep.description}
                 </div>
               ) : null}
 
@@ -245,9 +246,9 @@ export const StaffReportsPage: React.FC = () => {
                   style={{
                     fontSize: '0.8125rem',
                     color: 'var(--color-ink-muted)',
-                    borderLeft: '3px solid var(--color-jade-600)',
+                    borderLeft: '3px solid var(--color-burgundy-600)',
                     paddingLeft: 'var(--space-3)',
-                    backgroundColor: 'rgba(52, 135, 119, 0.04)',
+                    backgroundColor: 'rgba(106, 4, 15, 0.04)',
                     padding: 'var(--space-2) var(--space-3)',
                     borderRadius: '0 var(--radius-control) var(--radius-control) 0',
                   }}
@@ -263,8 +264,8 @@ export const StaffReportsPage: React.FC = () => {
                 <div
                   style={{
                     fontSize: '0.8125rem',
-                    color: 'var(--color-jade-700)',
-                    backgroundColor: 'var(--color-jade-100)',
+                    color: 'var(--color-burgundy-700)',
+                    backgroundColor: 'rgba(106, 4, 15, 0.08)',
                     padding: 'var(--space-2) var(--space-3)',
                     borderRadius: 'var(--radius-control)',
                   }}

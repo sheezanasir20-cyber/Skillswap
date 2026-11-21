@@ -74,7 +74,7 @@ export const MemberProfilePage: React.FC = () => {
             width: '56px',
             height: '56px',
             borderRadius: '50%',
-            backgroundColor: 'var(--color-parchment-200)',
+            backgroundColor: 'var(--color-paper-warm)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -134,11 +134,11 @@ export const MemberProfilePage: React.FC = () => {
           padding: 0,
         }}
       >
-        {/* Decorative Forest/Jade Header Banner */}
+        {/* Decorative Ember Noir Header Banner */}
         <div
           style={{
             height: '110px',
-            background: 'linear-gradient(135deg, #142b28 0%, #1b3934 60%, #287565 100%)',
+            background: 'var(--gradient-sidebar)',
             position: 'relative',
           }}
         >
@@ -147,7 +147,7 @@ export const MemberProfilePage: React.FC = () => {
               position: 'absolute',
               right: '24px',
               top: '16px',
-              opacity: 0.12,
+              opacity: 0.1,
               pointerEvents: 'none',
             }}
           >
@@ -175,9 +175,9 @@ export const MemberProfilePage: React.FC = () => {
               <div
                 style={{
                   padding: '3px',
-                  backgroundColor: 'var(--color-paper)',
+                  backgroundColor: 'var(--color-surface)',
                   borderRadius: '50%',
-                  boxShadow: 'var(--shadow-md)',
+                  boxShadow: 'var(--shadow-card)',
                 }}
               >
                 <Avatar name={member.displayName} avatarUrl={member.avatarUrl} size={84} />
@@ -195,15 +195,15 @@ export const MemberProfilePage: React.FC = () => {
                     fontWeight: 600,
                     padding: '8px 16px',
                     borderRadius: 'var(--radius-pill)',
-                    backgroundColor: 'var(--color-jade-100)',
-                    color: 'var(--color-jade-700)',
-                    border: '1px solid rgba(52, 135, 119, 0.25)',
+                    backgroundColor: 'rgba(208, 0, 0, 0.08)',
+                    color: 'var(--color-crimson-600)',
+                    border: '1px solid rgba(208, 0, 0, 0.25)',
                   }}
                 >
                   <CheckCircle2 size={16} /> Request Sent
                 </div>
               ) : (
-                <Button onClick={handleSendConnectionRequest} isLoading={sendingRequest}>
+                <Button variant="primary" onClick={handleSendConnectionRequest} isLoading={sendingRequest}>
                   <UserPlus size={16} /> Connect to Exchange
                 </Button>
               )}
@@ -216,9 +216,9 @@ export const MemberProfilePage: React.FC = () => {
                 style={{
                   background: 'none',
                   border: '1px solid var(--color-line)',
-                  borderRadius: 'var(--radius-control)',
+                  borderRadius: 'var(--radius-sm)',
                   cursor: 'pointer',
-                  color: 'var(--color-ink-muted)',
+                  color: 'var(--color-muted)',
                   padding: '9px 12px',
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -226,7 +226,7 @@ export const MemberProfilePage: React.FC = () => {
                   fontSize: '0.8125rem',
                   fontWeight: 500,
                   transition: 'background-color 0.15s ease',
-                  backgroundColor: 'var(--color-paper)',
+                  backgroundColor: 'var(--color-surface)',
                 }}
               >
                 <Flag size={14} /> Report
@@ -239,10 +239,10 @@ export const MemberProfilePage: React.FC = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', flexWrap: 'wrap' }}>
               <h1
                 style={{
-                  fontFamily: 'var(--font-heading)',
+                  fontFamily: 'var(--font-display)',
                   fontSize: '1.625rem',
                   fontWeight: 700,
-                  color: 'var(--color-ink)',
+                  color: 'var(--color-ink-950)',
                 }}
               >
                 {member.displayName}
@@ -255,9 +255,9 @@ export const MemberProfilePage: React.FC = () => {
                   fontSize: '0.75rem',
                   fontWeight: 600,
                   padding: '2px 8px',
-                  borderRadius: 'var(--radius-tag)',
-                  backgroundColor: 'var(--color-jade-100)',
-                  color: 'var(--color-jade-700)',
+                  borderRadius: 'var(--radius-pill)',
+                  backgroundColor: 'rgba(208, 0, 0, 0.08)',
+                  color: 'var(--color-crimson-600)',
                 }}
               >
                 <ShieldCheck size={12} /> Community Member
@@ -270,7 +270,7 @@ export const MemberProfilePage: React.FC = () => {
                 flexWrap: 'wrap',
                 gap: 'var(--space-4)',
                 fontSize: '0.8125rem',
-                color: 'var(--color-ink-muted)',
+                color: 'var(--color-muted)',
                 marginTop: 'var(--space-2)',
               }}
             >
@@ -286,11 +286,11 @@ export const MemberProfilePage: React.FC = () => {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '4px',
-                    color: 'var(--color-amber-600)',
+                    color: 'var(--color-ink-950)',
                     fontWeight: 600,
                   }}
                 >
-                  <Star size={14} fill="var(--color-amber-600)" /> {member.averageRating} Rating
+                  <Star size={14} fill="#FFBA08" color="#FFBA08" /> {member.averageRating} Rating
                 </span>
               ) : null}
             </div>
@@ -301,9 +301,9 @@ export const MemberProfilePage: React.FC = () => {
               style={{
                 marginTop: 'var(--space-4)',
                 padding: 'var(--space-3) var(--space-4)',
-                borderRadius: 'var(--radius-control)',
-                backgroundColor: 'rgba(179, 78, 74, 0.08)',
-                color: 'var(--color-danger)',
+                borderRadius: 'var(--radius-sm)',
+                backgroundColor: 'rgba(208, 0, 0, 0.08)',
+                color: 'var(--color-crimson-600)',
                 fontSize: '0.875rem',
               }}
             >
@@ -317,9 +317,9 @@ export const MemberProfilePage: React.FC = () => {
               style={{
                 marginTop: 'var(--space-6)',
                 padding: 'var(--space-4) var(--space-5)',
-                backgroundColor: 'var(--color-parchment-200)',
-                borderRadius: 'var(--radius-panel)',
-                border: '1px solid var(--color-line-subtle)',
+                backgroundColor: 'rgba(3, 7, 30, 0.03)',
+                borderRadius: 'var(--radius-md)',
+                border: '1px solid var(--color-line)',
               }}
             >
               <div
@@ -328,13 +328,13 @@ export const MemberProfilePage: React.FC = () => {
                   fontWeight: 600,
                   letterSpacing: '0.04em',
                   textTransform: 'uppercase',
-                  color: 'var(--color-ink-muted)',
+                  color: 'var(--color-muted)',
                   marginBottom: 'var(--space-2)',
                 }}
               >
                 About {member.displayName}
               </div>
-              <p style={{ fontSize: '0.9375rem', color: 'var(--color-ink)', lineHeight: 1.65, margin: 0 }}>
+              <p style={{ fontSize: '0.9375rem', color: 'var(--color-ink-950)', lineHeight: 1.65, margin: 0 }}>
                 {member.bio}
               </p>
             </div>
@@ -344,11 +344,11 @@ export const MemberProfilePage: React.FC = () => {
 
       {/* Skills Inventory: Split 2-Column Section */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 'var(--space-6)' }}>
-        {/* Teaching Skills (Jade) */}
+        {/* Teaching Skills (Burgundy) */}
         <div
           className="paper-card"
           style={{
-            borderTop: '3px solid var(--color-jade-600)',
+            borderTop: '3px solid var(--color-burgundy-800)',
             display: 'flex',
             flexDirection: 'column',
             gap: 'var(--space-4)',
@@ -357,10 +357,10 @@ export const MemberProfilePage: React.FC = () => {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <h2
               style={{
-                fontFamily: 'var(--font-heading)',
+                fontFamily: 'var(--font-display)',
                 fontSize: '1.125rem',
                 fontWeight: 600,
-                color: 'var(--color-jade-700)',
+                color: 'var(--color-burgundy-800)',
               }}
             >
               Skills {member.displayName} Can Teach
@@ -371,8 +371,8 @@ export const MemberProfilePage: React.FC = () => {
                 fontWeight: 600,
                 padding: '2px 8px',
                 borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'var(--color-jade-100)',
-                color: 'var(--color-jade-700)',
+                backgroundColor: 'rgba(106, 4, 15, 0.08)',
+                color: 'var(--color-burgundy-800)',
               }}
             >
               {teachSkills.length} listed
@@ -380,7 +380,7 @@ export const MemberProfilePage: React.FC = () => {
           </div>
 
           {teachSkills.length === 0 ? (
-            <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-muted)' }}>
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)' }}>
               No teaching skills listed on this profile yet.
             </p>
           ) : (
@@ -392,11 +392,11 @@ export const MemberProfilePage: React.FC = () => {
           )}
         </div>
 
-        {/* Learning Skills (Clay) */}
+        {/* Learning Skills (Crimson) */}
         <div
           className="paper-card"
           style={{
-            borderTop: '3px solid var(--color-clay-600)',
+            borderTop: '3px solid var(--color-crimson-600)',
             display: 'flex',
             flexDirection: 'column',
             gap: 'var(--space-4)',
@@ -405,10 +405,10 @@ export const MemberProfilePage: React.FC = () => {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <h2
               style={{
-                fontFamily: 'var(--font-heading)',
+                fontFamily: 'var(--font-display)',
                 fontSize: '1.125rem',
                 fontWeight: 600,
-                color: 'var(--color-clay-600)',
+                color: 'var(--color-crimson-600)',
               }}
             >
               Skills {member.displayName} Wants to Learn
@@ -419,8 +419,8 @@ export const MemberProfilePage: React.FC = () => {
                 fontWeight: 600,
                 padding: '2px 8px',
                 borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'rgba(201, 111, 85, 0.12)',
-                color: 'var(--color-clay-600)',
+                backgroundColor: 'rgba(232, 93, 4, 0.08)',
+                color: 'var(--color-crimson-600)',
               }}
             >
               {learnSkills.length} listed
@@ -428,7 +428,7 @@ export const MemberProfilePage: React.FC = () => {
           </div>
 
           {learnSkills.length === 0 ? (
-            <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-muted)' }}>
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)' }}>
               No learning goals listed on this profile yet.
             </p>
           ) : (
@@ -445,10 +445,10 @@ export const MemberProfilePage: React.FC = () => {
       <div className="paper-card" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-2)' }}>
           <div>
-            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-ink)' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-ink-950)' }}>
               Verified Post-Session Feedback ({reviews.length})
             </h2>
-            <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-muted)', marginTop: '2px' }}>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--color-muted)', marginTop: '2px' }}>
               Authentic reviews submitted exclusively by verified exchange partners after completed sessions.
             </p>
           </div>
@@ -461,13 +461,13 @@ export const MemberProfilePage: React.FC = () => {
                 gap: '6px',
                 padding: '6px 12px',
                 borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'rgba(185, 133, 63, 0.12)',
-                color: 'var(--color-amber-600)',
+                backgroundColor: 'rgba(250, 163, 7, 0.12)',
+                color: 'var(--color-ink-950)',
                 fontWeight: 700,
                 fontSize: '0.9375rem',
               }}
             >
-              <Star size={16} fill="var(--color-amber-600)" />
+              <Star size={16} fill="#FFBA08" color="#FFBA08" />
               {member.averageRating} / 5.0
             </div>
           ) : null}
@@ -478,13 +478,13 @@ export const MemberProfilePage: React.FC = () => {
             style={{
               padding: 'var(--space-8) var(--space-4)',
               textAlign: 'center',
-              backgroundColor: 'var(--color-parchment-200)',
-              borderRadius: 'var(--radius-control)',
+              backgroundColor: 'rgba(3, 7, 30, 0.03)',
+              borderRadius: 'var(--radius-sm)',
               border: '1px dashed var(--color-line)',
             }}
           >
-            <Star size={24} style={{ color: 'var(--color-amber-600)', opacity: 0.6, marginBottom: 'var(--space-2)' }} />
-            <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-muted)', margin: 0 }}>
+            <Star size={24} style={{ color: '#FFBA08', opacity: 0.6, marginBottom: 'var(--space-2)' }} />
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)', margin: 0 }}>
               No reviews recorded yet. Reviews can only be submitted following a completed learning session.
             </p>
           </div>
@@ -495,13 +495,13 @@ export const MemberProfilePage: React.FC = () => {
                 key={r.id}
                 style={{
                   padding: 'var(--space-4) var(--space-5)',
-                  borderRadius: 'var(--radius-control)',
-                  backgroundColor: 'var(--color-parchment-200)',
-                  border: '1px solid var(--color-line-subtle)',
+                  borderRadius: 'var(--radius-sm)',
+                  backgroundColor: 'rgba(3, 7, 30, 0.03)',
+                  border: '1px solid var(--color-line)',
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 'var(--space-2)' }}>
-                  <div style={{ fontWeight: 600, fontSize: '0.9375rem', color: 'var(--color-ink)' }}>
+                  <div style={{ fontWeight: 600, fontSize: '0.9375rem', color: 'var(--color-ink-950)' }}>
                     {r.reviewer?.displayName || 'Learning Partner'}
                   </div>
                   <div style={{ display: 'flex', gap: '2px' }}>
@@ -509,14 +509,14 @@ export const MemberProfilePage: React.FC = () => {
                       <Star
                         key={i}
                         size={14}
-                        fill={i < r.rating ? 'var(--color-amber-600)' : 'none'}
-                        color={i < r.rating ? 'var(--color-amber-600)' : 'var(--color-line)'}
+                        fill={i < r.rating ? '#FFBA08' : 'none'}
+                        color={i < r.rating ? '#FFBA08' : 'var(--color-line)'}
                       />
                     ))}
                   </div>
                 </div>
                 {r.body ? (
-                  <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-muted)', lineHeight: 1.55, margin: 0 }}>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-soft)', lineHeight: 1.55, margin: 0 }}>
                     "{r.body}"
                   </p>
                 ) : null}

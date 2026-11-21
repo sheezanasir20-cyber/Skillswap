@@ -9,7 +9,7 @@ export const TermsPage: React.FC = () => {
             fontSize: '2.25rem',
             fontFamily: 'var(--font-display)',
             fontWeight: 800,
-            color: 'var(--color-forest-950)',
+            color: 'var(--color-ink-950)',
             letterSpacing: '-0.025em',
             marginBottom: 'var(--space-2)',
           }}
@@ -27,7 +27,7 @@ export const TermsPage: React.FC = () => {
           </p>
 
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)', marginBottom: 'var(--space-2)' }}>
+            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)', marginBottom: 'var(--space-2)' }}>
               1. Purpose and Exchange Model
             </h2>
             <p style={{ color: 'var(--color-ink-soft)' }}>
@@ -38,7 +38,7 @@ export const TermsPage: React.FC = () => {
           </div>
 
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)', marginBottom: 'var(--space-2)' }}>
+            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)', marginBottom: 'var(--space-2)' }}>
               2. Code of Conduct
             </h2>
             <p style={{ color: 'var(--color-ink-soft)' }}>
@@ -49,7 +49,7 @@ export const TermsPage: React.FC = () => {
           </div>
 
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)', marginBottom: 'var(--space-2)' }}>
+            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)', marginBottom: 'var(--space-2)' }}>
               3. External Services and Safety
             </h2>
             <p style={{ color: 'var(--color-ink-soft)' }}>
@@ -73,7 +73,7 @@ export const PrivacyPage: React.FC = () => {
             fontSize: '2.25rem',
             fontFamily: 'var(--font-display)',
             fontWeight: 800,
-            color: 'var(--color-forest-950)',
+            color: 'var(--color-ink-950)',
             letterSpacing: '-0.025em',
             marginBottom: 'var(--space-2)',
           }}
@@ -91,7 +91,7 @@ export const PrivacyPage: React.FC = () => {
           </p>
 
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)', marginBottom: 'var(--space-2)' }}>
+            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)', marginBottom: 'var(--space-2)' }}>
               1. Information We Collect
             </h2>
             <p style={{ color: 'var(--color-ink-soft)' }}>
@@ -102,7 +102,7 @@ export const PrivacyPage: React.FC = () => {
           </div>
 
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)', marginBottom: 'var(--space-2)' }}>
+            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)', marginBottom: 'var(--space-2)' }}>
               2. Strict Privacy Boundary
             </h2>
             <p style={{ color: 'var(--color-ink-soft)' }}>
@@ -113,7 +113,7 @@ export const PrivacyPage: React.FC = () => {
           </div>
 
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-forest-950)', marginBottom: 'var(--space-2)' }}>
+            <h2 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--color-ink-950)', marginBottom: 'var(--space-2)' }}>
               3. Security and Storage
             </h2>
             <p style={{ color: 'var(--color-ink-soft)' }}>

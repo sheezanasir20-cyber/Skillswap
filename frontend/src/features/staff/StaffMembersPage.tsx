@@ -144,7 +144,7 @@ export const StaffMembersPage: React.FC = () => {
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.875rem' }}>
               <thead>
-                <tr style={{ borderBottom: '1px solid var(--color-line)', backgroundColor: 'var(--color-parchment-200)' }}>
+                <tr style={{ borderBottom: '1px solid var(--color-line)', backgroundColor: 'var(--color-paper-warm)' }}>
                   <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink)' }}>Member</th>
                   <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink)' }}>Email</th>
                   <th style={{ padding: 'var(--space-3) var(--space-4)', fontWeight: 600, color: 'var(--color-ink)' }}>Role</th>
@@ -170,15 +170,15 @@ export const StaffMembersPage: React.FC = () => {
                           fontWeight: 600,
                           backgroundColor:
                             m.role === 'admin'
-                              ? 'rgba(179, 78, 74, 0.12)'
+                              ? 'rgba(208, 0, 0, 0.12)'
                               : m.role === 'moderator'
-                              ? 'rgba(185, 133, 63, 0.15)'
-                              : 'var(--color-parchment-200)',
+                              ? 'rgba(250, 163, 7, 0.18)'
+                              : 'var(--color-paper-warm)',
                           color:
                             m.role === 'admin'
-                              ? 'var(--color-danger)'
+                              ? 'var(--color-crimson-600)'
                               : m.role === 'moderator'
-                              ? 'var(--color-amber-600)'
+                              ? '#b35300'
                               : 'var(--color-ink)',
                           textTransform: 'capitalize',
                         }}
@@ -195,11 +195,11 @@ export const StaffMembersPage: React.FC = () => {
                           fontWeight: 600,
                           backgroundColor:
                             m.status === 'active'
-                              ? 'var(--color-jade-100)'
-                              : 'rgba(179, 78, 74, 0.12)',
+                              ? 'rgba(106, 4, 15, 0.08)'
+                              : 'rgba(208, 0, 0, 0.12)',
                           color:
                             m.status === 'active'
-                              ? 'var(--color-jade-700)'
+                              ? 'var(--color-burgundy-700)'
                               : 'var(--color-danger)',
                           textTransform: 'capitalize',
                         }}

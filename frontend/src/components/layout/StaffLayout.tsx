@@ -16,7 +16,7 @@ export const StaffLayout: React.FC = () => {
   ];
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: 'var(--color-parchment)' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: 'var(--color-paper)' }}>
       {/* Staff Sidebar */}
       <aside
         className="sidebar"
@@ -31,7 +31,7 @@ export const StaffLayout: React.FC = () => {
           bottom: 0,
           left: 0,
           zIndex: 90,
-          boxShadow: '4px 0 24px rgba(20, 43, 40, 0.15)',
+          boxShadow: '4px 0 28px rgba(3, 7, 30, 0.35)',
         }}
       >
         <div
@@ -51,9 +51,9 @@ export const StaffLayout: React.FC = () => {
               fontWeight: 700,
               padding: '2px 8px',
               borderRadius: 'var(--radius-pill)',
-              backgroundColor: 'rgba(185, 133, 63, 0.25)',
-              color: 'var(--color-amber-100)',
-              border: '1px solid rgba(185, 133, 63, 0.4)',
+              backgroundColor: 'rgba(250, 163, 7, 0.16)',
+              color: 'var(--color-amber-400)',
+              border: '1px solid rgba(250, 163, 7, 0.32)',
               textTransform: 'uppercase',
               letterSpacing: '0.05em',
             }}
@@ -78,7 +78,7 @@ export const StaffLayout: React.FC = () => {
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: '0.08em',
-              color: 'rgba(226, 237, 230, 0.5)',
+              color: 'rgba(255, 255, 255, 0.45)',
               padding: '0 var(--space-3) var(--space-2)',
             }}
           >
@@ -99,16 +99,16 @@ export const StaffLayout: React.FC = () => {
                   borderRadius: 'var(--radius-sm)',
                   fontSize: '0.875rem',
                   fontWeight: isActive ? 650 : 500,
-                  color: isActive ? 'var(--color-white)' : 'rgba(255, 255, 255, 0.78)',
-                  backgroundColor: isActive ? 'rgba(220, 237, 230, 0.14)' : 'transparent',
-                  borderLeft: isActive ? '3px solid var(--color-amber-600)' : '3px solid transparent',
+                  color: isActive ? 'var(--color-white)' : 'rgba(255, 255, 255, 0.76)',
+                  backgroundColor: isActive ? 'rgba(208, 0, 0, 0.18)' : 'transparent',
+                  borderLeft: isActive ? '3px solid var(--color-gold-400)' : '3px solid transparent',
                   textDecoration: 'none',
                   transition: 'all var(--transition-fast)',
                 }}
               >
                 <span
                   style={{
-                    color: isActive ? 'var(--color-amber-100)' : 'rgba(226, 237, 230, 0.72)',
+                    color: isActive ? 'var(--color-gold-400)' : 'rgba(255, 255, 255, 0.72)',
                     display: 'flex',
                     alignItems: 'center',
                   }}
@@ -125,7 +125,7 @@ export const StaffLayout: React.FC = () => {
           style={{
             padding: 'var(--space-4) var(--space-5)',
             borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-            backgroundColor: 'rgba(20, 43, 40, 0.4)',
+            backgroundColor: 'rgba(3, 7, 30, 0.45)',
           }}
         >
           <button
@@ -154,7 +154,7 @@ export const StaffLayout: React.FC = () => {
           className="glass-surface"
           style={{
             height: '72px',
-            borderBottom: '1px solid rgba(228, 228, 217, 0.75)',
+            borderBottom: '1px solid var(--color-line)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -166,7 +166,7 @@ export const StaffLayout: React.FC = () => {
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
             <span style={{ fontSize: '0.875rem', color: 'var(--color-muted)' }}>Staff /</span>
-            <span style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--color-forest-950)', fontFamily: 'var(--font-display)' }}>
+            <span style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--color-ink-950)', fontFamily: 'var(--font-display)' }}>
               {staffItems.find((i) => i.path === location.pathname)?.label || 'Control Center'}
             </span>
           </div>
