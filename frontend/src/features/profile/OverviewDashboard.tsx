@@ -742,6 +742,3 @@ export const OverviewDashboard: React.FC = () => {
     </div>
   );
 };
-    </div>
-  );
-};

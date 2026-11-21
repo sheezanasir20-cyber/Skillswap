@@ -257,15 +257,6 @@ export const SessionHistoryPage: React.FC = () => {
           })}
         </div>
       )}
-                      <CheckCircle2 size={15} /> Review submitted
-                    </span>
-                  )}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      )}
 
       {/* Review Modal */}
       {reviewingSession ? (
