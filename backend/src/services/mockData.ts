@@ -99,7 +99,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'alex@example.com',
     displayName: 'Alex Vance',
     bio: 'Senior full-stack engineer passionate about React, TypeScript, and architectural patterns. Eager to master conversational Spanish and explore machine learning.',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/New_York',
     role: 'member',
     teachSkills: [
@@ -117,7 +117,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'sam@example.com',
     displayName: 'Sam Rivera',
     bio: 'Native Spanish educator and Python data enthusiast. Looking to level up my front-end web engineering skills with React and TypeScript.',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/New_York',
     role: 'member',
     teachSkills: [
@@ -135,7 +135,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'elena.rostova@example.com',
     displayName: 'Elena Rostova',
     bio: 'Lead product designer specializing in Figma systems and user research. Wanting to learn Rust for systems programming and brush up on French.',
-    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Berlin',
     role: 'member',
     teachSkills: [
@@ -154,7 +154,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'marcus.vance@example.com',
     displayName: 'Marcus Vance',
     bio: 'Cloud architect and DevOps specialist. I build high-availability Kubernetes clusters and Docker pipelines. Seeking to learn Blender 3D modeling.',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Chicago',
     role: 'member',
     teachSkills: [
@@ -173,7 +173,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'priya.sharma@example.com',
     displayName: 'Priya Sharma',
     bio: 'Data scientist and NLP researcher. Passionate about transformers and deep learning with PyTorch. Looking to practice public speaking and presentation skills.',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Asia/Kolkata',
     role: 'member',
     teachSkills: [
@@ -192,7 +192,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'lucas.silva@example.com',
     displayName: 'Lucas Silva',
     bio: 'Mobile engineer creating cross-platform Flutter and native iOS experiences. Native Portuguese speaker eager to exchange with Golang and cloud backend devs.',
-    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Sao_Paulo',
     role: 'member',
     teachSkills: [
@@ -210,7 +210,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'chloe.dupont@example.com',
     displayName: 'Chloé Dupont',
     bio: 'Brand strategist and native French speaker from Lyon. Interested in learning UI/UX design and modern web development basics.',
-    avatarUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Paris',
     role: 'member',
     teachSkills: [
@@ -228,7 +228,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'liam.chen@example.com',
     displayName: 'Liam Chen',
     bio: 'Staff backend engineer specializing in Go microservices and high-throughput SQL databases. Eager to master UI design in Figma and learn Japanese.',
-    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Los_Angeles',
     role: 'member',
     teachSkills: [
@@ -247,7 +247,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'kenji.sato@example.com',
     displayName: 'Kenji Sato',
     bio: 'Tokyo-based 3D artist and animator. Happy to teach Japanese and Blender 3D modeling in exchange for Python scripting and data analysis.',
-    avatarUrl: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Asia/Tokyo',
     role: 'member',
     teachSkills: [
@@ -265,7 +265,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'hannah.schmidt@example.com',
     displayName: 'Hannah Schmidt',
     bio: 'German language instructor and technical documentation specialist. Seeking guidance on React frontend development and Tailwind CSS.',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Berlin',
     role: 'member',
     teachSkills: [
@@ -283,7 +283,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'tariq.almansoor@example.com',
     displayName: 'Tariq Al-Mansoor',
     bio: 'Cybersecurity analyst and penetration tester. Teaching ethical hacking, network defense, and Arabic. Looking to learn Next.js and web design.',
-    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Asia/Dubai',
     role: 'member',
     teachSkills: [
@@ -302,7 +302,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'isabella.rossi@example.com',
     displayName: 'Isabella Rossi',
     bio: 'Creative director and motion designer from Milan. Teaching Italian and After Effects motion design. Seeking to learn Python for automation.',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Rome',
     role: 'member',
     teachSkills: [
@@ -320,7 +320,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'samuel.osei@example.com',
     displayName: 'Samuel Osei',
     bio: 'Fintech product manager and financial modeling coach. Eager to understand SQL data extraction and Docker container deployments.',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Africa/Accra',
     role: 'member',
     teachSkills: [
@@ -338,7 +338,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'maya.lin@example.com',
     displayName: 'Maya Lin',
     bio: 'Systems software developer passionate about Rust and memory safety. Happy to teach Rust and C++. Looking to learn UI/UX design and Mandarin.',
-    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Vancouver',
     role: 'member',
     teachSkills: [
@@ -356,7 +356,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'noah.johansson@example.com',
     displayName: 'Noah Johansson',
     bio: 'Stockholm audio engineer and podcast producer. Offering audio mastering and sound design. Looking for coaching in Swift iOS development.',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Stockholm',
     role: 'member',
     teachSkills: [
@@ -374,7 +374,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'aaliyah.khan@example.com',
     displayName: 'Aaliyah Khan',
     bio: 'SEO consultant and digital growth strategist. Teaching search optimization and copywriting. Looking to learn Python for data scraping.',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/London',
     role: 'member',
     teachSkills: [
@@ -392,7 +392,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'mateo.fernandez@example.com',
     displayName: 'Mateo Fernandez',
     bio: 'Full-stack TypeScript developer and GraphQL architect. Teaching Next.js, Node, and TypeScript. Excited to learn prompt engineering and AI workflows.',
-    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Mexico_City',
     role: 'member',
     teachSkills: [
@@ -410,7 +410,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'meiling.zhou@example.com',
     displayName: 'Meiling Zhou',
     bio: 'Native Mandarin speaker and professional translator. Offering Mandarin lessons and cross-cultural communication. Looking to learn Figma design.',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Asia/Shanghai',
     role: 'member',
     teachSkills: [
@@ -428,7 +428,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'carlos.mendoza@example.com',
     displayName: 'Carlos Mendoza',
     bio: 'iOS developer with 7 years of Swift experience. Eager to exchange iOS development knowledge for Tailwind CSS and React web patterns.',
-    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Bogota',
     role: 'member',
     teachSkills: [
@@ -446,7 +446,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'freja.lindqvist@example.com',
     displayName: 'Freja Lindqvist',
     bio: 'Agile coach and leadership consultant from Copenhagen. Teaching Scrum frameworks and executive coaching. Learning Python and data visualization.',
-    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Copenhagen',
     role: 'member',
     teachSkills: [
@@ -464,7 +464,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'benjamin.cohen@example.com',
     displayName: 'Benjamin Cohen',
     bio: 'Senior Java engineer specializing in Spring Boot and enterprise architectures. Wanting to learn modern TypeScript and Vue.js.',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Asia/Jerusalem',
     role: 'member',
     teachSkills: [
@@ -482,7 +482,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'nadia.bouazizi@example.com',
     displayName: 'Nadia Bouazizi',
     bio: 'Data analyst and Power BI expert. Fluent in French and Arabic. Looking to learn machine learning algorithms and Spanish.',
-    avatarUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Africa/Tunis',
     role: 'member',
     teachSkills: [
@@ -500,7 +500,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'henrik.olsen@example.com',
     displayName: 'Henrik Olsen',
     bio: 'Senior Kubernetes administrator and security specialist. Teaching cloud infrastructure. Looking to learn Figma design systems.',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Oslo',
     role: 'member',
     teachSkills: [
@@ -518,7 +518,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'fatima.zahra@example.com',
     displayName: 'Fatima Zahra',
     bio: 'UI designer and typography nerd. I design accessible, gorgeous interfaces. Looking to learn JavaScript and CSS animations.',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Africa/Casablanca',
     role: 'member',
     teachSkills: [
@@ -536,7 +536,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'oliver.taylor@example.com',
     displayName: 'Oliver Taylor',
     bio: 'Video editor and color grading specialist with DaVinci and Premiere. Seeking to learn React web development and Node.js.',
-    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Australia/Melbourne',
     role: 'member',
     teachSkills: [
@@ -554,7 +554,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'ananya.patel@example.com',
     displayName: 'Ananya Patel',
     bio: 'AI researcher and prompt engineering consultant. Happy to teach LLM prompting and AI workflows. Wanting to learn Go backend programming.',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Toronto',
     role: 'member',
     teachSkills: [
@@ -572,7 +572,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'dmitry.petrov@example.com',
     displayName: 'Dmitry Petrov',
     bio: 'C++ games and graphics developer. Teaching 3D math and C++ performance optimizations. Interested in learning UI/UX design in Figma.',
-    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Warsaw',
     role: 'member',
     teachSkills: [
@@ -590,7 +590,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'mia.novak@example.com',
     displayName: 'Mia Novak',
     bio: 'Copywriter and content strategist from Prague. Teaching engaging storytelling, SEO, and German. Looking to learn Python for automation.',
-    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Prague',
     role: 'member',
     teachSkills: [
@@ -608,7 +608,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'lucas.moreau@example.com',
     displayName: 'Lucas Moreau',
     bio: 'Vue.js and Tailwind specialist. Happy to mentor on frontend component libraries. Seeking to learn public speaking and leadership coaching.',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Brussels',
     role: 'member',
     teachSkills: [
@@ -626,7 +626,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'aisha.bello@example.com',
     displayName: 'Aisha Bello',
     bio: 'Fintech data engineer building scalable ETL pipelines with Python and SQL. Looking to learn React and modern frontend web design.',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Africa/Lagos',
     role: 'member',
     teachSkills: [
@@ -644,7 +644,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'james.wilson@example.com',
     displayName: 'James Wilson',
     bio: 'American Sign Language (ASL) instructor and accessibility advocate. Eager to learn mobile app development in Flutter and TypeScript.',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Denver',
     role: 'member',
     teachSkills: [
@@ -662,7 +662,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'yuka.tanaka@example.com',
     displayName: 'Yuka Tanaka',
     bio: 'Illustrator and graphic artist from Kyoto. Teaching Japanese and digital illustration. Looking to learn web development with React.',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Asia/Tokyo',
     role: 'member',
     teachSkills: [
@@ -680,7 +680,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'jorge.morales@example.com',
     displayName: 'Jorge Morales',
     bio: 'Agile coach and project leader. Teaching project management and negotiation. Looking to learn Python data analytics and Power BI.',
-    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Santiago',
     role: 'member',
     teachSkills: [
@@ -698,7 +698,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'amina.idris@example.com',
     displayName: 'Amina Idris',
     bio: 'Machine learning engineer focusing on computer vision and medical imaging. Happy to teach Python and PyTorch. Looking to practice French.',
-    avatarUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Africa/Cairo',
     role: 'member',
     teachSkills: [
@@ -716,7 +716,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'leo.fischer@example.com',
     displayName: 'Leo Fischer',
     bio: 'Full-stack Go and React developer from Zurich. Passionate about microservices. Seeking to learn Spanish and 3D modeling in Blender.',
-    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Zurich',
     role: 'member',
     teachSkills: [
@@ -734,7 +734,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'camille.laurent@example.com',
     displayName: 'Camille Laurent',
     bio: 'UX researcher and accessibility specialist. Teaching usability testing and inclusive design. Looking to learn TypeScript and GraphQL.',
-    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Paris',
     role: 'member',
     teachSkills: [
@@ -752,7 +752,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'arvind.nair@example.com',
     displayName: 'Arvind Nair',
     bio: 'Kubernetes reliability engineer and Docker mentor. Passionate about resilient systems. Looking to learn German and audio production.',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Asia/Kolkata',
     role: 'member',
     teachSkills: [
@@ -770,7 +770,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'beatrice.rossi@example.com',
     displayName: 'Beatrice Rossi',
     bio: 'Italian language coach and brand storytelling strategist from Florence. Looking to learn web design in Figma and Next.js.',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Rome',
     role: 'member',
     teachSkills: [
@@ -788,7 +788,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'kieran.oconnor@example.com',
     displayName: 'Kieran O\'Connor',
     bio: 'Technical writer and documentation architect. Teaching API docs and clear technical communication. Looking to learn Rust and Go.',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Dublin',
     role: 'member',
     teachSkills: [
@@ -806,7 +806,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'leila.benali@example.com',
     displayName: 'Leïla Benali',
     bio: 'Growth marketing specialist and Arabic/French speaker. Teaching paid acquisition and conversion optimization. Looking to learn SQL.',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Africa/Algiers',
     role: 'member',
     teachSkills: [
@@ -824,7 +824,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'david.miller@example.com',
     displayName: 'David Miller',
     bio: 'Senior Java & Spring Cloud architect with 10+ years experience. Looking to learn modern UI design in Figma and conversational Japanese.',
-    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/New_York',
     role: 'member',
     teachSkills: [
@@ -842,7 +842,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'zara.larsson@example.com',
     displayName: 'Zara Larsson',
     bio: 'Design systems engineer bridging the gap between Figma components and React code. Eager to explore prompt engineering and NLP.',
-    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/Stockholm',
     role: 'member',
     teachSkills: [
@@ -860,7 +860,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'gabriel.garcia@example.com',
     displayName: 'Gabriel Garcia',
     bio: 'Flutter and Dart enthusiast from Buenos Aires. Teaching mobile cross-platform patterns and Spanish. Seeking to learn Node.js and Docker.',
-    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Argentina/Buenos_Aires',
     role: 'member',
     teachSkills: [
@@ -878,7 +878,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'olivia.kim@example.com',
     displayName: 'Olivia Kim',
     bio: 'Product manager and agile coach in Seoul. Teaching product discovery, user story mapping, and Korean. Looking to learn Python.',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Asia/Seoul',
     role: 'member',
     teachSkills: [
@@ -896,7 +896,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'julian.mercier@example.com',
     displayName: 'Julian Mercier',
     bio: 'Motion graphics artist and 3D visualizer from Montreal. Teaching Cinema 4D and After Effects. Looking to learn JavaScript and web animation.',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Montreal',
     role: 'member',
     teachSkills: [
@@ -914,7 +914,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'layla.hassan@example.com',
     displayName: 'Layla Hassan',
     bio: 'Ethical hacker and application security researcher. Teaching web pentesting and security code audits. Looking to learn Rust and Italian.',
-    avatarUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/London',
     role: 'member',
     teachSkills: [
@@ -932,7 +932,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'ethan.walker@example.com',
     displayName: 'Ethan Walker',
     bio: 'Brand copywriter and content strategist. Teaching audience growth, copywriting, and public speaking. Looking to learn Python and Power BI.',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Chicago',
     role: 'member',
     teachSkills: [
@@ -950,7 +950,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'sophia.martinez@example.com',
     displayName: 'Sophia Martinez',
     bio: 'Data analyst and statistics instructor. Teaching applied statistics, hypothesis testing, and Pandas. Seeking to learn UI/UX design in Figma.',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/Los_Angeles',
     role: 'member',
     teachSkills: [
@@ -968,7 +968,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'mod@example.com',
     displayName: 'Sarah Jenkins (Moderator)',
     bio: 'SkillSwap Community Moderator & Trust/Safety Lead. Background in conflict resolution, ethics, and technical writing.',
-    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'America/New_York',
     role: 'moderator',
     teachSkills: [
@@ -986,7 +986,7 @@ export const MOCK_USERS_DATA: MockUserConfig[] = [
     email: 'admin@example.com',
     displayName: 'Dr. Arthur Pendelton (Admin)',
     bio: 'Platform System Administrator & Engineering Director. Decades of distributed systems experience.',
-    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=250&h=250&auto=format&fit=crop&crop=faces&q=80',
     timezone: 'Europe/London',
     role: 'admin',
     teachSkills: [

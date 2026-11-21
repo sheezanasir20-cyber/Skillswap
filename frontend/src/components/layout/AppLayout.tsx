@@ -208,7 +208,7 @@ export const AppLayout: React.FC = () => {
                 style={{
                   fontSize: '0.875rem',
                   fontWeight: 650,
-                  color: 'var(--color-white)',
+                  color: '#ffffff',
                   whiteSpace: 'nowrap',
                   textOverflow: 'ellipsis',
                   overflow: 'hidden',
@@ -217,7 +217,7 @@ export const AppLayout: React.FC = () => {
               >
                 {currentUser?.displayName || 'Member'}
               </div>
-              <div style={{ fontSize: '0.6875rem', color: 'rgba(255, 255, 255, 0.6)', textTransform: 'capitalize' }}>
+              <div style={{ fontSize: '0.6875rem', color: 'rgba(255, 255, 255, 0.72)', textTransform: 'capitalize' }}>
                 {currentUser?.role || 'member'}
               </div>
             </div>

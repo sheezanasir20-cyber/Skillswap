@@ -137,24 +137,25 @@ export const MemberProfilePage: React.FC = () => {
         {/* Decorative Ember Noir Header Banner */}
         <div
           style={{
-            height: '110px',
+            height: '140px',
             background: 'var(--gradient-sidebar)',
             position: 'relative',
+            overflow: 'hidden',
           }}
         >
+          {/* Subtle warm ember ambient glow */}
           <div
             style={{
               position: 'absolute',
-              right: '24px',
-              top: '16px',
-              opacity: 0.1,
+              top: '-30px',
+              right: '-30px',
+              width: '240px',
+              height: '240px',
+              borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(208, 0, 0, 0.28) 0%, rgba(232, 93, 4, 0.12) 50%, transparent 70%)',
               pointerEvents: 'none',
             }}
-          >
-            <svg width="120" height="80" viewBox="0 0 100 60" fill="none">
-              <path d="M10 50 C 30 10, 70 10, 90 50 C 70 30, 30 30, 10 50 Z" fill="#ffffff" />
-            </svg>
-          </div>
+          />
         </div>
 
         {/* Profile Details Container */}
@@ -167,20 +168,21 @@ export const MemberProfilePage: React.FC = () => {
               alignItems: 'flex-end',
               justifyContent: 'space-between',
               gap: 'var(--space-4)',
-              marginTop: '-44px',
+              marginTop: '-48px',
               marginBottom: 'var(--space-4)',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: 'var(--space-4)' }}>
               <div
                 style={{
-                  padding: '3px',
+                  padding: '4px',
                   backgroundColor: 'var(--color-surface)',
                   borderRadius: '50%',
-                  boxShadow: 'var(--shadow-card)',
+                  boxShadow: '0 8px 24px rgba(3, 7, 30, 0.14)',
+                  display: 'inline-block',
                 }}
               >
-                <Avatar name={member.displayName} avatarUrl={member.avatarUrl} size={84} />
+                <Avatar name={member.displayName} avatarUrl={member.avatarUrl} size={90} />
               </div>
             </div>
 
@@ -251,16 +253,37 @@ export const MemberProfilePage: React.FC = () => {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '4px',
+                  gap: '5px',
                   fontSize: '0.75rem',
-                  fontWeight: 600,
-                  padding: '2px 8px',
+                  fontWeight: 650,
+                  padding: '3px 10px',
                   borderRadius: 'var(--radius-pill)',
-                  backgroundColor: 'rgba(208, 0, 0, 0.08)',
-                  color: 'var(--color-crimson-600)',
+                  backgroundColor:
+                    (member as any).role === 'admin'
+                      ? 'rgba(250, 163, 7, 0.16)'
+                      : (member as any).role === 'moderator'
+                      ? 'rgba(232, 93, 4, 0.14)'
+                      : 'rgba(106, 4, 15, 0.08)',
+                  color:
+                    (member as any).role === 'admin'
+                      ? '#b35300'
+                      : (member as any).role === 'moderator'
+                      ? 'var(--color-crimson-700)'
+                      : 'var(--color-burgundy-800)',
+                  border:
+                    (member as any).role === 'admin'
+                      ? '1px solid rgba(250, 163, 7, 0.35)'
+                      : (member as any).role === 'moderator'
+                      ? '1px solid rgba(232, 93, 4, 0.3)'
+                      : '1px solid rgba(106, 4, 15, 0.18)',
                 }}
               >
-                <ShieldCheck size={12} /> Community Member
+                <ShieldCheck size={13} />
+                {(member as any).role === 'admin'
+                  ? 'Platform Administrator'
+                  : (member as any).role === 'moderator'
+                  ? 'Staff Moderator'
+                  : 'Verified Community Member'}
               </span>
             </div>
 
@@ -343,7 +366,7 @@ export const MemberProfilePage: React.FC = () => {
       </div>
 
       {/* Skills Inventory: Split 2-Column Section */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 'var(--space-6)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 'var(--space-6)' }}>
         {/* Teaching Skills (Burgundy) */}
         <div
           className="paper-card"
@@ -354,33 +377,41 @@ export const MemberProfilePage: React.FC = () => {
             gap: 'var(--space-4)',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <h2
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: '1.125rem',
-                fontWeight: 600,
-                color: 'var(--color-burgundy-800)',
-              }}
-            >
-              Skills {member.displayName} Can Teach
-            </h2>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-3)', flexWrap: 'wrap' }}>
+            <div>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.125rem',
+                  fontWeight: 700,
+                  color: 'var(--color-burgundy-800)',
+                  margin: 0,
+                }}
+              >
+                Skills Offered to Teach
+              </h2>
+              <div style={{ fontSize: '0.75rem', color: 'var(--color-muted)', marginTop: '2px' }}>
+                Areas of expertise available for exchange
+              </div>
+            </div>
             <span
               style={{
                 fontSize: '0.75rem',
-                fontWeight: 600,
-                padding: '2px 8px',
+                fontWeight: 650,
+                padding: '3px 10px',
                 borderRadius: 'var(--radius-pill)',
                 backgroundColor: 'rgba(106, 4, 15, 0.08)',
                 color: 'var(--color-burgundy-800)',
+                border: '1px solid rgba(106, 4, 15, 0.2)',
+                whiteSpace: 'nowrap',
               }}
             >
-              {teachSkills.length} listed
+              {teachSkills.length} {teachSkills.length === 1 ? 'skill' : 'skills'}
             </span>
           </div>
 
           {teachSkills.length === 0 ? (
-            <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)' }}>
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)', margin: 0 }}>
               No teaching skills listed on this profile yet.
             </p>
           ) : (
@@ -402,33 +433,41 @@ export const MemberProfilePage: React.FC = () => {
             gap: 'var(--space-4)',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <h2
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: '1.125rem',
-                fontWeight: 600,
-                color: 'var(--color-crimson-600)',
-              }}
-            >
-              Skills {member.displayName} Wants to Learn
-            </h2>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-3)', flexWrap: 'wrap' }}>
+            <div>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.125rem',
+                  fontWeight: 700,
+                  color: 'var(--color-crimson-600)',
+                  margin: 0,
+                }}
+              >
+                Skills Desired to Learn
+              </h2>
+              <div style={{ fontSize: '0.75rem', color: 'var(--color-muted)', marginTop: '2px' }}>
+                Topics actively seeking reciprocal mentorship
+              </div>
+            </div>
             <span
               style={{
                 fontSize: '0.75rem',
-                fontWeight: 600,
-                padding: '2px 8px',
+                fontWeight: 650,
+                padding: '3px 10px',
                 borderRadius: 'var(--radius-pill)',
                 backgroundColor: 'rgba(232, 93, 4, 0.08)',
                 color: 'var(--color-crimson-600)',
+                border: '1px solid rgba(232, 93, 4, 0.2)',
+                whiteSpace: 'nowrap',
               }}
             >
-              {learnSkills.length} listed
+              {learnSkills.length} {learnSkills.length === 1 ? 'skill' : 'skills'}
             </span>
           </div>
 
           {learnSkills.length === 0 ? (
-            <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)' }}>
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)', margin: 0 }}>
               No learning goals listed on this profile yet.
             </p>
           ) : (
