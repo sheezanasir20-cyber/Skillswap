@@ -36,8 +36,10 @@ export interface AnalyticsData {
 }
 
 export class AnalyticsService {
-  public static async getPlatformAnalytics(): Promise<AnalyticsData> {
-    const users = Array.from(inMemoryDb.users.values());
+  public static async getPlatformAnalytics(opts?: { days?: number }): Promise<AnalyticsData> {
+    const cutoff = opts && opts.days ? new Date(Date.now() - opts.days * 24 * 60 * 60 * 1000) : null;
+    const within = (d: Date | undefined | null) => !cutoff || (d && new Date(d) >= cutoff);
+    const users = Array.from(inMemoryDb.users.values()).filter((u) => within(u.createdAt));
     const totalMembers = users.length;
     const activeMembers = users.filter((u) => u.status === 'active').length;
     const suspendedMembers = users.filter((u) => u.status === 'suspended').length;
@@ -56,7 +58,7 @@ export class AnalyticsService {
       totalMembers > 0 ? parseFloat(((withReciprocalSkills / totalMembers) * 100).toFixed(1)) : 0;
 
     // Connections
-    const connections = Array.from(inMemoryDb.connections.values());
+    const connections = Array.from(inMemoryDb.connections.values()).filter((c) => within(c.createdAt));
     const totalConnections = connections.length;
     const pendingConn = connections.filter((c) => c.status === 'pending').length;
     const acceptedConn = connections.filter((c) => c.status === 'accepted').length;
@@ -66,7 +68,7 @@ export class AnalyticsService {
       resolvedConn > 0 ? parseFloat(((acceptedConn / resolvedConn) * 100).toFixed(1)) : 0;
 
     // Sessions
-    const sessions = Array.from(inMemoryDb.sessions.values());
+    const sessions = Array.from(inMemoryDb.sessions.values()).filter((s) => within(s.createdAt));
     const totalSessions = sessions.length;
     const proposedSessions = sessions.filter((s) => s.status === 'proposed').length;
     const confirmedSessions = sessions.filter((s) => s.status === 'confirmed').length;
@@ -74,7 +76,7 @@ export class AnalyticsService {
     const cancelledSessions = sessions.filter((s) => s.status === 'cancelled').length;
 
     // Reviews
-    const reviews = Array.from(inMemoryDb.reviews.values()).filter((r) => r.status === 'visible');
+    const reviews = Array.from(inMemoryDb.reviews.values()).filter((r) => r.status === 'visible' && within(r.createdAt));
     const totalReviews = reviews.length;
     const averageRating =
       totalReviews > 0
@@ -86,7 +88,7 @@ export class AnalyticsService {
         : 0;
 
     // Reports
-    const reports = Array.from(inMemoryDb.reports.values());
+    const reports = Array.from(inMemoryDb.reports.values()).filter((r) => within(r.createdAt));
     const totalReports = reports.length;
     const pendingReports = reports.filter((r) => r.status === 'submitted' || r.status === 'under_review').length;
     const resolvedReports = reports.filter((r) => r.status === 'resolved').length;

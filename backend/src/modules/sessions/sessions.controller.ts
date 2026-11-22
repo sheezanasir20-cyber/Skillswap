@@ -17,7 +17,7 @@ export class SessionsController {
         throw new ValidationError('Please check the highlighted fields.', fields);
       }
 
-      const session = await SessionsService.proposeSession(req.user.id, parsed.data);
+      const session = await SessionsService.proposeSession(req.user.id, parsed.data as any);
       sendSuccess(res, { session }, undefined, 201);
     } catch (err) {
       next(err);
@@ -59,7 +59,7 @@ export class SessionsController {
         throw new ValidationError('Validation failed.', fields);
       }
 
-      const session = await SessionsService.rescheduleSession(req.user.id, id, parsed.data);
+      const session = await SessionsService.rescheduleSession(req.user.id, id, parsed.data as any);
       sendSuccess(res, { session });
     } catch (err) {
       next(err);

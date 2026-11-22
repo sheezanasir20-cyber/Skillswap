@@ -50,7 +50,7 @@ export const StaffMembersPage: React.FC = () => {
 
   const handleSaveUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedMember || !reason.trim()) return;
+    if (!selectedMember) return;
 
     setSaving(true);
     try {

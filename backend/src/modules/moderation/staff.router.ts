@@ -30,7 +30,7 @@ router.patch('/members/:id', requireRole('admin'), AdminController.updateMember)
 // Staff analytics
 router.get('/analytics', AnalyticsController.getAnalytics);
 
-// Staff activity logs
-router.use('/', auditRouter);
+// Staff activity logs — restricted to Administrator per SRS UC-16
+router.use('/', requireRole('admin'), auditRouter);
 
 export { router as staffRouter };

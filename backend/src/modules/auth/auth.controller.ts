@@ -16,7 +16,7 @@ export class AuthController {
         throw new ValidationError('Please check the highlighted fields.', fields);
       }
 
-      const { user, token } = await AuthService.register(parsed.data);
+      const { user, token } = await AuthService.register(parsed.data as any);
 
       res.cookie('skillswap_token', token, {
         httpOnly: true,
@@ -42,7 +42,7 @@ export class AuthController {
         throw new ValidationError('Please check the highlighted fields.', fields);
       }
 
-      const { user, token } = await AuthService.login(parsed.data);
+      const { user, token } = await AuthService.login(parsed.data as any);
 
       res.cookie('skillswap_token', token, {
         httpOnly: true,
@@ -91,7 +91,7 @@ export class AuthController {
         throw new ValidationError('Please check the highlighted fields.', fields);
       }
 
-      await AuthService.resetPassword(parsed.data);
+      await AuthService.resetPassword(parsed.data as any);
       sendSuccess(res, { message: 'Password has been successfully updated. You can now sign in.' });
     } catch (err) {
       next(err);

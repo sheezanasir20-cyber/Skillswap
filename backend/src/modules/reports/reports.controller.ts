@@ -13,7 +13,7 @@ export class ReportsController {
         throw new ValidationError('Invalid report payload.');
       }
 
-      const report = await ReportsService.createReport(req.user.id, parsed.data);
+      const report = await ReportsService.createReport(req.user.id, parsed.data as any);
       sendSuccess(res, { report }, undefined, 201);
     } catch (err) {
       next(err);

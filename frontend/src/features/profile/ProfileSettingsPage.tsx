@@ -19,6 +19,7 @@ export const ProfileSettingsPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
+  const [skillWarning, setSkillWarning] = useState<string | null>(null);
 
   // New skill input
   const [newSkillName, setNewSkillName] = useState('');
@@ -74,8 +75,9 @@ export const ProfileSettingsPage: React.FC = () => {
         intent: newSkillIntent,
         level: newSkillLevel,
       });
-      setSkills((prev) => [...prev, res.skill]);
+      setSkills((prev) => [...prev, { ...res.skill, name: res.skill.name || newSkillName.trim(), category: res.skill.category || 'General' }]);
       setNewSkillName('');
+      setSkillWarning(null);
     } catch (err: any) {
       alert(err.message || 'Failed to add skill.');
     }
@@ -84,7 +86,14 @@ export const ProfileSettingsPage: React.FC = () => {
   const handleRemoveSkill = async (userSkillId: string) => {
     try {
       await api.delete(`/members/me/skills/${userSkillId}`);
-      setSkills((prev) => prev.filter((s) => s.id !== userSkillId));
+      const removed = skills.find((s) => s.id === userSkillId);
+      const next = skills.filter((s) => s.id !== userSkillId);
+      setSkills(next);
+      if (removed && next.filter((s) => s.intent === removed.intent).length === 0) {
+        setSkillWarning(`Warning: you no longer have any skills to ${removed.intent === 'teach' ? 'teach' : 'learn'}. Matches and connection requests will not be available until a new skill is added.`);
+      } else {
+        setSkillWarning(null);
+      }
     } catch (err: any) {
       alert(err.message || 'Failed to delete skill.');
     }
@@ -205,6 +214,23 @@ export const ProfileSettingsPage: React.FC = () => {
             Add skills you can share with peers and skills you aspire to acquire.
           </p>
         </div>
+
+        {skillWarning ? (
+          <div
+            role="alert"
+            style={{
+              padding: 'var(--space-3) var(--space-4)',
+              borderRadius: 'var(--radius-sm)',
+              backgroundColor: 'rgba(250, 163, 7, 0.12)',
+              border: '1px solid rgba(250, 163, 7, 0.28)',
+              fontSize: '0.8125rem',
+              fontWeight: 600,
+              color: 'var(--color-amber-700, #b45309)',
+            }}
+          >
+            {skillWarning}
+          </div>
+        ) : null}
 
         {/* Add Skill Form Row */}
         <form

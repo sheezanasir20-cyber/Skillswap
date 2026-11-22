@@ -157,6 +157,17 @@ export class ConnectionsService {
     conn.updatedAt = new Date();
     inMemoryDb.connections.set(conn.id, conn);
 
+    // UC-01 A4: notify the sender that their request was declined
+    const recipientUser = inMemoryDb.users.get(userId);
+    await NotificationsService.create({
+      userId: conn.requesterId,
+      type: 'connection_update',
+      title: 'Connection Request Declined',
+      body: `${recipientUser?.displayName || 'A member'} declined your connection request.`,
+      resourceType: 'connection',
+      resourceId: conn.id,
+    });
+
     return conn;
   }
 

@@ -69,7 +69,7 @@ export class MembersController {
         throw new ValidationError('Invalid availability payload.');
       }
 
-      const slots = await MembersService.setAvailability(req.user.id, parsed.data);
+      const slots = await MembersService.setAvailability(req.user.id, parsed.data as any);
       sendSuccess(res, { availability: slots });
     } catch (err) {
       next(err);

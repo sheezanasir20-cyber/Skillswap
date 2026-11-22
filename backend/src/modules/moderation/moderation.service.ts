@@ -119,6 +119,15 @@ export class ModerationService {
       reason: data.resolutionNote,
     });
 
+    await NotificationsService.create({
+      userId: report.reporterId,
+      type: 'report_update',
+      title: data.action === 'resolved' ? 'Your Report Was Resolved' : 'Your Report Was Dismissed',
+      body: `Your report was marked as ${data.action}. Note: ${report.resolutionNote}`,
+      resourceType: 'report',
+      resourceId: report.id,
+    });
+
     return report;
   }
 

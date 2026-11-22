@@ -13,7 +13,8 @@ export const StaffAnalyticsPage: React.FC = () => {
     const loadAnalytics = async () => {
       setLoading(true);
       try {
-        const res: any = await api.get('/staff/analytics');
+        const daysMap: Record<string, number> = { '7d': 7, '30d': 30, '90d': 90 };
+        const res: any = await api.get('/staff/analytics', daysMap[dateRange] ? { days: daysMap[dateRange] } : undefined);
         setAnalytics(res.analytics);
       } catch (err) {
         console.error(err);

@@ -114,6 +114,13 @@ export class MessagingService {
       throw new ForbiddenError('Messages can only be sent in accepted connections.');
     }
 
+    // UC-09 A3: chat is unavailable when the partner's account is suspended or deleted
+    const partnerId = conn.requesterId === userId ? conn.recipientId : conn.requesterId;
+    const partner = inMemoryDb.users.get(partnerId);
+    if (partner && (partner.status === 'suspended' || partner.status === 'deleted')) {
+      throw new ForbiddenError('Chat is unavailable: your partner\'s account is suspended or deleted.');
+    }
+
     const sanitizedBody = body.trim();
     if (!sanitizedBody) {
       throw new ValidationError('Message cannot be empty.');

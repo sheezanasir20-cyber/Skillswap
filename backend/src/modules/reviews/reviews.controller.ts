@@ -14,7 +14,7 @@ export class ReviewsController {
         throw new ValidationError('Invalid review payload.');
       }
 
-      const review = await ReviewsService.createReview(req.user.id, id, parsed.data);
+      const review = await ReviewsService.createReview(req.user.id, id, parsed.data as any);
       sendSuccess(res, { review }, undefined, 201);
     } catch (err) {
       next(err);

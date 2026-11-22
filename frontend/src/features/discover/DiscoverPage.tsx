@@ -18,6 +18,7 @@ export const DiscoverPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [levelFilter, setLevelFilter] = useState('');
   const [intentFilter, setIntentFilter] = useState('');
+  const [searchError, setSearchError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -34,6 +35,16 @@ export const DiscoverPage: React.FC = () => {
   };
 
   const handleSearch = async () => {
+    const q = searchQuery.trim();
+    if (q && /[<>]/.test(q)) {
+      setSearchError('Invalid search input: please remove markup characters such as "<" or ">".');
+      return;
+    }
+    if (q.length === 1) {
+      setSearchError('Search term is too short — enter at least 2 characters.');
+      return;
+    }
+    setSearchError(null);
     setLoading(true);
     try {
       const res: any = await api.get('/members/search', {
@@ -57,11 +68,20 @@ export const DiscoverPage: React.FC = () => {
     }
   }, [tab]);
 
-  const clearFilters = () => {
+  const clearFilters = async () => {
     setSearchQuery('');
     setLevelFilter('');
     setIntentFilter('');
-    setTimeout(handleSearch, 0);
+    setSearchError(null);
+    setLoading(true);
+    try {
+      const res: any = await api.get('/members/search', {});
+      setSearchResults(res.members || []);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const hasActiveFilters = Boolean(searchQuery || levelFilter || intentFilter);
@@ -196,6 +216,23 @@ export const DiscoverPage: React.FC = () => {
               <Search size={16} /> Search
             </Button>
           </div>
+
+          {searchError ? (
+            <div
+              role="alert"
+              style={{
+                padding: 'var(--space-3) var(--space-4)',
+                borderRadius: 'var(--radius-sm)',
+                backgroundColor: 'rgba(233, 69, 96, 0.1)',
+                border: '1px solid rgba(233, 69, 96, 0.35)',
+                fontSize: '0.8125rem',
+                fontWeight: 600,
+                color: 'var(--color-crimson-600)',
+              }}
+            >
+              {searchError}
+            </div>
+          ) : null}
 
           {hasActiveFilters ? (
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', paddingTop: 'var(--space-2)' }}>

@@ -159,7 +159,7 @@ export const MemberProfilePage: React.FC = () => {
         </div>
 
         {/* Profile Details Container */}
-        <div style={{ padding: '0 var(--space-8) var(--space-8) var(--space-8)' }}>
+        <div style={{ padding: '0 var(--space-8) var(--space-8) var(--space-8)', position: 'relative', zIndex: 10 }}>
           {/* Avatar and Primary Actions Row */}
           <div
             style={{
@@ -170,6 +170,8 @@ export const MemberProfilePage: React.FC = () => {
               gap: 'var(--space-4)',
               marginTop: '-48px',
               marginBottom: 'var(--space-4)',
+              position: 'relative',
+              zIndex: 11,
             }}
           >
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: 'var(--space-4)' }}>
@@ -178,11 +180,13 @@ export const MemberProfilePage: React.FC = () => {
                   padding: '4px',
                   backgroundColor: 'var(--color-surface)',
                   borderRadius: '50%',
-                  boxShadow: '0 8px 24px rgba(3, 7, 30, 0.14)',
+                  boxShadow: '0 8px 24px rgba(3, 7, 30, 0.22)',
                   display: 'inline-block',
+                  position: 'relative',
+                  zIndex: 12,
                 }}
               >
-                <Avatar name={member.displayName} avatarUrl={member.avatarUrl} size={90} />
+                <Avatar name={member.displayName} avatarUrl={member.avatarUrl} size={92} />
               </div>
             </div>
 
@@ -371,6 +375,7 @@ export const MemberProfilePage: React.FC = () => {
         <div
           className="paper-card"
           style={{
+            padding: 'var(--space-6)',
             borderTop: '3px solid var(--color-burgundy-800)',
             display: 'flex',
             flexDirection: 'column',
@@ -427,6 +432,7 @@ export const MemberProfilePage: React.FC = () => {
         <div
           className="paper-card"
           style={{
+            padding: 'var(--space-6)',
             borderTop: '3px solid var(--color-crimson-600)',
             display: 'flex',
             flexDirection: 'column',
@@ -481,7 +487,15 @@ export const MemberProfilePage: React.FC = () => {
       </div>
 
       {/* Verified Reviews Section per PRD §6 & design.md §10 */}
-      <div className="paper-card" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
+      <div
+        className="paper-card"
+        style={{
+          padding: 'var(--space-6)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 'var(--space-6)',
+        }}
+      >
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-2)' }}>
           <div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-ink-950)' }}>

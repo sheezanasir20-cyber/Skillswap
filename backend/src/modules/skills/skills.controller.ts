@@ -29,7 +29,7 @@ export class SkillsController {
         throw new ValidationError('Validation failed.', fields);
       }
 
-      const created = await SkillsService.addMemberSkill(req.user.id, parsed.data);
+      const created = await SkillsService.addMemberSkill(req.user.id, parsed.data as any);
       sendSuccess(res, { skill: created }, undefined, 201);
     } catch (err) {
       next(err);

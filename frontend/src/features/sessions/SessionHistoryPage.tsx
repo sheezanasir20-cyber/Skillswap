@@ -232,12 +232,12 @@ export const SessionHistoryPage: React.FC = () => {
                 </div>
 
                 <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
-                  {isCompleted && !session.hasReview && (
+                  {isCompleted && session.canReview && (
                     <Button size="sm" variant="ember" onClick={() => setReviewingSession(session)}>
                       <Star size={14} color="#03071E" fill="#FFBA08" /> Rate & review
                     </Button>
                   )}
-                  {isCompleted && session.hasReview && (
+                  {isCompleted && !session.canReview && (
                     <span
                       style={{
                         fontSize: '0.75rem',

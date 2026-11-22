@@ -1,5 +1,5 @@
 import { inMemoryDb, ReportEntity } from '../../services/db.js';
-import { ValidationError, NotFoundError } from '../../utils/errors.js';
+import { ValidationError, NotFoundError, ConflictError } from '../../utils/errors.js';
 
 export class ReportsService {
   public static async createReport(
@@ -21,6 +21,21 @@ export class ReportsService {
     } else if (data.targetType === 'review') {
       const review = inMemoryDb.reviews.get(data.targetId);
       if (!review) throw new NotFoundError('Reported review not found.');
+    }
+
+    if (!data.reason || data.reason.trim().length === 0) {
+      throw new ValidationError('Please select a reason for the report.');
+    }
+
+    for (const existing of inMemoryDb.reports.values()) {
+      if (
+        existing.reporterId === reporterId &&
+        existing.targetType === data.targetType &&
+        existing.targetId === data.targetId &&
+        (existing.status === 'submitted' || existing.status === 'under_review')
+      ) {
+        throw new ConflictError('You have already reported this content. It is pending moderator review.');
+      }
     }
 
     const report: ReportEntity = {

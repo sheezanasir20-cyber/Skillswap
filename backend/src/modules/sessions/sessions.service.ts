@@ -1,6 +1,6 @@
 import { inMemoryDb, SessionEntity, NotificationJobEntity, UserEntity } from '../../services/db.js';
 import { SessionStateMachine } from './session.state-machine.js';
-import { NotFoundError, ForbiddenError, ValidationError } from '../../utils/errors.js';
+import { NotFoundError, ForbiddenError, ValidationError, ConflictError } from '../../utils/errors.js';
 import { NotificationsService } from '../notifications/notifications.service.js';
 
 export interface EnrichedSession extends SessionEntity {
@@ -10,6 +10,28 @@ export interface EnrichedSession extends SessionEntity {
 }
 
 export class SessionsService {
+  private static assertNoClash(userIds: string[], startsAt: string, endsAt: string, excludeSessionId?: string): void {
+    const s = new Date(startsAt).getTime();
+    const e = new Date(endsAt).getTime();
+    for (const existing of inMemoryDb.sessions.values()) {
+      if (existing.id === excludeSessionId) continue;
+      if (existing.status !== 'proposed' && existing.status !== 'confirmed') continue;
+      const other = this.participantIds(existing);
+      if (!other.some((id) => userIds.includes(id))) continue;
+      if (s < existing.endsAt.getTime() && e > existing.startsAt.getTime()) {
+        throw new ConflictError(
+          `Time clash: one of the participants already has "${existing.title}" scheduled from ${existing.startsAt.toISOString()} to ${existing.endsAt.toISOString()}. Please pick a new time.`
+        );
+      }
+    }
+  }
+
+  private static participantIds(session: SessionEntity): string[] {
+    const conn = inMemoryDb.connections.get(session.connectionId);
+    if (!conn) return [session.proposedBy];
+    return [conn.requesterId, conn.recipientId];
+  }
+
   public static async proposeSession(
     userId: string,
     data: {
@@ -34,6 +56,8 @@ export class SessionsService {
     if (conn.requesterId !== userId && conn.recipientId !== userId) {
       throw new ForbiddenError('You are not a participant in this connection.');
     }
+
+    this.assertNoClash([conn.requesterId, conn.recipientId], data.startsAt, data.endsAt);
 
     const session: SessionEntity = {
       id: `sess-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
@@ -171,6 +195,7 @@ export class SessionsService {
     }
 
     // Valid from proposed or confirmed
+    this.assertNoClash(this.participantIds(session), data.startsAt, data.endsAt, session.id);
     session.status = SessionStateMachine.transition(session.status, 'proposed');
     session.proposedBy = userId;
     session.startsAt = new Date(data.startsAt);

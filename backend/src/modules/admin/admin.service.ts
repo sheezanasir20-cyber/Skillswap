@@ -44,6 +44,14 @@ export class AdminService {
     const user = inMemoryDb.users.get(targetUserId);
     if (!user) throw new NotFoundError('User not found.');
 
+    if (targetUserId === adminId) {
+      throw new ForbiddenError('You cannot modify or delete your own account. Ask another administrator to perform this change.');
+    }
+
+    if (!updates.reason || updates.reason.trim().length === 0) {
+      throw new ValidationError('A reason for change is required for audit logging.');
+    }
+
     const changes: Record<string, any> = {};
 
     if (updates.role && updates.role !== user.role) {

@@ -159,7 +159,7 @@ export interface NotificationJobEntity {
 }
 
 // In-Memory Database Store with Full CRUD and Querying support
-class InMemoryDatabase {
+export class InMemoryDatabase {
   public users: Map<string, UserEntity> = new Map();
   public skills: Map<string, SkillEntity> = new Map();
   public userSkills: Map<string, UserSkillEntity> = new Map();
